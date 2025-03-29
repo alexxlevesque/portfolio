@@ -445,8 +445,8 @@ export default function Home() {
           <Section title="Connect">
             <div className="flex flex-col items-center space-y-6">
               <div className="flex flex-wrap justify-center gap-4">
-                <a 
-                  href="https://www.dropbox.com/scl/fi/5uk5jqyb0e6vyzat8qxiz/AlexLevesque_Resume_Mar_2025.pdf?rlkey=ryhttnh1rip4qlafs6vmq5diz&dl=0" 
+                <a
+                  href="https://drive.google.com/file/d/1-nJlfoGunCPbt80uqaX3c6paBlU_9q_9/view?usp=drive_link"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-all duration-500 ease-in-out"
