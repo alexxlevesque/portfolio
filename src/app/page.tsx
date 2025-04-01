@@ -266,7 +266,7 @@ export default function Home() {
         <div className="flex justify-center -mt-48 mb-12">
           <div className="relative w-[480px] h-[480px] rounded-full overflow-hidden border-4 border-navy-200 dark:border-navy-700 shadow-lg transition-all duration-500 ease-in-out">
             <Image
-              src="/images/profile/headshot.jpg"
+              src="/images/profile/headshot.JPG"
               alt="Alex Levesque"
               fill
               sizes="(max-width: 768px) 100vw, 480px"
