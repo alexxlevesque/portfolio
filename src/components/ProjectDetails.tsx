@@ -100,7 +100,9 @@ export default function ProjectDetails({ project, onClose, onNext, onPrevious }:
                     <p className="font-medium text-navy-900 dark:text-blue-100 mb-2">Challenge:</p>
                     <p className="text-navy-700 dark:text-blue-200 mb-2">{challenge}</p>
                     <p className="font-medium text-navy-900 dark:text-blue-100 mb-2">Solution:</p>
-                    <p className="text-navy-700 dark:text-blue-200">{project.solutions[index]}</p>
+                    <p className="text-navy-700 dark:text-blue-200">
+                      {project.solutions && index < project.solutions.length ? project.solutions[index] : 'No solution provided'}
+                    </p>
                   </div>
                 ))}
               </div>
