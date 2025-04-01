@@ -19,3 +19,5 @@ A modern, responsive portfolio website built with Next.js, TypeScript, and Tailw
 - Tailwind CSS
 - React
 - Node.js
+
+Leverage Cursor.AI to assist in web development.
