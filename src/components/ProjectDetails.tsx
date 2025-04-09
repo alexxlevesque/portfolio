@@ -9,7 +9,6 @@ interface ProjectDetailsProps {
     title: string;
     description: string;
     techStack: string[];
-    status: string;
     date: string;
     category: string;
     color: string;

@@ -16,93 +16,11 @@ export default function Home() {
 
   const projects = [
     {
-      id: 1,
-      title: "AI-Powered Business Intelligence Dashboard",
-      description: "An end-to-end business analytics tool leveraging real-time data, customer segmentation, and predictive modeling to provide strategic insights for clients.",
-      longDescription: "This comprehensive business intelligence platform combines advanced analytics with intuitive visualization to help businesses make data-driven decisions. The system processes real-time data streams, performs customer segmentation, and generates predictive models to forecast business trends and opportunities.",
-      techStack: ["Python", "Pandas", "scikit-learn", "XGBoost", "Streamlit"],
-      status: "In Progress",
-      date: "Expected: Jun 2025",
-      category: "ai",
-      color: "blue",
-      image: "/images/projects/bi-dashboard.jpg",
-      features: [
-        "Real-time data processing and visualization",
-        "Customer segmentation using K-means clustering",
-        "Predictive modeling for business trends",
-        "Interactive dashboards with Streamlit",
-        "Automated report generation"
-      ],
-      challenges: [
-        "Handling large-scale real-time data streams efficiently",
-        "Ensuring model accuracy across different business sectors"
-      ],
-      solutions: [
-        "Implemented efficient data processing pipelines using Pandas and NumPy",
-        "Developed sector-specific model validation and tuning procedures"
-      ]
-    },
-    {
-      id: 2,
-      title: "Bayesian Clue Solver & Strategy Engine",
-      description: "A probability-driven engine that models the game of Clue using Bayesian inference, simulation, and AI to optimize gameplay strategy.",
-      longDescription: "This innovative project applies Bayesian probability theory to the classic board game Clue, creating an AI-powered strategy engine that helps players make optimal decisions. The system uses historical game data and real-time information to calculate probabilities and suggest the most effective moves.",
-      techStack: ["Python", "NumPy", "Pandas", "Bayesian"],
-      status: "In Progress",
-      date: "Expected: Jul 2025",
-      category: "ai",
-      color: "purple",
-      image: "/images/projects/clue-solver.jpg",
-      features: [
-        "Real-time probability calculations",
-        "Strategy optimization using Bayesian inference",
-        "Game state simulation and prediction",
-        "Interactive command-line interface",
-        "Performance analytics dashboard"
-      ],
-      challenges: [
-        "Managing complex probability calculations in real-time",
-        "Balancing computational efficiency with accuracy"
-      ],
-      solutions: [
-        "Implemented efficient probability update algorithms",
-        "Developed caching mechanisms for frequently accessed calculations"
-      ]
-    },
-    {
-      id: 3,
-      title: "Deep Learning for Options Pricing & Financial Research",
-      description: "A machine learning initiative combining neural networks for pricing European options with a research paper analyzing AI's role in finance and ethical considerations.",
-      longDescription: "This comprehensive project combines deep learning techniques with traditional financial models to develop a novel approach to options pricing. The research paper explores the implications of AI in financial markets and addresses key ethical considerations in algorithmic trading.",
-      techStack: ["Python", "TensorFlow", "PyTorch", "scikit-learn"],
-      status: "In Progress",
-      date: "Expected: Aug 2025",
-      category: "finance",
-      color: "indigo",
-      image: "/images/projects/options-pricing.jpg",
-      features: [
-        "Neural network-based options pricing model",
-        "Comparative analysis with traditional models",
-        "Market impact analysis",
-        "Ethical framework for AI in finance",
-        "Interactive visualization tools"
-      ],
-      challenges: [
-        "Achieving model accuracy comparable to traditional methods",
-        "Addressing ethical concerns in AI-driven trading"
-      ],
-      solutions: [
-        "Developed hybrid models combining ML with traditional pricing",
-        "Created comprehensive ethical guidelines for AI implementation"
-      ]
-    },
-    {
       id: 4,
       title: "Stock ML Prediction",
       description: "Machine learning model for stock price prediction using historical data and advanced algorithms.",
       longDescription: "This project develops a sophisticated machine learning model for stock price prediction, utilizing historical market data and advanced algorithms to forecast future price movements. The system incorporates multiple technical indicators and market sentiment analysis to provide comprehensive predictions.",
       techStack: ["Python", "scikit-learn", "NumPy", "Pandas"],
-      status: "Completed",
       date: "Completed: Feb 2025",
       category: "finance",
       color: "green",
@@ -129,7 +47,6 @@ export default function Home() {
       description: "Research paper on AI-based forecasting methods with novel approaches to time series prediction.",
       longDescription: "This research paper presents innovative approaches to time series forecasting using artificial intelligence techniques. The study compares various machine learning models and proposes novel methodologies for improving prediction accuracy in complex time series data.",
       techStack: ["Python", "scikit-learn", "LaTeX"],
-      status: "Completed",
       date: "Completed: Mar 2025",
       category: "ai",
       color: "orange",
@@ -156,7 +73,6 @@ export default function Home() {
       description: "Developed an automated water treatment system using Arduino IDE with 3D-printed components and turbidity sensors for water quality monitoring.",
       longDescription: "Co-designed and implemented an innovative automated water treatment system utilizing Arduino IDE. The system features a custom 3D-printed powder dispenser and integrated turbidity sensors for real-time water quality monitoring. Through automated quality control and precise dispensing mechanisms, the system successfully improved water purity by 50%. This project demonstrates practical application of embedded systems in environmental solutions.",
       techStack: ["Arduino IDE", "C++", "3D Printing", "Sensors", "CAD"],
-      status: "Completed",
       date: "2023",
       category: "hardware",
       color: "blue",
@@ -384,13 +300,6 @@ export default function Home() {
                         className="object-cover"
                       />
                       <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-navy-600 opacity-0 group-hover:opacity-20 transition-opacity duration-500 ease-in-out" />
-                      <div className={`absolute top-4 right-4 px-3 py-1 ${
-                        project.status === 'Completed'
-                          ? 'bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200'
-                          : 'bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200'
-                      } text-sm font-medium rounded-full transition-colors duration-500 ease-in-out`}>
-                        {project.status}
-                      </div>
                     </div>
                     <div className="p-6">
                       <h3 className="text-xl font-semibold text-navy-900 dark:text-blue-100 mb-2 transition-colors duration-500 ease-in-out">{project.title}</h3>
