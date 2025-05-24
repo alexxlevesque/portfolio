@@ -21,7 +21,7 @@ export default function Home() {
       description: "A sophisticated Clue game assistant that uses Bayesian reasoning and probabilistic inference to help players track game state, calculate probabilities, and make optimal suggestions.",
       longDescription: "This project implements a sophisticated Clue game assistant that leverages Bayesian reasoning and probabilistic inference to help players track game state, calculate probabilities, and make optimal suggestions. The system provides real-time probability updates for cards in the murder envelope and player hands, helping solve the mystery faster and more effectively. Inspired by probabilistic models in finance, AI, and information theory, it can consistently win Clue in fewer than 7 turns.",
       techStack: ["Python", "Streamlit", "Pandas", "NumPy", "Bayesian Inference"],
-      date: "2024",
+      date: "Completed: May 2025",
       category: "ai",
       color: "purple",
       image: "/images/projects/clue-solver.jpg",
