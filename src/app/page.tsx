@@ -25,6 +25,7 @@ export default function Home() {
       category: "ai",
       color: "purple",
       image: "/images/projects/clue-solver.jpg",
+      link: "https://github.com/alexxlevesque/cluegamesolver",
       features: [
         "Real-time probability updates for envelope and player cards",
         "Bayesian inference engine for optimal move suggestions",
@@ -53,6 +54,7 @@ export default function Home() {
       category: "finance",
       color: "green",
       image: "/images/projects/stock-prediction.jpg",
+      link: "https://github.com/alexxlevesque/stockpriceprediction-rf",
       features: [
         "Multi-factor prediction model",
         "Technical indicator integration",
@@ -79,6 +81,7 @@ export default function Home() {
       category: "ai",
       color: "orange",
       image: "/images/projects/forecasting-paper.jpg",
+      link: "https://medium.com/qmind-ai/transforming-market-predictions-with-machine-learning-and-random-forests-36e1d550da60",
       features: [
         "Novel forecasting methodology",
         "Comparative model analysis",
