@@ -16,6 +16,34 @@ export default function Home() {
 
   const projects = [
     {
+      id: 7,
+      title: "Bayesian Clue Solver",
+      description: "A sophisticated Clue game assistant that uses Bayesian reasoning and probabilistic inference to help players track game state, calculate probabilities, and make optimal suggestions.",
+      longDescription: "This project implements a sophisticated Clue game assistant that leverages Bayesian reasoning and probabilistic inference to help players track game state, calculate probabilities, and make optimal suggestions. The system provides real-time probability updates for cards in the murder envelope and player hands, helping solve the mystery faster and more effectively. Inspired by probabilistic models in finance, AI, and information theory, it can consistently win Clue in fewer than 7 turns.",
+      techStack: ["Python", "Streamlit", "Pandas", "NumPy", "Bayesian Inference"],
+      date: "2024",
+      category: "ai",
+      color: "purple",
+      image: "/images/projects/clue-solver.jpg",
+      features: [
+        "Real-time probability updates for envelope and player cards",
+        "Bayesian inference engine for optimal move suggestions",
+        "Interactive Streamlit UI for game state tracking",
+        "Consistent wins in fewer than 7 turns",
+        "Separate probability distributions for suspects, weapons, and rooms"
+      ],
+      challenges: [
+        "Implementing complex Bayesian update rules",
+        "Maintaining accurate probability distributions",
+        "Designing an intuitive user interface"
+      ],
+      solutions: [
+        "Developed sophisticated probability normalization algorithms",
+        "Created modular engine architecture for state management",
+        "Built interactive Streamlit UI for real-time updates"
+      ]
+    },
+    {
       id: 4,
       title: "Stock ML Prediction",
       description: "Machine learning model for stock price prediction using historical data and advanced algorithms.",
