@@ -17,6 +17,25 @@ export default function Home() {
   const projects = [
     {
       id: 1,
+      title: "Golf Analytics Machine Learning Project",
+      description: "Advanced statistical analysis and machine learning model for predicting golf performance using player statistics, course conditions, and environmental factors.",
+      longDescription: "This project analyzes curated professional golf performance data to identify the key factors driving low scores. By leveraging regression techniques and machine learning models, it quantifies how environmental conditions, course characteristics, and player profiles influence performance. The system implements a comprehensive modeling pipeline, starting with Ordinary Least Squares (OLS) regression as a benchmark before exploring more advanced predictive techniques.",
+      purpose: "This project served as my introduction to web scraping with BeautifulSoup and advanced my knowledge in data manipulation with Pandas. It provided hands-on experience with statistical modeling and machine learning, particularly in developing domain-specific features and interpreting complex interactions between variables. The project deepened my understanding of sports analytics while teaching me essential data science skills.",
+      techStack: ["Python", "Pandas", "NumPy", "scikit-learn", "BeautifulSoup", "SQLite", "Matplotlib", "Seaborn"],
+      date: "Completed: July 2025",
+      category: "ai",
+      image: "/images/projects/golf-modeling.jpg",
+      link: "https://github.com/alexxlevesque/golf-performance-modeling",
+      features: [
+        "Web scraping pipeline for PGA Tour statistics (2017-2025)",
+        "Domain-specific feature engineering (Weather-adjusted Strokes Gained, Course Aggressiveness Score)",
+        "OLS regression model with interaction terms for non-linear dynamics",
+        "SQLite database for efficient data storage and retrieval",
+        "Advanced visualization of player performance and course characteristics"
+      ]
+    },
+    {
+      id: 2,
       title: "Bayesian Clue Solver",
       description: "Bayesian-powered Clue game assistant for optimal gameplay through probability tracking and move suggestions.",
       longDescription: "This project implements a sophisticated Clue game assistant that leverages Bayesian reasoning and probabilistic inference to help players track game state, calculate probabilities, and make optimal suggestions. The system provides real-time probability updates for cards in the murder envelope and player hands, helping solve the mystery faster and more effectively. Inspired by probabilistic models in finance, AI, and information theory, it can consistently win Clue in fewer than 7 turns.",
@@ -24,7 +43,6 @@ export default function Home() {
       techStack: ["Python", "Streamlit", "Pandas", "NumPy", "Bayesian Inference"],
       date: "Completed: May 2025",
       category: "ai",
-      color: "purple",
       image: "/images/projects/clue-solver.jpg",
       link: "https://github.com/alexxlevesque/cluegamesolver",
       features: [
@@ -36,7 +54,7 @@ export default function Home() {
       ]
     },
     {
-      id: 2,
+      id: 3,
       title: "Stock ML Prediction",
       description: "Machine learning model for stock price prediction using historical data and advanced algorithms.",
       longDescription: "This project develops a sophisticated machine learning model for stock price prediction, utilizing historical market data and advanced algorithms to forecast future price movements. The system incorporates multiple technical indicators and market sentiment analysis to provide comprehensive predictions.",
@@ -44,7 +62,6 @@ export default function Home() {
       techStack: ["Python", "scikit-learn", "NumPy", "Pandas"],
       date: "Completed: Feb 2025",
       category: "finance",
-      color: "green",
       image: "/images/projects/stock-prediction.jpg",
       link: "https://github.com/alexxlevesque/stockpriceprediction-rf",
       features: [
@@ -56,7 +73,7 @@ export default function Home() {
       ]
     },
     {
-      id: 3,
+      id: 4,
       title: "AI Forecasting Paper",
       description: "Research paper on AI-based forecasting methods with novel approaches to time series prediction.",
       longDescription: "This research paper presents innovative approaches to time series forecasting using artificial intelligence techniques. The study compares various machine learning models and proposes novel methodologies for improving prediction accuracy in complex time series data.",
@@ -64,7 +81,6 @@ export default function Home() {
       techStack: ["Python", "scikit-learn", "LaTeX"],
       date: "Completed: Mar 2025",
       category: "ai",
-      color: "orange",
       image: "/images/projects/forecasting-paper.jpg",
       link: "https://medium.com/qmind-ai/transforming-market-predictions-with-machine-learning-and-random-forests-36e1d550da60",
       features: [
@@ -76,7 +92,7 @@ export default function Home() {
       ]
     },
     {
-      id: 4,
+      id: 5,
       title: "Automated Water Treatment System",
       description: "Developed an automated water treatment system using Arduino IDE with 3D-printed components and turbidity sensors for water quality monitoring.",
       longDescription: "Co-designed and implemented an innovative automated water treatment system utilizing Arduino IDE. The system features a custom 3D-printed powder dispenser and integrated turbidity sensors for real-time water quality monitoring. Through automated quality control and precise dispensing mechanisms, the system successfully improved water purity by 50%.",
@@ -84,7 +100,6 @@ export default function Home() {
       techStack: ["Arduino IDE", "C++", "3D Printing", "Sensors", "CAD"],
       date: "2023",
       category: "hardware",
-      color: "blue",
       features: [
         "Real-time water quality monitoring system",
         "3D-printed powder dispenser for treatment chemicals",
