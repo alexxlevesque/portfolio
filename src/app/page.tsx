@@ -16,12 +16,12 @@ export default function Home() {
 
   const projects = [
     {
-      id: 7,
+      id: 1,
       title: "Bayesian Clue Solver",
       description: "Bayesian-powered Clue game assistant for optimal gameplay through probability tracking and move suggestions.",
       longDescription: `This project implements a sophisticated Clue game assistant that leverages Bayesian reasoning and probabilistic inference to help players track game state, calculate probabilities, and make optimal suggestions. The system provides real-time probability updates for cards in the murder envelope and player hands, helping solve the mystery faster and more effectively. Inspired by probabilistic models in finance, AI, and information theory, it can consistently win Clue in fewer than 7 turns.
 
-This project served as my introduction to fundamental probability concepts and essential Python libraries like NumPy and Pandas. Through building this solver, I gained hands-on experience with Bayesian statistics while learning how to manipulate data structures and create interactive applications with Streamlit.`,
+\n\nThis project served as my introduction to fundamental probability concepts and essential Python libraries like NumPy and Pandas. Through building this solver, I gained hands-on experience with Bayesian statistics while learning how to manipulate data structures and create interactive applications with Streamlit.`,
       techStack: ["Python", "Streamlit", "Pandas", "NumPy", "Bayesian Inference"],
       date: "Completed: May 2025",
       category: "ai",
@@ -34,23 +34,15 @@ This project served as my introduction to fundamental probability concepts and e
         "Interactive Streamlit UI for game state tracking",
         "Consistent wins in fewer than 7 turns",
         "Separate probability distributions for suspects, weapons, and rooms"
-      ],
-      challenges: [
-        "Implementing complex Bayesian update rules",
-        "Maintaining accurate probability distributions",
-        "Designing an intuitive user interface"
-      ],
-      solutions: [
-        "Developed sophisticated probability normalization algorithms",
-        "Created modular engine architecture for state management",
-        "Built interactive Streamlit UI for real-time updates"
       ]
     },
     {
-      id: 4,
+      id: 2,
       title: "Stock ML Prediction",
       description: "Machine learning model for stock price prediction using historical data and advanced algorithms.",
-      longDescription: "This project develops a sophisticated machine learning model for stock price prediction, utilizing historical market data and advanced algorithms to forecast future price movements. The system incorporates multiple technical indicators and market sentiment analysis to provide comprehensive predictions.",
+      longDescription: `This project develops a sophisticated machine learning model for stock price prediction, utilizing historical market data and advanced algorithms to forecast future price movements. The system incorporates multiple technical indicators and market sentiment analysis to provide comprehensive predictions.
+      
+      \n\n This project marked my entry into quantitative finance and algorithmic trading. Through developing this model, I gained valuable experience with financial data analysis, market indicators, and the application of machine learning in trading strategies. The project deepened my understanding of market mechanics while teaching me essential quant skills using Python libraries like scikit-learn and NumPy for financial modeling.`,
       techStack: ["Python", "scikit-learn", "NumPy", "Pandas"],
       date: "Completed: Feb 2025",
       category: "finance",
@@ -63,18 +55,10 @@ This project served as my introduction to fundamental probability concepts and e
         "Market sentiment analysis",
         "Performance backtesting",
         "Risk assessment metrics"
-      ],
-      challenges: [
-        "Handling market volatility and regime changes",
-        "Incorporating real-time market data"
-      ],
-      solutions: [
-        "Implemented adaptive learning rates",
-        "Developed efficient data streaming pipeline"
       ]
     },
     {
-      id: 5,
+      id: 3,
       title: "AI Forecasting Paper",
       description: "Research paper on AI-based forecasting methods with novel approaches to time series prediction.",
       longDescription: "This research paper presents innovative approaches to time series forecasting using artificial intelligence techniques. The study compares various machine learning models and proposes novel methodologies for improving prediction accuracy in complex time series data.",
@@ -90,18 +74,10 @@ This project served as my introduction to fundamental probability concepts and e
         "Statistical validation framework",
         "Visualization of results",
         "Implementation guidelines"
-      ],
-      challenges: [
-        "Ensuring statistical significance of results",
-        "Making complex concepts accessible"
-      ],
-      solutions: [
-        "Developed comprehensive statistical tests",
-        "Created clear visual explanations"
       ]
     },
     {
-      id: 6,
+      id: 4,
       title: "Automated Water Treatment System",
       description: "Developed an automated water treatment system using Arduino IDE with 3D-printed components and turbidity sensors for water quality monitoring.",
       longDescription: "Co-designed and implemented an innovative automated water treatment system utilizing Arduino IDE. The system features a custom 3D-printed powder dispenser and integrated turbidity sensors for real-time water quality monitoring. Through automated quality control and precise dispensing mechanisms, the system successfully improved water purity by 50%. This project demonstrates practical application of embedded systems in environmental solutions.",
@@ -116,17 +92,7 @@ This project served as my introduction to fundamental probability concepts and e
         "Automated quality control system",
         "50% improvement in water purity metrics"
       ],
-      challenges: [
-        "Calibrating sensors for accurate turbidity readings",
-        "Designing a reliable powder dispensing mechanism",
-        "Integrating multiple system components"
-      ],
-      solutions: [
-        "Implemented sensor calibration algorithms",
-        "Created custom 3D-printed components for precise dispensing",
-        "Developed modular code architecture for system integration"
-      ],
-      image: "/images/projects/arduino-water-treatment.jpg",
+      image: "/images/projects/arduino-water-treatment.jpg"
     }
   ];
 
