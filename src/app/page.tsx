@@ -19,9 +19,8 @@ export default function Home() {
       id: 1,
       title: "Bayesian Clue Solver",
       description: "Bayesian-powered Clue game assistant for optimal gameplay through probability tracking and move suggestions.",
-      longDescription: `This project implements a sophisticated Clue game assistant that leverages Bayesian reasoning and probabilistic inference to help players track game state, calculate probabilities, and make optimal suggestions. The system provides real-time probability updates for cards in the murder envelope and player hands, helping solve the mystery faster and more effectively. Inspired by probabilistic models in finance, AI, and information theory, it can consistently win Clue in fewer than 7 turns.
-
-\n\nThis project served as my introduction to fundamental probability concepts and essential Python libraries like NumPy and Pandas. Through building this solver, I gained hands-on experience with Bayesian statistics while learning how to manipulate data structures and create interactive applications with Streamlit.`,
+      longDescription: "This project implements a sophisticated Clue game assistant that leverages Bayesian reasoning and probabilistic inference to help players track game state, calculate probabilities, and make optimal suggestions. The system provides real-time probability updates for cards in the murder envelope and player hands, helping solve the mystery faster and more effectively. Inspired by probabilistic models in finance, AI, and information theory, it can consistently win Clue in fewer than 7 turns.",
+      purpose: "This project served as my introduction to fundamental probability concepts and essential Python libraries like NumPy and Pandas. Through building this solver, I gained hands-on experience with Bayesian statistics while learning how to manipulate data structures and create interactive applications with Streamlit.",
       techStack: ["Python", "Streamlit", "Pandas", "NumPy", "Bayesian Inference"],
       date: "Completed: May 2025",
       category: "ai",
@@ -40,9 +39,8 @@ export default function Home() {
       id: 2,
       title: "Stock ML Prediction",
       description: "Machine learning model for stock price prediction using historical data and advanced algorithms.",
-      longDescription: `This project develops a sophisticated machine learning model for stock price prediction, utilizing historical market data and advanced algorithms to forecast future price movements. The system incorporates multiple technical indicators and market sentiment analysis to provide comprehensive predictions.
-      
-\n\nThis project marked my entry into quantitative finance and algorithmic trading. Through developing this model, I gained valuable experience with financial data analysis, market indicators, and the application of machine learning in trading strategies. The project deepened my understanding of market mechanics while teaching me essential quant skills using Python libraries like scikit-learn and NumPy for financial modeling.`,
+      longDescription: "This project develops a sophisticated machine learning model for stock price prediction, utilizing historical market data and advanced algorithms to forecast future price movements. The system incorporates multiple technical indicators and market sentiment analysis to provide comprehensive predictions.",
+      purpose: "This project marked my entry into quantitative finance and algorithmic trading. Through developing this model, I gained valuable experience with financial data analysis, market indicators, and the application of machine learning in trading strategies. The project deepened my understanding of market mechanics while teaching me essential quant skills using Python libraries like scikit-learn and NumPy for financial modeling.",
       techStack: ["Python", "scikit-learn", "NumPy", "Pandas"],
       date: "Completed: Feb 2025",
       category: "finance",
@@ -62,6 +60,7 @@ export default function Home() {
       title: "AI Forecasting Paper",
       description: "Research paper on AI-based forecasting methods with novel approaches to time series prediction.",
       longDescription: "This research paper presents innovative approaches to time series forecasting using artificial intelligence techniques. The study compares various machine learning models and proposes novel methodologies for improving prediction accuracy in complex time series data.",
+      purpose: "This research project allowed me to explore the intersection of AI and time series analysis, developing new methodologies for forecasting complex data patterns. Through this work, I gained expertise in statistical validation and the practical application of machine learning models in real-world scenarios.",
       techStack: ["Python", "scikit-learn", "LaTeX"],
       date: "Completed: Mar 2025",
       category: "ai",
@@ -80,7 +79,8 @@ export default function Home() {
       id: 4,
       title: "Automated Water Treatment System",
       description: "Developed an automated water treatment system using Arduino IDE with 3D-printed components and turbidity sensors for water quality monitoring.",
-      longDescription: "Co-designed and implemented an innovative automated water treatment system utilizing Arduino IDE. The system features a custom 3D-printed powder dispenser and integrated turbidity sensors for real-time water quality monitoring. Through automated quality control and precise dispensing mechanisms, the system successfully improved water purity by 50%. This project demonstrates practical application of embedded systems in environmental solutions.",
+      longDescription: "Co-designed and implemented an innovative automated water treatment system utilizing Arduino IDE. The system features a custom 3D-printed powder dispenser and integrated turbidity sensors for real-time water quality monitoring. Through automated quality control and precise dispensing mechanisms, the system successfully improved water purity by 50%.",
+      purpose: "This project demonstrated the practical application of embedded systems in environmental solutions. It provided hands-on experience with hardware integration, sensor calibration, and the development of automated control systems. The project strengthened my understanding of both software and hardware components in real-world applications.",
       techStack: ["Arduino IDE", "C++", "3D Printing", "Sensors", "CAD"],
       date: "2023",
       category: "hardware",

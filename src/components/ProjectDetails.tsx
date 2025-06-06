@@ -14,6 +14,7 @@ interface ProjectDetailsProps {
     color: string;
     image: string;
     longDescription?: string;
+    purpose?: string;
     features?: string[];
     challenges?: string[];
     solutions?: string[];
@@ -75,6 +76,16 @@ export default function ProjectDetails({ project, onClose, onNext, onPrevious }:
               {project.longDescription || project.description}
             </p>
           </div>
+
+          {/* Purpose */}
+          {project.purpose && (
+            <div>
+              <h3 className="text-lg font-semibold text-navy-900 dark:text-blue-100 mb-2">Purpose</h3>
+              <p className="text-navy-700 dark:text-blue-200">
+                {project.purpose}
+              </p>
+            </div>
+          )}
 
           {/* Features */}
           {project.features && (
