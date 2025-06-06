@@ -42,7 +42,7 @@ export default function Home() {
       description: "Machine learning model for stock price prediction using historical data and advanced algorithms.",
       longDescription: `This project develops a sophisticated machine learning model for stock price prediction, utilizing historical market data and advanced algorithms to forecast future price movements. The system incorporates multiple technical indicators and market sentiment analysis to provide comprehensive predictions.
       
-      \n\n This project marked my entry into quantitative finance and algorithmic trading. Through developing this model, I gained valuable experience with financial data analysis, market indicators, and the application of machine learning in trading strategies. The project deepened my understanding of market mechanics while teaching me essential quant skills using Python libraries like scikit-learn and NumPy for financial modeling.`,
+\n\nThis project marked my entry into quantitative finance and algorithmic trading. Through developing this model, I gained valuable experience with financial data analysis, market indicators, and the application of machine learning in trading strategies. The project deepened my understanding of market mechanics while teaching me essential quant skills using Python libraries like scikit-learn and NumPy for financial modeling.`,
       techStack: ["Python", "scikit-learn", "NumPy", "Pandas"],
       date: "Completed: Feb 2025",
       category: "finance",
