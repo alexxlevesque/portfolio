@@ -18,8 +18,10 @@ export default function Home() {
     {
       id: 7,
       title: "Bayesian Clue Solver",
-      description: "A sophisticated Clue game assistant that uses Bayesian reasoning and probabilistic inference to help players track game state, calculate probabilities, and make optimal suggestions.",
-      longDescription: "This project implements a sophisticated Clue game assistant that leverages Bayesian reasoning and probabilistic inference to help players track game state, calculate probabilities, and make optimal suggestions. The system provides real-time probability updates for cards in the murder envelope and player hands, helping solve the mystery faster and more effectively. Inspired by probabilistic models in finance, AI, and information theory, it can consistently win Clue in fewer than 7 turns.",
+      description: "Bayesian-powered Clue game assistant for optimal gameplay through probability tracking and move suggestions.",
+      longDescription: `This project implements a sophisticated Clue game assistant that leverages Bayesian reasoning and probabilistic inference to help players track game state, calculate probabilities, and make optimal suggestions. The system provides real-time probability updates for cards in the murder envelope and player hands, helping solve the mystery faster and more effectively. Inspired by probabilistic models in finance, AI, and information theory, it can consistently win Clue in fewer than 7 turns.
+
+This project served as my introduction to fundamental probability concepts and essential Python libraries like NumPy and Pandas. Through building this solver, I gained hands-on experience with Bayesian statistics while learning how to manipulate data structures and create interactive applications with Streamlit.`,
       techStack: ["Python", "Streamlit", "Pandas", "NumPy", "Bayesian Inference"],
       date: "Completed: May 2025",
       category: "ai",
