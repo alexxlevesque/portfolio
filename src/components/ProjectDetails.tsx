@@ -11,7 +11,6 @@ interface ProjectDetailsProps {
     techStack: string[];
     date: string;
     category: string;
-    color: string;
     image: string;
     longDescription?: string;
     purpose?: string;
