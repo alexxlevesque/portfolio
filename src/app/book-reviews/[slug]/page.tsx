@@ -114,7 +114,7 @@ export default async function BookReviewPage({ params }: BookReviewPageProps) {
           {/* Book Review Content */}
           <div className="bg-white dark:bg-navy-800 rounded-lg shadow-lg p-6">
             <div 
-              className="prose prose-lg max-w-none prose-slate dark:prose-invert prose-headings:text-navy-900 dark:prose-headings:text-white prose-p:text-navy-700 dark:prose-p:text-blue-200 prose-strong:text-navy-900 dark:prose-strong:text-white prose-ul:text-navy-700 dark:prose-ul:text-blue-200 prose-li:text-navy-700 dark:prose-li:text-blue-200 prose-blockquote:text-navy-700 dark:prose-blockquote:text-blue-200 prose-code:text-navy-900 dark:prose-code:text-white prose-pre:text-navy-900 dark:prose-pre:text-white"
+              className="prose prose-lg max-w-none text-gray-900 dark:text-white prose-headings:text-gray-900 dark:prose-headings:text-white prose-p:text-gray-700 dark:prose-p:text-gray-200 prose-strong:text-gray-900 dark:prose-strong:text-white prose-ul:text-gray-700 dark:prose-ul:text-gray-200 prose-li:text-gray-700 dark:prose-li:text-gray-200 prose-blockquote:text-gray-700 dark:prose-blockquote:text-gray-200 prose-code:text-gray-900 dark:prose-code:text-white prose-pre:text-gray-900 dark:prose-pre:text-white prose-a:text-blue-600 dark:prose-a:text-blue-400"
               dangerouslySetInnerHTML={{ __html: content }}
             />
           </div>

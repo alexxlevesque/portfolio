@@ -4,7 +4,7 @@ import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
 
-const bookReviewsDirectory = path.join(process.cwd(), 'content/book-reviews');
+const bookReviewsDirectory = path.join(process.cwd(), 'src/app/book-reviews/content');
 
 export interface BookReview {
   slug: string;
