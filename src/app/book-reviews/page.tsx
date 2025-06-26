@@ -3,53 +3,12 @@
 import BottomNavigation from '@/components/BottomNavigation';
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
+import { getAllBookReviews } from '@/lib/markdown';
 
 export default function BookReviews() {
   const [activeCategory, setActiveCategory] = useState('all');
 
-  const bookReviews = [
-    {
-      id: 1,
-      title: "Sample Finance Book",
-      author: "John Doe",
-      categories: ["finance", "math"],
-      rating: 4.5,
-      date: "January 20, 2025",
-      excerpt: "A comprehensive guide to personal finance and investment strategies.",
-      slug: "sample-finance-book"
-    },
-    {
-      id: 2,
-      title: "Advanced Mathematics Textbook",
-      author: "Jane Smith",
-      categories: ["math"],
-      rating: 4.0,
-      date: "January 15, 2025",
-      excerpt: "An in-depth exploration of advanced mathematical concepts.",
-      slug: "advanced-mathematics-textbook"
-    },
-    {
-      id: 3,
-      title: "Computer Science Fundamentals",
-      author: "Bob Johnson",
-      categories: ["computer-science"],
-      rating: 4.8,
-      date: "January 10, 2025",
-      excerpt: "Essential concepts in computer science and programming.",
-      slug: "computer-science-fundamentals"
-    },
-    {
-      id: 4,
-      title: "AI and Machine Learning",
-      author: "Alice Brown",
-      categories: ["ai", "computer-science"],
-      rating: 4.7,
-      date: "January 5, 2025",
-      excerpt: "A comprehensive introduction to artificial intelligence and machine learning.",
-      slug: "ai-and-machine-learning"
-    },
-    // Add more book reviews as needed
-  ];
+  const bookReviews = getAllBookReviews();
 
   const categories = [
     { id: 'all', name: 'All Books', count: bookReviews.length },
@@ -63,7 +22,7 @@ export default function BookReviews() {
     return bookReviews.filter(book => 
       activeCategory === 'all' || book.categories.includes(activeCategory)
     );
-  }, [activeCategory]);
+  }, [activeCategory, bookReviews]);
 
   const renderStars = (rating: number) => {
     const stars = [];
@@ -132,7 +91,7 @@ export default function BookReviews() {
           <div className="space-y-6">
             {filteredBooks.map((book) => (
               <article
-                key={book.id}
+                key={book.slug}
                 className="bg-white dark:bg-navy-800 rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
               >
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-4">
