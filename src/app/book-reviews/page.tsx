@@ -87,55 +87,95 @@ export default function BookReviews() {
                 key={book.id}
                 className="bg-white dark:bg-navy-800 rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
               >
-                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-4">
-                  <div className="flex-grow">
-                    <h2 className="text-xl font-semibold text-navy-900 dark:text-blue-100 mb-2">
-                      <Link
-                        href={`/book-reviews/${book.slug}`}
-                        className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                      >
-                        {book.title}
-                      </Link>
-                    </h2>
-                    <p className="text-navy-600 dark:text-blue-300 mb-2">
-                      by {book.author}
-                    </p>
-                    <div className="flex items-center space-x-2 mb-2">
-                      <div className="flex">
-                        {renderStars(book.rating)}
+                <div className="flex flex-col lg:flex-row gap-6">
+                  {/* Book Cover */}
+                  {book.coverImage && (
+                    <div className="flex-shrink-0">
+                      <div className="w-32 h-48 bg-gray-200 dark:bg-gray-700 rounded-lg shadow-md overflow-hidden">
+                        <img
+                          src={book.coverImage}
+                          alt={`Cover of ${book.title}`}
+                          className="w-full h-full object-cover"
+                          onError={(e) => {
+                            // Fallback to placeholder if image fails to load
+                            const target = e.target as HTMLImageElement;
+                            target.style.display = 'none';
+                            const parent = target.parentElement;
+                            if (parent) {
+                              parent.innerHTML = `
+                                <div class="w-full h-full flex items-center justify-center text-gray-500 dark:text-gray-400 text-sm">
+                                  <div class="text-center">
+                                    <svg class="w-8 h-8 mx-auto mb-2" fill="currentColor" viewBox="0 0 20 20">
+                                      <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd" />
+                                    </svg>
+                                    <p>No Cover</p>
+                                  </div>
+                                </div>
+                              `;
+                            }
+                          }}
+                          onLoad={() => {
+                            // Image loaded successfully
+                            console.log(`Cover image loaded for: ${book.title}`);
+                          }}
+                        />
                       </div>
-                      <span className="text-sm text-navy-600 dark:text-blue-300">
-                        {book.rating}/5
+                    </div>
+                  )}
+                  
+                  {/* Book Information */}
+                  <div className="flex-grow">
+                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-4">
+                      <div className="flex-grow">
+                        <h2 className="text-xl font-semibold text-navy-900 dark:text-blue-100 mb-2">
+                          <Link
+                            href={`/book-reviews/${book.slug}`}
+                            className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                          >
+                            {book.title}
+                          </Link>
+                        </h2>
+                        <p className="text-navy-600 dark:text-blue-300 mb-2">
+                          by {book.author}
+                        </p>
+                        <div className="flex items-center space-x-2 mb-2">
+                          <div className="flex">
+                            {renderStars(book.rating)}
+                          </div>
+                          <span className="text-sm text-navy-600 dark:text-blue-300">
+                            {book.rating}/5
+                          </span>
+                        </div>
+                      </div>
+                      <span className="text-sm text-navy-600 dark:text-blue-300 mt-2 sm:mt-0">
+                        {book.date}
                       </span>
                     </div>
-                  </div>
-                  <span className="text-sm text-navy-600 dark:text-blue-300 mt-2 sm:mt-0">
-                    {book.date}
-                  </span>
-                </div>
-                
-                <p className="text-navy-700 dark:text-blue-200 mb-4">
-                  {book.excerpt}
-                </p>
-                
-                <div className="flex items-center justify-between">
-                  <div className="flex flex-wrap gap-2">
-                    {book.categories.map((category, index) => (
-                      <span
-                        key={index}
-                        className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm capitalize"
+                    
+                    <p className="text-navy-700 dark:text-blue-200 mb-4">
+                      {book.excerpt}
+                    </p>
+                    
+                    <div className="flex items-center justify-between">
+                      <div className="flex flex-wrap gap-2">
+                        {book.categories.map((category, index) => (
+                          <span
+                            key={index}
+                            className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm capitalize"
+                          >
+                            {category.replace('-', ' ')}
+                          </span>
+                        ))}
+                      </div>
+                      
+                      <Link
+                        href={`/book-reviews/${book.slug}`}
+                        className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium transition-colors"
                       >
-                        {category.replace('-', ' ')}
-                      </span>
-                    ))}
+                        Read review →
+                      </Link>
+                    </div>
                   </div>
-                  
-                  <Link
-                    href={`/book-reviews/${book.slug}`}
-                    className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium transition-colors"
-                  >
-                    Read review →
-                  </Link>
                 </div>
               </article>
             ))}

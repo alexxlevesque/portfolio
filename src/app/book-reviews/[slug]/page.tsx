@@ -120,41 +120,81 @@ export default function BookReviewPage() {
 
           {/* Book Header */}
           <article className="bg-white dark:bg-navy-800 rounded-lg shadow-lg p-6 mb-8">
-            <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-6">
-              <div className="flex-grow">
-                <h1 className="text-3xl font-bold text-navy-900 dark:text-blue-100 mb-3">
-                  {book.title}
-                </h1>
-                <p className="text-xl text-navy-600 dark:text-blue-300 mb-3">
-                  by {book.author}
-                </p>
-                <div className="flex items-center space-x-2 mb-3">
-                  <div className="flex">
-                    {renderStars(book.rating)}
+            <div className="flex flex-col lg:flex-row gap-6 mb-6">
+              {/* Book Cover */}
+              {book.coverImage && (
+                <div className="flex-shrink-0">
+                  <div className="w-48 h-72 bg-gray-200 dark:bg-gray-700 rounded-lg shadow-md overflow-hidden">
+                                         <img
+                       src={book.coverImage}
+                       alt={`Cover of ${book.title}`}
+                       className="w-full h-full object-cover"
+                       onError={(e) => {
+                         // Fallback to placeholder if image fails to load
+                         const target = e.target as HTMLImageElement;
+                         target.style.display = 'none';
+                         const parent = target.parentElement;
+                         if (parent) {
+                           parent.innerHTML = `
+                             <div class="w-full h-full flex items-center justify-center text-gray-500 dark:text-gray-400 text-sm">
+                               <div class="text-center">
+                                 <svg class="w-12 h-12 mx-auto mb-3" fill="currentColor" viewBox="0 0 20 20">
+                                   <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd" />
+                                 </svg>
+                                 <p>No Cover</p>
+                               </div>
+                             </div>
+                           `;
+                         }
+                       }}
+                       onLoad={() => {
+                         // Image loaded successfully
+                         console.log(`Cover image loaded for: ${book.title}`);
+                       }}
+                     />
                   </div>
-                  <span className="text-lg text-navy-600 dark:text-blue-300">
-                    {book.rating}/5
+                </div>
+              )}
+              
+              {/* Book Information */}
+              <div className="flex-grow">
+                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-4">
+                  <div className="flex-grow">
+                    <h1 className="text-3xl font-bold text-navy-900 dark:text-blue-100 mb-3">
+                      {book.title}
+                    </h1>
+                    <p className="text-xl text-navy-600 dark:text-blue-300 mb-3">
+                      by {book.author}
+                    </p>
+                    <div className="flex items-center space-x-2 mb-3">
+                      <div className="flex">
+                        {renderStars(book.rating)}
+                      </div>
+                      <span className="text-lg text-navy-600 dark:text-blue-300">
+                        {book.rating}/5
+                      </span>
+                    </div>
+                  </div>
+                  <span className="text-sm text-navy-600 dark:text-blue-300 mt-2 sm:mt-0">
+                    {book.date}
                   </span>
                 </div>
+                
+                <p className="text-lg text-navy-700 dark:text-blue-200 mb-4">
+                  {book.excerpt}
+                </p>
+                
+                <div className="flex flex-wrap gap-2">
+                  {book.categories.map((category, index) => (
+                    <span
+                      key={index}
+                      className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm capitalize"
+                    >
+                      {category.replace('-', ' ')}
+                    </span>
+                  ))}
+                </div>
               </div>
-              <span className="text-sm text-navy-600 dark:text-blue-300 mt-2 sm:mt-0">
-                {book.date}
-              </span>
-            </div>
-            
-            <p className="text-lg text-navy-700 dark:text-blue-200 mb-4">
-              {book.excerpt}
-            </p>
-            
-            <div className="flex flex-wrap gap-2">
-              {book.categories.map((category, index) => (
-                <span
-                  key={index}
-                  className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm capitalize"
-                >
-                  {category.replace('-', ' ')}
-                </span>
-              ))}
             </div>
           </article>
 
