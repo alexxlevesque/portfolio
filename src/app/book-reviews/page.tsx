@@ -3,61 +3,13 @@
 import BottomNavigation from '@/components/BottomNavigation';
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
+import { getAllBooks, getCategories } from '@/data/bookReviews';
 
 export default function BookReviews() {
   const [activeCategory, setActiveCategory] = useState('all');
 
-  const bookReviews = [
-    {
-      id: 1,
-      title: "Sample Finance Book",
-      author: "John Doe",
-      categories: ["finance", "math"],
-      rating: 4.5,
-      date: "January 20, 2025",
-      excerpt: "A comprehensive guide to personal finance and investment strategies.",
-      slug: "sample-finance-book"
-    },
-    {
-      id: 2,
-      title: "Advanced Mathematics Textbook",
-      author: "Jane Smith",
-      categories: ["math"],
-      rating: 4.0,
-      date: "January 15, 2025",
-      excerpt: "An in-depth exploration of advanced mathematical concepts.",
-      slug: "advanced-mathematics-textbook"
-    },
-    {
-      id: 3,
-      title: "Computer Science Fundamentals",
-      author: "Bob Johnson",
-      categories: ["computer-science"],
-      rating: 4.8,
-      date: "January 10, 2025",
-      excerpt: "Essential concepts in computer science and programming.",
-      slug: "computer-science-fundamentals"
-    },
-    {
-      id: 4,
-      title: "AI and Machine Learning",
-      author: "Alice Brown",
-      categories: ["ai", "computer-science"],
-      rating: 4.7,
-      date: "January 5, 2025",
-      excerpt: "A comprehensive introduction to artificial intelligence and machine learning.",
-      slug: "ai-and-machine-learning"
-    },
-    // Add more book reviews as needed
-  ];
-
-  const categories = [
-    { id: 'all', name: 'All Books', count: bookReviews.length },
-    { id: 'finance', name: 'Finance', count: bookReviews.filter(b => b.categories.includes('finance')).length },
-    { id: 'math', name: 'Math', count: bookReviews.filter(b => b.categories.includes('math')).length },
-    { id: 'computer-science', name: 'Computer Science', count: bookReviews.filter(b => b.categories.includes('computer-science')).length },
-    { id: 'ai', name: 'AI', count: bookReviews.filter(b => b.categories.includes('ai')).length }
-  ];
+  const bookReviews = getAllBooks();
+  const categories = getCategories();
 
   const filteredBooks = useMemo(() => {
     return bookReviews.filter(book => 
