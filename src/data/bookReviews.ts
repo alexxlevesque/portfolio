@@ -21,7 +21,7 @@ export const bookReviews: BookReview[] = [
     date: "Unfinished",
     excerpt: "An introduction to the basics of financial mathematics, including topics in probability theory, stochastic processes, brownian motion, and options.",
     slug: "sample-finance-book",
-    coverImage: "/images/book-covers/mathematical-finance.jpg",
+    coverImage: "/images/book-covers/book1.jpeg",
     fullReview: `
       <p>This book was my first attempt at learning about mathematical finance. I read this book on my commute to my freshman internship and it served as a proper introduction to quant finance.</p>
       
