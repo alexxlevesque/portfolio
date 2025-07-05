@@ -131,7 +131,7 @@ export default function Home() {
                   </a>
                 </p>
                 <p className="text-navy-600 dark:text-blue-300 text-sm transition-colors duration-500 ease-in-out">
-                  Relevant Coursework: Software Engineering, Data Structures, Algorithms
+                  Relevant Coursework: C++, probability/stochastics, mathematical finance, and computer science
                 </p>
               </div>
             </div>
@@ -207,50 +207,6 @@ export default function Home() {
             </div>
           </div>
         </Section>
-
-        {/* Skills & Interests Section */}
-        <div id="skills">
-          <Section title="Skills & Interests">
-            <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-4 justify-items-center">
-              <TechStackBadge 
-                name="Python" 
-                icon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-                color="bg-blue-100 dark:bg-blue-900"
-              />
-              <TechStackBadge 
-                name="C" 
-                icon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg"
-                color="bg-gray-100 dark:bg-gray-800"
-              />
-              <TechStackBadge 
-                name="C++" 
-                icon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
-                color="bg-blue-100 dark:bg-blue-900"
-              />
-              <TechStackBadge 
-                name="Git" 
-                icon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
-                color="bg-red-100 dark:bg-red-900"
-              />
-              <TechStackBadge 
-                name="Pandas" 
-                icon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg"
-                color="bg-blue-100 dark:bg-blue-900"
-              />
-              <TechStackBadge 
-                name="NumPy" 
-                icon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg"
-                color="bg-blue-100 dark:bg-blue-900"
-              />
-              <TechStackBadge 
-                name="Matplotlib" 
-                icon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matplotlib/matplotlib-original.svg"
-                color="bg-blue-100 dark:bg-blue-900"
-              />
-            </div>
-          </Section>
-        </div>
-
         {/* Contact Section */}
         <section id="contact" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
