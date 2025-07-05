@@ -4,6 +4,7 @@ import BottomNavigation from '@/components/BottomNavigation';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { getBookBySlug, BookReview } from '@/data/bookReviews';
 
 export default function BookReviewPage() {
@@ -125,32 +126,12 @@ export default function BookReviewPage() {
               {book.coverImage && (
                 <div className="flex-shrink-0">
                   <div className="w-48 h-72 bg-gray-200 dark:bg-gray-700 rounded-lg shadow-md overflow-hidden">
-                                         <img
+                                         <Image
                        src={book.coverImage}
                        alt={`Cover of ${book.title}`}
+                       width={192}
+                       height={288}
                        className="w-full h-full object-cover"
-                       onError={(e) => {
-                         // Fallback to placeholder if image fails to load
-                         const target = e.target as HTMLImageElement;
-                         target.style.display = 'none';
-                         const parent = target.parentElement;
-                         if (parent) {
-                           parent.innerHTML = `
-                             <div class="w-full h-full flex items-center justify-center text-gray-500 dark:text-gray-400 text-sm">
-                               <div class="text-center">
-                                 <svg class="w-12 h-12 mx-auto mb-3" fill="currentColor" viewBox="0 0 20 20">
-                                   <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd" />
-                                 </svg>
-                                 <p>No Cover</p>
-                               </div>
-                             </div>
-                           `;
-                         }
-                       }}
-                       onLoad={() => {
-                         // Image loaded successfully
-                         console.log(`Cover image loaded for: ${book.title}`);
-                       }}
                      />
                   </div>
                 </div>

@@ -7,15 +7,28 @@ export default function Experience() {
   const experiences = [
     {
       id: 1,
-      title: "AI Research & Cloud Engineering",
+      title: "AI Research & Cloud Engineering Intern",
       company: "Government of Canada - Immigration and Refugee Board",
-      period: "2024 - Present",
-      description: "Conducting AI research and cloud engineering work for the Canadian government.",
+      period: "May 2025 - August 2025",
+      description: "Conducting AI research and cloud engineering work for the Immigration and Refugee Board of Canada.",
       technologies: ["AI/ML", "Cloud Computing", "Research"],
       achievements: [
-        "Placeholder achievement 1",
-        "Placeholder achievement 2",
-        "Placeholder achievement 3"
+        "Developed a Microsoft Power Automate workflow to transcribe and classify refugee Basis of Claim documents, achieving 93% accuracy and significantly reducing manual processing time.",
+        "Trained a custom AI translation model in Microsoft Azure, fine-tuned for bilingual and legal contexts to support accurate, domain-specific communication in judicial workflows.",
+        "Designed and deployed cloud-based Microsoft CoPilots to assist government board members with task-specific automation, improving daily operational efficiency."
+      ]
+    },
+    {
+      id: 2,
+      title: "LLM Research Member",
+      company: "Algoverse AI Research",
+      period: "June 2025 - September 2025",
+      description: "Conducting LLM research under the supervision of PhD mentors and industry researchers for the Algoverse AI Research team.",
+      technologies: ["AI/ML", "Research Paper Writing", "LLM Research"],
+      achievements: [
+        "Conducted independent AI Research in a 12-week program led by PhDs from Meta, UCSD, and Cornell, combining weekly lectures with personalized mentorship.",
+        "Co-authored a research paper aimed at submission to top-tier AI conferences such as NeurIPS, ACL, and ICML, focusing on novel research in LLMs.",
+        "Collaborated in a 3-4 member research team to scope a research question, implement models in Python, and present findings in a publication-ready format."
       ]
     },
     // Add more experiences as needed

@@ -59,7 +59,7 @@ export default function Projects() {
       techStack: ["Python", "scikit-learn", "NumPy", "Pandas"],
       date: "Completed: Feb 2025",
       category: "finance",
-      image: "/images/projects/stock-prediction.jpg",
+      image: "/images/projects/stock-prediction.png",
       link: "https://github.com/alexxlevesque/stockpriceprediction-rf",
       features: [
         "Multi-factor prediction model",
