@@ -7,11 +7,11 @@ export default function Experience() {
   const experiences = [
     {
       id: 1,
-      title: "AI Research & Cloud Engineering Intern",
+      title: "AI Technician Intern",
       company: "Government of Canada - Immigration and Refugee Board",
       period: "May 2025 - August 2025",
-      description: "Conducting AI research and cloud engineering work for the Immigration and Refugee Board of Canada.",
-      technologies: ["AI/ML", "Cloud Computing", "Research"],
+      description: "Building AI agents on the cloud via Azure for the Immigration and Refugee Board of Canada.",
+      technologies: ["AI/ML", "Cloud Computing", "Azure", "Power Automate", "CoPilots"],
       achievements: [
         "Developed a Microsoft Power Automate workflow to transcribe and classify refugee Basis of Claim documents, achieving 93% accuracy and significantly reducing manual processing time.",
         "Trained a custom AI translation model in Microsoft Azure, fine-tuned for bilingual and legal contexts to support accurate, domain-specific communication in judicial workflows.",
