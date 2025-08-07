@@ -14,22 +14,22 @@ export default function Home() {
 
   // Featured project (your best/most recent project)
   const featuredProject = {
-    id: 1,
-    title: "Golf Analytics Machine Learning Project",
-    description: "Advanced statistical analysis and machine learning model for predicting golf performance using player statistics, course conditions, and environmental factors.",
-    longDescription: "This project analyzes curated professional golf performance data to identify the key factors driving low scores. By leveraging regression techniques and machine learning models, it quantifies how environmental conditions, course characteristics, and player profiles influence performance. The system implements a comprehensive modeling pipeline, starting with Ordinary Least Squares (OLS) regression as a benchmark before exploring more advanced predictive techniques.",
-    purpose: "This project served as my introduction to web scraping with BeautifulSoup and advanced my knowledge in data manipulation with Pandas. It provided hands-on experience with statistical modeling and machine learning, particularly in developing domain-specific features and interpreting complex interactions between variables. The project deepened my understanding of sports analytics while teaching me essential data science skills.",
-    techStack: ["Python", "Pandas", "NumPy", "scikit-learn", "BeautifulSoup", "SQLite", "Matplotlib", "Seaborn"],
-    date: "Completed: July 2025",
+    id: 2,
+    title: "Clue Game Strategy Optimization",
+    description: "Bayesian-powered Clue game assistant for optimal gameplay through probability tracking and move suggestions.",
+    longDescription: "This project implements a sophisticated Clue game assistant that leverages Bayesian reasoning and probabilistic inference to help players track game state, calculate probabilities, and make optimal suggestions. The system provides real-time probability updates for cards in the murder envelope and player hands, helping solve the mystery faster and more effectively. Inspired by probabilistic models in finance, AI, and information theory, it can consistently win Clue in fewer than 7 turns.",
+    purpose: "This project served as my introduction to fundamental probability concepts and essential Python libraries like NumPy and Pandas. Through building this solver, I gained hands-on experience with Bayesian statistics while learning how to manipulate data structures and create interactive applications with Streamlit.",
+    techStack: ["Python", "Pandas", "NumPy", "Bayesian Inference"],
+    date: "Completed: May 2025",
     category: "ai",
-    image: "/images/projects/golf-modeling.jpg",
-    link: "https://github.com/alexxlevesque/golf-analytics.git",
+    image: "/images/projects/clue-solver.jpg",
+    link: "https://github.com/alexxlevesque/cluegamesolver",
     features: [
-      "Web scraping pipeline for PGA Tour statistics (2017-2025)",
-      "Domain-specific feature engineering (Weather-adjusted Strokes Gained, Course Aggressiveness Score)",
-      "OLS regression model with interaction terms for non-linear dynamics",
-      "SQLite database for efficient data storage and retrieval",
-      "Advanced visualization of player performance and course characteristics"
+      "Real-time probability updates for envelope and player cards",
+      "Bayesian inference engine for optimal move suggestions",
+      "Interactive Streamlit UI for game state tracking",
+      "Consistent wins in fewer than 7 turns",
+      "Separate probability distributions for suspects, weapons, and rooms"
     ]
   };
 
@@ -48,11 +48,7 @@ export default function Home() {
         <section id="home" className="min-h-screen flex flex-col justify-center px-4 sm:px-6 lg:px-8 py-20 bg-gradient-to-b from-gray-50 via-white to-gray-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-5xl sm:text-6xl font-bold text-navy-900 dark:text-white mb-4">
-              Hi, I'm Alex <span 
-                className={`inline-block cursor-pointer transition-transform duration-300 ${isWaving ? 'animate-wave' : ''}`}
-                onMouseEnter={() => setIsWaving(true)}
-                onAnimationEnd={() => setIsWaving(false)}
-              >👋</span>
+              Alex Levesque
             </h1>
             <h2 className="text-2xl sm:text-3xl text-navy-700 dark:text-gray-300 mb-8">
               Applied Math & Computer Engineering @ Queen's University
@@ -60,15 +56,15 @@ export default function Home() {
             <ul className="space-y-3 text-lg text-navy-600 dark:text-gray-400">
               <li className="flex items-center space-x-2">
                 <span>• </span>
-                <span className="font-medium">researching AI applications in business intelligence</span>
+                <span className="font-medium">machine learning</span>
               </li>
               <li className="flex items-center space-x-2">
                 <span>• </span>
-                <span className="font-medium">building software & AI-powered financial solutions</span>
+                <span className="font-medium">engineering</span>
               </li>
               <li className="flex items-center space-x-2">
                 <span>• </span>
-                <span className="font-medium">exploring machine learning, engineering, and quantitative finance</span>
+                <span className="font-medium">quantitative finance</span>
               </li>
               <li className="flex items-center space-x-2">
                 <span>• </span>

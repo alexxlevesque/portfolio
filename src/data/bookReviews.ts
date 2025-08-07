@@ -30,11 +30,14 @@ export const bookReviews: BookReview[] = [
       
       <p>The most memorable chapter for me was the probability theory section, which likely has direct applications to trading/quant interviews. I also wanted to learn this topic effectively before my probability classes.</p>
       
+      <p>Furthermore, this book introduces essential concepts for people who want to learn about quant finance. I was very satisfied with sections about GBM, Black-Scholes, and greeks.<p>
+
       <h3>Key Insights</h3>
       <p>Once again, one of the most important parts of this book was the practice problems. I would recommend doing them as you are reading the following chapter.</p>
 
-      <h3>Areas for Improvement</h3>
       <p>While proofs are necessary to understand the background of some concepts, some are skippable and unnecessary for the average reader.</p>
+
+      <p>I did not read chapters on Additional Results on Options, Valuing by Expected Utility, Stochastic Order Relations, Optimization Models, and Stochastic Dynamic Programming. I will likely read these in the future.<p>
     `
   }
 ];

@@ -7,37 +7,17 @@ import Image from 'next/image';
 import { useState, useMemo } from 'react';
 
 export default function Projects() {
-  const [activeCategory, setActiveCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
 
   const projects = [
     {
-      id: 1,
-      title: "Golf Analytics Machine Learning Project",
-      description: "Advanced statistical analysis and machine learning model for predicting golf performance using player statistics, course conditions, and environmental factors.",
-      longDescription: "This project analyzes curated professional golf performance data to identify the key factors driving low scores. By leveraging regression techniques and machine learning models, it quantifies how environmental conditions, course characteristics, and player profiles influence performance. The system implements a comprehensive modeling pipeline, starting with Ordinary Least Squares (OLS) regression as a benchmark before exploring more advanced predictive techniques.",
-      purpose: "This project served as my introduction to web scraping with BeautifulSoup and advanced my knowledge in data manipulation with Pandas. It provided hands-on experience with statistical modeling and machine learning, particularly in developing domain-specific features and interpreting complex interactions between variables. The project deepened my understanding of sports analytics while teaching me essential data science skills.",
-      techStack: ["Python", "Pandas", "NumPy", "scikit-learn", "BeautifulSoup", "SQLite", "Matplotlib", "Seaborn"],
-      date: "Completed: July 2025",
-      category: "ai",
-      image: "/images/projects/golf-modeling.jpg",
-      link: "https://github.com/alexxlevesque/golf-analytics.git",
-      features: [
-        "Web scraping pipeline for PGA Tour statistics (2017-2025)",
-        "Domain-specific feature engineering (Weather-adjusted Strokes Gained, Course Aggressiveness Score)",
-        "OLS regression model with interaction terms for non-linear dynamics",
-        "SQLite database for efficient data storage and retrieval",
-        "Advanced visualization of player performance and course characteristics"
-      ]
-    },
-    {
       id: 2,
-      title: "Bayesian Clue Solver",
+      title: "Clue Game Strategy Optimization",
       description: "Bayesian-powered Clue game assistant for optimal gameplay through probability tracking and move suggestions.",
       longDescription: "This project implements a sophisticated Clue game assistant that leverages Bayesian reasoning and probabilistic inference to help players track game state, calculate probabilities, and make optimal suggestions. The system provides real-time probability updates for cards in the murder envelope and player hands, helping solve the mystery faster and more effectively. Inspired by probabilistic models in finance, AI, and information theory, it can consistently win Clue in fewer than 7 turns.",
       purpose: "This project served as my introduction to fundamental probability concepts and essential Python libraries like NumPy and Pandas. Through building this solver, I gained hands-on experience with Bayesian statistics while learning how to manipulate data structures and create interactive applications with Streamlit.",
-      techStack: ["Python", "Streamlit", "Pandas", "NumPy", "Bayesian Inference"],
+      techStack: ["Python", "Pandas", "NumPy", "Bayesian Inference"],
       date: "Completed: May 2025",
       category: "ai",
       image: "/images/projects/clue-solver.jpg",
@@ -52,11 +32,11 @@ export default function Projects() {
     },
     {
       id: 3,
-      title: "Stock ML Prediction",
+      title: "Basic Stock ML Prediction",
       description: "Machine learning model for stock price prediction using historical data and advanced algorithms.",
-      longDescription: "This project develops a sophisticated machine learning model for stock price prediction, utilizing historical market data and advanced algorithms to forecast future price movements. The system incorporates multiple technical indicators and market sentiment analysis to provide comprehensive predictions.",
+      longDescription: "This project develops a machine learning model for stock price prediction, utilizing historical market data and advanced algorithms to forecast future price movements. The system incorporates multiple technical indicators and market sentiment analysis to provide comprehensive predictions.",
       purpose: "This project marked my entry into quantitative finance and algorithmic trading. Through developing this model, I gained valuable experience with financial data analysis, market indicators, and the application of machine learning in trading strategies. The project deepened my understanding of market mechanics while teaching me essential quant skills using Python libraries like scikit-learn and NumPy for financial modeling.",
-      techStack: ["Python", "scikit-learn", "NumPy", "Pandas"],
+      techStack: ["Python", "scikit-learn", "NumPy", "Pandas", "Matplotlib"],
       date: "Completed: Feb 2025",
       category: "finance",
       image: "/images/projects/stock-prediction.png",
@@ -75,7 +55,7 @@ export default function Projects() {
       description: "Research paper on AI-based forecasting methods with novel approaches to time series prediction.",
       longDescription: "This research paper presents innovative approaches to time series forecasting using artificial intelligence techniques. The study compares various machine learning models and proposes novel methodologies for improving prediction accuracy in complex time series data.",
       purpose: "This research project allowed me to explore the intersection of AI and time series analysis, developing new methodologies for forecasting complex data patterns. Through this work, I gained expertise in statistical validation and the practical application of machine learning models in real-world scenarios.",
-      techStack: ["Python", "scikit-learn", "LaTeX"],
+      techStack: ["Python", "scikit-learn"],
       date: "Completed: Mar 2025",
       category: "ai",
       image: "/images/projects/forecasting-paper.jpg",
@@ -90,40 +70,33 @@ export default function Projects() {
     },
     {
       id: 5,
-      title: "Automated Water Treatment System",
-      description: "Developed an automated water treatment system using Arduino IDE with 3D-printed components and turbidity sensors for water quality monitoring.",
-      longDescription: "Co-designed and implemented an innovative automated water treatment system utilizing Arduino IDE. The system features a custom 3D-printed powder dispenser and integrated turbidity sensors for real-time water quality monitoring. Through automated quality control and precise dispensing mechanisms, the system successfully improved water purity by 50%.",
-      purpose: "This project demonstrated the practical application of embedded systems in environmental solutions. It provided hands-on experience with hardware integration, sensor calibration, and the development of automated control systems. The project strengthened my understanding of both software and hardware components in real-world applications.",
-      techStack: ["Arduino IDE", "C++", "3D Printing", "Sensors", "CAD"],
-      date: "2023",
-      category: "hardware",
+      title: "Queen's University Artificial Intelligence Club | Ethics Paper",
+      description: "Co-authored and published analysis and research on evolving copyright laws in generative AI, focusing on the intersection of intellectual property and emerging technologies (Published to CUCAI 2025).",
+      longDescription: "This research paper explores the complex intersection of intellectual property law and emerging generative AI technologies. The work examines how current copyright frameworks struggle to address the unique challenges posed by AI-generated content, particularly in areas of authorship, ownership, and fair use. Through comprehensive analysis of existing legal precedents and emerging case law, the paper proposes frameworks for balancing innovation with intellectual property protection in the AI era.",
+      purpose: "This project allowed me to explore the critical intersection of technology and law, developing a deeper understanding of how AI advancements challenge existing legal frameworks. Through this research, I gained valuable experience in academic writing, legal analysis, and the ethical considerations surrounding emerging technologies. The work strengthened my ability to communicate complex technical and legal concepts to diverse audiences.",
+      techStack: ["Research", "AI Ethics"],
+      date: "Completed: Mar 2025",
+      category: "ai",
+      image: "/images/projects/ethics-paper.png",
+      link: "https://qmind.ca/project/86",
       features: [
-        "Real-time water quality monitoring system",
-        "3D-printed powder dispenser for treatment chemicals",
-        "Turbidity sensor integration",
-        "Automated quality control system",
-        "50% improvement in water purity metrics"
-      ],
-      image: "/images/projects/arduino-water-treatment.jpg"
+        "Comprehensive analysis of AI copyright law evolution",
+        "Proposed frameworks for AI-generated content regulation",
+        "Published to CUCAI 2025 conference proceedings",
+        "Interdisciplinary approach combining law and technology",
+        "Policy recommendations for future AI governance"
+      ]
     }
-  ];
-
-  const categories = [
-    { id: 'all', name: 'All Projects', count: projects.length },
-    { id: 'ai', name: 'Artificial Intelligence', count: projects.filter(p => p.category === 'ai').length },
-    { id: 'finance', name: 'Finance', count: projects.filter(p => p.category === 'finance').length },
-    { id: 'hardware', name: 'Hardware', count: projects.filter(p => p.category === 'hardware').length }
   ];
 
   const filteredProjects = useMemo(() => {
     return projects.filter(project => {
-      const matchesCategory = activeCategory === 'all' || project.category === activeCategory;
       const matchesSearch = project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                           project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                           project.techStack.some(tech => tech.toLowerCase().includes(searchQuery.toLowerCase()));
-      return matchesCategory && matchesSearch;
+      return matchesSearch;
     });
-  }, [activeCategory, searchQuery]);
+  }, [searchQuery]);
 
   const handleProjectClick = (projectId: number) => {
     setSelectedProject(projectId);
@@ -184,23 +157,6 @@ export default function Projects() {
                   />
                 </svg>
               </div>
-            </div>
-
-            {/* Project Categories */}
-            <div className="flex flex-wrap gap-2 justify-center">
-              {categories.map(category => (
-                <button
-                  key={category.id}
-                  onClick={() => setActiveCategory(category.id)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-500 ease-in-out ${
-                    activeCategory === category.id
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-navy-100 dark:bg-navy-800 text-navy-800 dark:text-blue-200 hover:bg-navy-200 dark:hover:bg-navy-700'
-                  }`}
-                >
-                  {category.name} ({category.count})
-                </button>
-              ))}
             </div>
 
             {/* Project Grid */}
