@@ -9,7 +9,7 @@ export default function Notes() {
     {
       id: 1,
       title: "APSC 221 - Economics and Business Practice for Engineers",
-      repository: "https://github.com/alexxlevesque/course-notes/tree/main/apsc221-engineering_economics"
+      repository: "/documents/APSC 221 Economics and Business Practice_lectures.pdf"
     }
   ];
 
