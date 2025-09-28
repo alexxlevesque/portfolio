@@ -7,6 +7,31 @@ export default function Notes() {
       title: 'APSC 221 — Economics and Business Practice for Engineers',
       repository: '/documents/APSC 221 Economics and Business Practice_lectures.pdf',
     },
+    {
+      id: 2,
+      title: 'ELEC 271 — Digital Systems',
+      repository: '/documents/ELEC 271 Digital Systems_lectures.pdf',
+    },
+    {
+      id: 3,
+      title: 'ELEC 278 — Fundamentals of Information Structures',
+      repository: '/documents/ELEC 278 Fundamentals Of Information Structures_lectures.pdf',
+    },
+    {
+      id: 4,
+      title: 'MTHE 217 — Algebraic Structures with Applications',
+      repository: '/documents/MTHE 217 Algebraic Structures with Applications_lectures.pdf',
+    },
+    {
+      id: 5,
+      title: 'MTHE 237 — Differential Equations for Engineering Science',
+      repository: '/documents/MTHE 237 Differential Equations for Engineering Science_lectures.pdf',
+    },
+    {
+      id: 6,
+      title: 'MTHE 280 — Advanced Calculus',
+      repository: '/documents/MTHE 280 Advanced Calculus_lectures.pdf',
+    },
   ];
 
   return (
