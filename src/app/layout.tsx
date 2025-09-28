@@ -14,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className="min-h-screen bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-500 ease-in-out">
+      <body className="min-h-screen bg-isabelline text-space-cadet antialiased">
         <TopNavigation />
         {children}
       </body>

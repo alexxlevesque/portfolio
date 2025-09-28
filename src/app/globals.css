@@ -1,51 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+/* Minimal, text-first typography. Prefer monospace for a notebook-like feel. */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 245, 245, 247;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 34, 34, 59; /* space-cadet */
+  --background-rgb: 242, 233, 228; /* isabelline */
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-    to bottom,
-    rgb(var(--background-start-rgb)),
-    rgb(var(--background-end-rgb))
-  );
-  font-family: 'Inter', sans-serif;
+  background-color: rgb(var(--background-rgb));
+  font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  line-height: 1.6;
 }
 
-.section-card {
-  @apply rounded-2xl shadow-lg p-8 max-w-3xl mx-auto mb-12;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-}
+/* Remove glassy cards for a pure text-first layout */
+.section-card { @apply max-w-3xl mx-auto mb-10 p-0 shadow-none bg-transparent; }
 
-.dark .section-card {
-  background: linear-gradient(135deg, rgba(31, 41, 55, 0.9), rgba(31, 41, 55, 0.7));
-}
-
-.fade-in {
-  @apply opacity-0 translate-y-4 transition-all duration-700;
-}
-
-.fade-in.visible {
-  @apply opacity-100 translate-y-0;
-}
+/* Keep a subtle, no-motion default */
+.fade-in { @apply opacity-100 translate-y-0; }
 
 /* Custom prose styles for book reviews */
 .prose {
-  @apply text-navy-700 dark:text-blue-200;
+  @apply text-rose_quartz;
 }
 
 .prose h3 {
-  @apply text-navy-900 dark:text-blue-100 font-semibold mt-6 mb-3;
+  @apply text-space_cadet font-semibold mt-6 mb-3;
 }
 
 .prose p {
