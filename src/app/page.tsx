@@ -56,7 +56,7 @@ export default function Home() {
       </section>
 
       <section className="mt-14">
-        <h2 className="text-sm uppercase tracking-widest text-ultra-violet">technical arsenal</h2>
+        <h2 className="text-sm uppercase tracking-widest text-ultra-violet">technical skills</h2>
         <div className="mt-3 text-[15px] leading-7 space-y-1">
           <p><span className="text-rose-quartz">languages</span>: python, c++, typescript, sql</p>
           <p><span className="text-rose-quartz">ml / data</span>: numpy, pandas, scikit-learn, pytorch</p>
