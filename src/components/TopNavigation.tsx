@@ -21,7 +21,7 @@ export default function TopNavigation() {
               key={item.href}
               href={item.href}
               className={`px-0 py-0 font-medium tracking-tight ${
-                pathname === item.href ? 'text-space-cadet' : 'text-ultra-violet hover:text-space-cadet'
+                pathname === item.href ? 'text-isabelline' : 'text-pale-dogwood hover:text-isabelline'
               }`}
             >
               {item.label}

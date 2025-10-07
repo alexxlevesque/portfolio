@@ -13,8 +13,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className="min-h-screen bg-isabelline text-space-cadet antialiased">
+    <html lang="en" className="scroll-smooth dark">
+      <body className="min-h-screen bg-space-cadet text-isabelline antialiased">
         <TopNavigation />
         {children}
       </body>

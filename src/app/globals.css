@@ -6,8 +6,8 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 34, 34, 59; /* space-cadet */
-  --background-rgb: 242, 233, 228; /* isabelline */
+  --foreground-rgb: 242, 233, 228; /* isabelline - now text color */
+  --background-rgb: 34, 34, 59; /* space-cadet - now background */
 }
 
 body {
@@ -25,11 +25,11 @@ body {
 
 /* Custom prose styles for book reviews */
 .prose {
-  @apply text-rose_quartz;
+  @apply text-pale_dogwood;
 }
 
 .prose h3 {
-  @apply text-space_cadet font-semibold mt-6 mb-3;
+  @apply text-isabelline font-semibold mt-6 mb-3;
 }
 
 .prose p {
