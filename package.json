@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.16",
+    "@vercel/analytics": "^1.6.1",
     "next": "^15.3.4",
     "react": "^18",
     "react-dom": "^18"

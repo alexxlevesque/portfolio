@@ -1,5 +1,7 @@
 'use client';
 
+import { Analytics } from "@vercel/analytics/next"
+
 export default function Notes() {
   const courseRepositories = [
     {
@@ -53,6 +55,8 @@ export default function Notes() {
         </div>
       </section>
 
+      {/* Analytics component added here */}
+      <Analytics />
     </main>
   );
 }
