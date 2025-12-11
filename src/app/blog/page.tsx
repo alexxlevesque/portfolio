@@ -1,7 +1,6 @@
 'use client';
 
 import { Analytics } from "@vercel/analytics/next"
-import Head from 'next/head'; // 👈 Import next/head
 
 export default function Notes() {
   const courseRepositories = [
@@ -38,36 +37,25 @@ export default function Notes() {
   ];
 
   return (
-    // Wrap all elements in a single React Fragment (<>...</>)
-    <> 
-      <Head>
-        {/* AdSense Code: This script will be injected into the HTML <head> tag. */}
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1118550749854810"
-        crossOrigin="anonymous"
-        ></script>
-      </Head>
+    <main className="min-h-screen max-w-3xl mx-auto px-4 sm:px-6 py-24">
+      <header className="mb-10">
+        <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight">notes</h1>
+        <p className="mt-2 text-sm text-pale-dogwood">course materials and notes from my undergraduate studies.</p>
+      </header>
 
-      <main className="min-h-screen max-w-3xl mx-auto px-4 sm:px-6 py-24">
-        <header className="mb-10">
-          <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight">notes</h1>
-          <p className="mt-2 text-sm text-pale-dogwood">course materials and notes from my undergraduate studies.</p>
-        </header>
+      <section className="mb-10">
+        <h2 className="text-sm uppercase tracking-widest text-pale-dogwood">course repositories</h2>
+        <div className="mt-3 space-y-3 text-[15px] leading-7">
+          {courseRepositories.map((repo) => (
+            <p key={repo.id}>
+              &gt; {repo.title} —{' '}
+              <a href={repo.repository} target="_blank" rel="noopener noreferrer" className="underline">view pdf</a>
+            </p>
+          ))}
+        </div>
+      </section>
 
-        <section className="mb-10">
-          <h2 className="text-sm uppercase tracking-widest text-pale-dogwood">course repositories</h2>
-          <div className="mt-3 space-y-3 text-[15px] leading-7">
-            {courseRepositories.map((repo) => (
-              <p key={repo.id}>
-                &gt; {repo.title} —{' '}
-                <a href={repo.repository} target="_blank" rel="noopener noreferrer" className="underline">view pdf</a>
-              </p>
-            ))}
-          </div>
-        </section>
-
-        {/* Analytics component is placed inside the main content or at the end of the return. */}
-        <Analytics />
-      </main>
-    </>
+      <Analytics />
+    </main>
   );
 }
