@@ -3,6 +3,8 @@
 import { Analytics } from "@vercel/analytics/next"
 
 export default function Notes() {
+  const textbookLink = "https://queensuca-my.sharepoint.com/:f:/g/personal/23xmj1_queensu_ca/IgBd5WYV0avVRJhSZlCw9d5yAUAJNdXIf4p25o6QsQOU9_0?e=KEGoer";
+
   const courseRepositories = [
     {
       id: 1,
@@ -42,6 +44,24 @@ export default function Notes() {
         <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight">notes</h1>
         <p className="mt-2 text-sm text-pale-dogwood">course materials and notes from my undergraduate studies.</p>
       </header>
+
+      {/* New Textbooks Section */}
+      <section className="mb-10">
+        <h2 className="text-sm uppercase tracking-widest text-pale-dogwood">textbooks</h2>
+        <div className="mt-3 text-[15px] leading-7">
+          <p>
+            &gt; Textbooks —{' '}
+            <a 
+              href={textbookLink} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="underline"
+            >
+              view folder
+            </a>
+          </p>
+        </div>
+      </section>
 
       <section className="mb-10">
         <h2 className="text-sm uppercase tracking-widest text-pale-dogwood">course repositories</h2>
