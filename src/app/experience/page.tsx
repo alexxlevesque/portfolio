@@ -28,7 +28,7 @@ export default function Experience() {
       <section className="mt-12">
         <h2 className="text-sm uppercase tracking-widest text-pale-dogwood">links</h2>
         <div className="mt-3 text-[15px] leading-7 space-y-1">
-          <p>&gt; <Link href="/" className="underline">home</Link> · <Link href="/blog" className="underline">notes</Link></p>
+          <p>&gt; <Link href="/" className="underline">home</Link> · <Link href="/projects" className="underline">projects</Link> · <Link href="/blog" className="underline">notes</Link></p>
           <p>&gt; <a href="/documents/resume.pdf" target="_blank" rel="noopener noreferrer" className="underline">resume</a> · <a href="https://www.linkedin.com/in/alex-levesque/" target="_blank" rel="noopener noreferrer" className="underline">linkedin</a> · <a href="https://github.com/alexxlevesque" target="_blank" rel="noopener noreferrer" className="underline">github</a></p>
         </div>
       </section>

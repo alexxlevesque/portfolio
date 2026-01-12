@@ -15,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth dark">
-      <body className="min-h-screen bg-space-cadet text-isabelline antialiased">
+      <body className="min-h-screen bg-gradient-to-br from-space-cadet via-space-cadet to-ultra-violet text-isabelline antialiased">
         {/* 2. Add the AdSense Script here. Next.js handles the placement optimization. */}
         <Script
           async
@@ -23,7 +23,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
           strategy="afterInteractive"
         />
-        
+
         <TopNavigation />
         {children}
       </body>

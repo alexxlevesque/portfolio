@@ -9,6 +9,7 @@ export default function TopNavigation() {
   const navItems = [
     { href: '/', label: 'home' },
     { href: '/experience', label: 'experience' },
+    { href: '/projects', label: 'projects' },
     { href: '/blog', label: 'notes' },
   ];
 
@@ -20,9 +21,10 @@ export default function TopNavigation() {
             <Link
               key={item.href}
               href={item.href}
-              className={`px-0 py-0 font-medium tracking-tight ${
-                pathname === item.href ? 'text-isabelline' : 'text-pale-dogwood hover:text-isabelline'
-              }`}
+              className={`px-3 py-1.5 rounded-md font-medium tracking-tight transition-all duration-200 ${pathname === item.href
+                  ? 'text-isabelline bg-ultra-violet/30'
+                  : 'text-pale-dogwood hover:text-isabelline hover:bg-ultra-violet/20'
+                }`}
             >
               {item.label}
             </Link>
