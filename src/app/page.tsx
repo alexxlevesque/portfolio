@@ -36,6 +36,9 @@ export default function Home() {
       <section className="mb-10">
         <h2 className="text-sm uppercase tracking-widest text-pale-dogwood">key projects</h2>
         <div className="mt-3 space-y-3 text-[15px] leading-7">
+          <p>&gt; 2026 — patientaware — context-aware ai platform —
+            <span className="block text-rose-quartz">context-aware ai platform addressing inefficiencies in canada's medical system; physician-facing summaries, ohip integration, and thread-based patient data storage system.</span>
+          </p>
           <p>&gt; 2025 — adaptive reinforcement learning ensemble strategy — qmind —
             <span className="block text-rose-quartz">ensemble of ppo, a2c, and td3 agents with adaptive allocation across market regimes; diversification framework reducing volatility and improving risk-adjusted returns via sharpe ratio analysis.</span>
           </p>

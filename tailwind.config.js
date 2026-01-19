@@ -73,6 +73,35 @@ module.exports = {
           800: '#faf6f4',
           900: '#fcfaf9',
         },
+        // Frutiger Aero Palette
+        sky_blue: {
+          DEFAULT: '#87CEEB',
+          300: '#bfe6f6',
+          400: '#A0D8EF',
+          500: '#87CEEB',
+          600: '#00BFFF',
+        },
+        grass_green: {
+          DEFAULT: '#7CFC00',
+          300: '#ccff99',
+          400: '#99ff33',
+          500: '#7CFC00',
+          600: '#32CD32',
+        },
+        // Minecraft Palette
+        minecraft: {
+          dirt: '#8B4513',
+          grass: '#567D46',
+          stone: '#757575',
+          text: '#3f3f3f',
+        },
+        // Harry Potter Palette
+        potter: {
+          parchment: '#f0e6d2',
+          ink: '#2a1a15',
+          gold: '#c5a059',
+          red: '#740001',
+        },
       },
       keyframes: {
         wave: {

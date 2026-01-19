@@ -8,6 +8,15 @@ export default function Projects() {
             </header>
 
             <section className="mb-10">
+                <h2 className="text-sm uppercase tracking-widest text-pale-dogwood">2026 — patientaware: context-aware ai platform</h2>
+                <div className="mt-3 space-y-2 text-[15px] leading-7">
+                    <p>&gt; developed ai-powered clinical platform using backboard.ai to aggregate longitudinal patient data and generate physician-facing summaries, reducing appointment prep time and improving diagnostic accuracy.</p>
+                    <p>&gt; built context-aware patient dashboard integrated with ohip for continuous symptom logging and structured clinical insights, improving appointment efficiency and care continuity.</p>
+                    <p>&gt; architected thread-based patient data storage system to maintain persistent clinical context across appointments, enabling seamless access to ai-curated summaries.</p>
+                </div>
+            </section>
+
+            <section className="mb-10">
                 <h2 className="text-sm uppercase tracking-widest text-pale-dogwood">2025 — adaptive reinforcement learning ensemble strategy, queen's ai club</h2>
                 <div className="mt-3 space-y-2 text-[15px] leading-7">
                     <p>&gt; implemented and trained an ensemble of ppo, a2c, and td3 reinforcement learning agents, with experiment tracking and version control managed via git, enabling adaptive allocation across multiple market regimes.</p>

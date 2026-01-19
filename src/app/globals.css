@@ -1,13 +1,174 @@
 /* Modern, friendly typography with Inter font */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 242, 233, 228; /* isabelline - now text color */
-  --background-rgb: 34, 34, 59; /* space-cadet - now background */
+  --foreground-rgb: 242, 233, 228;
+  /* isabelline - now text color */
+  --background-rgb: 34, 34, 59;
+  /* space-cadet - now background */
+}
+
+/* Frutiger Aero Overrides */
+body.frutiger-aero {
+  --foreground-rgb: 10, 30, 60;
+  background-image: url('/documents/frutigerbg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: rgb(var(--foreground-rgb));
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='8' fill='rgba(135, 206, 235, 0.5)' stroke='white' stroke-width='2'/%3E%3C/svg%3E"), auto;
+}
+
+/* Floating Bubbles Layer - Handled by Bubbles component */
+@keyframes float-bubbles {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    transform: translateY(-20px) scale(1.05);
+  }
+
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Floating Bubbles Layer */
+/* body.frutiger-aero::after handled by Bubbles component */
+
+/* =========================================
+   MINECRAFT THEME
+   ========================================= */
+
+/* Pixel Font imported at top of file */
+
+body.minecraft {
+  --foreground-rgb: 255, 255, 255;
+  background-color: #121013;
+  /* Minecraft Landscape Background */
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("/documents/minecraftbg.webp");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: 'VT323', monospace;
+  font-size: 1.2rem;
+  image-rendering: pixelated;
+  /* Custom Sword Cursor */
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24'%3E%3Cpath fill='%23FFF' stroke='%23000' stroke-width='1' d='M6,18 L18,6 L20,8 L8,20 Z'/%3E%3Cpath fill='%235BC0EB' d='M16,4 L20,4 L20,8 L16,8 Z'/%3E%3C/svg%3E"), auto;
+}
+
+/* Minecraft Containers (GUI Style) */
+body.minecraft .section-card,
+body.minecraft section,
+body.minecraft header,
+body.minecraft nav>div {
+  @apply p-6 mb-8 rounded-none;
+  background-color: #c6c6c6;
+  border: 4px solid #000;
+  /* Minecraft Bevel Effect */
+  box-shadow:
+    inset 4px 4px 0px #fff,
+    inset -4px -4px 0px #555;
+  color: #3f3f3f;
+  transition: transform 0.1s;
+}
+
+body.minecraft section:hover {
+  transform: scale(1.01);
+}
+
+body.minecraft h1,
+body.minecraft h2,
+body.minecraft h3,
+body.minecraft p,
+body.minecraft span,
+body.minecraft a {
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+body.minecraft h1 {
+  color: #3f3f3f;
+  font-size: 3rem;
+  letter-spacing: 2px;
+}
+
+body.minecraft .text-pale-dogwood,
+body.minecraft .text-rose-quartz {
+  color: #3f3f3f !important;
+}
+
+body.minecraft a {
+  color: #3f3f3f;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+body.minecraft a:hover {
+  color: #101010;
+  background-color: rgba(0, 0, 0, 0.05);
+  box-shadow: 2px 2px 0 #000;
+}
+
+/* Minecraft Scrollbar */
+body.minecraft::-webkit-scrollbar {
+  width: 16px;
+}
+
+body.minecraft::-webkit-scrollbar-track {
+  background: #000;
+  border-left: 2px solid #555;
+}
+
+body.minecraft::-webkit-scrollbar-thumb {
+  background: #c6c6c6;
+  border: 2px solid #000;
+  box-shadow: inset 2px 2px 0 #fff, inset -2px -2px 0 #555;
+}
+
+/* Custom Aqua Scrollbar (Frutiger) */
+body.frutiger-aero::-webkit-scrollbar {
+  width: 12px;
+}
+
+body.frutiger-aero::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+body.frutiger-aero::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #87CEEB, #00BFFF);
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+/* Frutiger Aero Aurora/Bokeh Effect overlay */
+body.frutiger-aero::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.4) 0%, transparent 20%),
+    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.3) 0%, transparent 25%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 60%);
+  z-index: -1;
+  animation: pulse-slow 8s infinite alternate;
 }
 
 body {
@@ -19,7 +180,7 @@ body {
 
 /* Smooth transitions for interactive elements */
 * {
-  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  transition: color 0.5s ease, background-color 0.5s ease, border-color 0.5s ease, transform 0.2s ease, box-shadow 0.5s ease;
 }
 
 /* Enhanced link styling with smooth hover effects */
@@ -31,11 +192,125 @@ a:hover {
   @apply brightness-110;
 }
 
-/* Remove glassy cards for a pure text-first layout */
-.section-card { @apply max-w-3xl mx-auto mb-10 p-0 shadow-none bg-transparent; }
+/* Specific Frutiger Link Styling */
+body.frutiger-aero a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+body.frutiger-aero a:hover {
+  color: #0099ff;
+  text-shadow: 0 0 5px rgba(0, 153, 255, 0.4);
+}
+
+/* Remove glassy cards for a pure text-first layout - DEFAULT THEME */
+.section-card {
+  @apply max-w-3xl mx-auto mb-10 p-0 shadow-none bg-transparent;
+}
+
+/* FRUTIGER AERO: Re-introduce glassy cards */
+body.frutiger-aero .section-card,
+body.frutiger-aero section,
+body.frutiger-aero header,
+body.frutiger-aero nav>div {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.5) 100%);
+  backdrop-filter: blur(25px) saturate(150%);
+  -webkit-backdrop-filter: blur(25px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  position: relative;
+  overflow: hidden;
+  box-shadow:
+    0 15px 35px rgba(0, 50, 100, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 1),
+    0 0 0 1px rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
+}
+
+/* Glossy Sheen Sweep Animation */
+body.frutiger-aero .section-card::after,
+body.frutiger-aero section::after,
+body.frutiger-aero header::after {
+  content: "";
+  position: absolute;
+  top: -150%;
+  left: -150%;
+  width: 300%;
+  height: 300%;
+  background: linear-gradient(45deg, transparent 45%, rgba(255, 255, 255, 0.4) 50%, transparent 55%);
+  animation: shine-sweep 6s infinite;
+  pointer-events: none;
+}
+
+@keyframes shine-sweep {
+  0% {
+    transform: translate(-30%, -30%);
+  }
+
+  20% {
+    transform: translate(30%, 30%);
+  }
+
+  100% {
+    transform: translate(30%, 30%);
+  }
+}
+
+body.frutiger-aero .section-card,
+body.frutiger-aero section,
+body.frutiger-aero header {
+  @apply p-8 mb-10 rounded-3xl;
+}
+
+body.frutiger-aero nav>div {
+  @apply px-4 py-2 rounded-full;
+}
+
+body.frutiger-aero h1,
+body.frutiger-aero h2,
+body.frutiger-aero h3 {
+  color: #003366;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8), 0 0 10px rgba(135, 206, 235, 0.3);
+  letter-spacing: -0.02em;
+}
+
+body.frutiger-aero p {
+  color: #1a2a3a;
+}
+
+body.frutiger-aero .text-pale-dogwood {
+  color: #0066CC !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  background: linear-gradient(90deg, #004488, #0066CC);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+body.frutiger-aero .text-rose-quartz {
+  color: #2c3e50 !important;
+  /* Context text becomes dark slate */
+}
+
 
 /* Subtle fade-in animation */
-.fade-in { @apply opacity-100 translate-y-0; }
+.fade-in {
+  @apply opacity-100 translate-y-0;
+}
+
+/* Animation Keyframes */
+@keyframes pulse-slow {
+  0% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
 
 /* Custom prose styles for blog content */
 .prose {
@@ -56,4 +331,108 @@ a:hover {
 
 .prose li {
   @apply mb-2;
+}
+
+/* =========================================
+   HARRY POTTER THEME
+   ========================================= */
+
+body.potter {
+  background-color: #f0e6d2;
+  /* Parchment Texture via Noise and Gradient */
+  background-image: url('/documents/harrypotterbg.webp');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: 'Crimson Text', serif;
+  color: #2a1a15;
+
+  /* Wand Cursor */
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24'%3E%3Cpath fill='%232a1a15' d='M19.4 4.6l-2-2L6 14l-1 5 5-1 11.4-11.4c.5-.6.5-1.5 0-2z'/%3E%3Cpath fill='%23c5a059' d='M16 8l-2 2'/%3E%3C/svg%3E"), auto;
+}
+
+/* Potter Containers */
+body.potter .section-card,
+body.potter section,
+body.potter header,
+body.potter nav>div {
+  @apply bg-[#f8f1e5] mb-8 rounded-sm;
+  /* Double Border (Gold and Ink) */
+  border: 3px double #c5a059;
+  box-shadow:
+    5px 5px 15px rgba(0, 0, 0, 0.1),
+    inset 0 0 40px rgba(197, 160, 89, 0.1);
+  position: relative;
+}
+
+/* Decorative corner filigree (CSS pseudo-element approximation) */
+body.potter .section-card::after,
+body.potter section::after {
+  content: "⚡";
+  position: absolute;
+  top: -15px;
+  right: -10px;
+  font-size: 1.5rem;
+  color: #c5a059;
+  background: #f0e6d2;
+  border-radius: 50%;
+  padding: 0 5px;
+}
+
+body.potter h1,
+body.potter h2,
+body.potter h3 {
+  font-family: 'Cinzel', serif;
+  color: #740001;
+  /* Gryffindor Red */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 1px solid #c5a059;
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+body.potter p,
+body.potter span,
+body.potter li {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+body.potter .text-pale-dogwood,
+body.potter .text-rose-quartz {
+  color: #740001 !important;
+  font-weight: bold;
+}
+
+/* Link Hover Magic */
+body.potter a {
+  color: #2a1a15;
+  text-decoration: none;
+  border-bottom: 1px solid #740001;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+body.potter a:hover {
+  color: #740001;
+  text-shadow: 0 0 8px rgba(197, 160, 89, 0.8);
+  /* Lumos Effect */
+  border-bottom-color: #c5a059;
+}
+
+/* Potter Scrollbar (Quill Style) */
+body.potter::-webkit-scrollbar {
+  width: 12px;
+  background: #f0e6d2;
+}
+
+body.potter::-webkit-scrollbar-thumb {
+  background: #c5a059;
+  border: 2px solid #f0e6d2;
+  border-radius: 10px;
+}
+
+body.potter::-webkit-scrollbar-track {
+  background: rgba(42, 26, 21, 0.05);
 }
