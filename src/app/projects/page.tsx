@@ -51,6 +51,35 @@ export default function Projects() {
                 />
 
                 <ProjectCard
+                    title="Bayesian Clue Solver"
+                    status="COMPLETED"
+                    outcome="A real-time game assistant utilizing Bayesian reasoning and probabilistic inference to win Clue in under 7 turns."
+                    techStack="Python, Streamlit, Pandas, NumPy, Bayesian Inference"
+                    constraints="Real-time probability updates for 324 possible envelope combinations, handling imperfect information from player suggestions and refutations."
+                    imageSrc="/clue.jpg"
+                    description={
+                        <>
+                            <p>
+                                This game assistant uses <strong>Bayesian inference</strong> to model and update beliefs about the hidden state of the game. It tracks all player suggestions, responses, and seen cards to continuously calculate the probability distribution of the cards in the murder envelope.
+                            </p>
+                            <h4 className="font-bold text-space_cadet mt-4 mb-2">Technical Overview</h4>
+                            <p>
+                                For each card, the system estimates the probability of it being in the envelope given the history of observations:
+                                <br />
+                                <code className="block bg-space_cadet/5 p-2 rounded mt-2 text-xs">
+                                    P(Card ∈ Envelope | History) ∝ P(Card) × P(Evidence | Card ∈ Envelope)
+                                </code>
+                            </p>
+                            <ul className="list-disc ml-4 mt-2 space-y-1">
+                                <li><strong>Inference Rules:</strong> When no one refutes a suggestion, the specific cards are immediately assigned a probability of 1.0 (certainty).</li>
+                                <li><strong>Bayesian Updates:</strong> When a player shows a card they previously hid, the system uses a DecreaseFactor to adjust probabilities based on information theory principles.</li>
+                                <li><strong>Distribution Normalization:</strong> Suspect, weapon, and room probabilities each maintain a normalized sum of 1.0 within their respective categories.</li>
+                            </ul>
+                        </>
+                    }
+                />
+
+                <ProjectCard
                     title="Autonomous Multi-Agent Robotic Firefighting"
                     status="COMPLETED"
                     outcome="Optimized autonomous robot deployment system for wildfire containment, achieving a 30% reduction in cluster convergence time."
