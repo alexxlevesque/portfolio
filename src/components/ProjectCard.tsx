@@ -13,6 +13,7 @@ interface ProjectCardProps {
     description?: React.ReactNode;
     imageSrc?: string;
     imagePosition?: string;
+    grayscale?: boolean;
 }
 
 export default function ProjectCard({
@@ -24,7 +25,8 @@ export default function ProjectCard({
     constraints,
     description,
     imageSrc,
-    imagePosition = 'center'
+    imagePosition = 'center',
+    grayscale = false
 }: ProjectCardProps) {
     const [isExpanded, setIsExpanded] = useState(false);
 
@@ -37,7 +39,7 @@ export default function ProjectCard({
                         src={imageSrc}
                         alt={`${title} Preview`}
                         fill
-                        className="object-cover"
+                        className={`object-cover ${grayscale ? 'grayscale' : ''}`}
                         style={{ objectPosition: imagePosition }}
                         priority
                     />

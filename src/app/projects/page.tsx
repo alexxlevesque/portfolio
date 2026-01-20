@@ -57,6 +57,7 @@ export default function Projects() {
                     techStack="Python, Streamlit, Pandas, NumPy, Bayesian Inference"
                     constraints="Real-time probability updates for 324 possible envelope combinations, handling imperfect information from player suggestions and refutations."
                     imageSrc="/clue.jpg"
+                    grayscale={true}
                     description={
                         <>
                             <p>
