@@ -88,20 +88,8 @@ module.exports = {
           500: '#7CFC00',
           600: '#32CD32',
         },
-        // Minecraft Palette
-        minecraft: {
-          dirt: '#8B4513',
-          grass: '#567D46',
-          stone: '#757575',
-          text: '#3f3f3f',
-        },
-        // Harry Potter Palette
-        potter: {
-          parchment: '#f0e6d2',
-          ink: '#2a1a15',
-          gold: '#c5a059',
-          red: '#740001',
-        },
+
+
       },
       keyframes: {
         wave: {

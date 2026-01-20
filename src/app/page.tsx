@@ -1,71 +1,98 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Home() {
   return (
-    <main className="min-h-screen max-w-3xl mx-auto px-4 sm:px-6 py-24">
-      <header className="mb-12">
-        <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight">alex levesque</h1>
-        <p className="mt-2 text-sm text-pale-dogwood">applied math & computer engineering @ queen's university</p>
-        <div className="mt-4 text-sm text-rose-quartz space-x-4">
-          <a href="/documents/resume.pdf" target="_blank" rel="noopener noreferrer" className="underline hover:no-underline">resume</a>
-          <a href="https://www.linkedin.com/in/alex-levesque/" target="_blank" rel="noopener noreferrer" className="underline hover:no-underline">linkedin</a>
-          <a href="https://github.com/alexxlevesque" target="_blank" rel="noopener noreferrer" className="underline hover:no-underline">github</a>
+    <div className="space-y-16">
+      {/* Hero Section */}
+      <section className="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
+        <div className="shrink-0 w-32 h-32 sm:w-40 sm:h-40 rounded-xl overflow-hidden border border-white/10 shadow-lg relative">
+          <Image
+            src="/headshot.jpg"
+            alt="Alex Levesque"
+            fill
+            className="object-cover"
+            priority
+          />
         </div>
-      </header>
-
-      <section className="mb-10">
-        <h2 className="text-sm uppercase tracking-widest text-pale-dogwood">academics</h2>
-        <div className="mt-3 space-y-2 text-[15px] leading-7">
-          <p>&gt; 2024—present — queen's university — applied mathematics & computer engineering.</p>
-          <p className="text-rose-quartz">focus: computer science, real analysis, probability theory, control systems, stochastic calculus.</p>
-        </div>
-      </section>
-
-      <section className="mb-10">
-        <h2 className="text-sm uppercase tracking-widest text-pale-dogwood">internships</h2>
-        <div className="mt-3 space-y-3 text-[15px] leading-7">
-          <p>&gt; 2025 — ai technician intern — immigration and refugee board of canada.
-            <span className="block text-rose-quartz">azure, copilots, power automate; document transcription/classification; translation for legal workflows.</span>
+        <div className="flex-1 space-y-6">
+          <div>
+            <h1 className="text-4xl sm:text-5xl font-serif font-bold tracking-tight text-isabelline">Alex Levesque</h1>
+            <p className="mt-2 text-lg text-rose_quartz font-medium">Applied Math & Computer Engineering<br /><span className="text-sm opacity-80">Queen's University</span></p>
+          </div>
+          <p className="text-base text-pale_dogwood leading-relaxed max-w-lg">
+            I focus on computer science, real analysis, probability theory, control systems, and stochastic calculus. My goal is to build intelligent systems that bridge the gap between theory and application.
           </p>
-          <p>&gt; 2025 — llm research member — algoverse ai research.
-            <span className="block text-rose-quartz">12-week program with mentors from meta/openai/princeton; optimize MoE for efficiency, published a paper.</span>
-          </p>
-        </div>
-      </section>
-
-      <section className="mb-10">
-        <h2 className="text-sm uppercase tracking-widest text-pale-dogwood">key projects</h2>
-        <div className="mt-3 space-y-3 text-[15px] leading-7">
-          <p>&gt; 2026 — patientaware — context-aware ai platform —
-            <span className="block text-rose-quartz">context-aware ai platform addressing inefficiencies in canada's medical system; physician-facing summaries, ohip integration, and thread-based patient data storage system.</span>
-          </p>
-          <p>&gt; 2025 — adaptive reinforcement learning ensemble strategy — qmind —
-            <span className="block text-rose-quartz">ensemble of ppo, a2c, and td3 agents with adaptive allocation across market regimes; diversification framework reducing volatility and improving risk-adjusted returns via sharpe ratio analysis.</span>
-          </p>
-          <p>&gt; 2025 — clue game strategy optimization — bayesian assistant —
-            <a href="https://github.com/alexxlevesque/cluegamesolver" target="_blank" rel="noopener noreferrer" className="underline ml-1">github</a>
-            <span className="block text-rose-quartz">real-time probability updates, streamlit ui, consistent wins in fewer than 7 turns.</span>
-          </p>
-          <p>&gt; 2025 — ai forecasting paper — novel time series prediction methods —
-            <a href="https://medium.com/qmind-ai/transforming-market-predictions-with-machine-learning-and-random-forests-36e1d550da60" target="_blank" rel="noopener noreferrer" className="underline ml-1">medium</a>
-            <span className="block text-rose-quartz">comparative model analysis, statistical validation, implementation guidelines.</span>
-          </p>
-          <p>&gt; 2025 — ai ethics paper — copyright law in generative ai —
-            <a href="https://qmind.ca/project/86" target="_blank" rel="noopener noreferrer" className="underline ml-1">qmind</a>
-            <span className="block text-rose-quartz">published to cucai 2025, policy recommendations, interdisciplinary approach.</span>
-          </p>
+          <div className="pt-4 flex flex-wrap gap-6 text-sm text-pale_dogwood uppercase tracking-wider font-medium">
+            <a href="/documents/resume.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-isabelline transition-colors">Resume</a>
+            <a href="https://www.linkedin.com/in/alex-levesque/" target="_blank" rel="noopener noreferrer" className="hover:text-isabelline transition-colors">LinkedIn</a>
+            <a href="https://github.com/alexxlevesque" target="_blank" rel="noopener noreferrer" className="hover:text-isabelline transition-colors">GitHub</a>
+            <a href="mailto:alex.levesque@queensu.ca" className="hover:text-isabelline transition-colors">Email</a>
+            <a href="https://open.spotify.com/playlist/5StQUHdTuoxMFTDnhml6ot?si=56b6a2d707f64e3c" target="_blank" rel="noopener noreferrer" className="hover:text-isabelline transition-colors">Discography</a>
+          </div>
         </div>
       </section>
 
-      <section className="mt-14">
-        <h2 className="text-sm uppercase tracking-widest text-pale-dogwood">technical skills</h2>
-        <div className="mt-3 text-[15px] leading-7 space-y-1">
-          <p><span className="text-rose-quartz">languages</span>: python, c++, typescript, sql</p>
-          <p><span className="text-rose-quartz">ml / data</span>: numpy, pandas, scikit-learn, pytorch</p>
-          <p><span className="text-rose-quartz">platforms</span>: azure, copilot studio, power automate</p>
-          <p><span className="text-rose-quartz">tools</span>: git, solidworks, vscode, jupyter notebooks</p>
+      <hr className="border-white/10" />
+
+      {/* Experience Section */}
+      <section>
+        <h2 className="text-2xl font-serif font-bold text-isabelline mb-8">Experience</h2>
+        <div className="space-y-12">
+
+          {/* IRB */}
+          <div>
+            <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-1">
+              <h3 className="text-lg font-bold text-isabelline">AI Technician Intern</h3>
+              <span className="text-sm text-rose_quartz tabular-nums">2025</span>
+            </div>
+            <div className="text-sm text-rose_quartz mb-3">Immigration and Refugee Board of Canada</div>
+            <p className="text-pale_dogwood text-sm leading-relaxed">
+              Developed and deployed Azure-based workflows to transcribe, classify, and organize refugee basis-of-claim documents with 93% accuracy, significantly reducing manual processing time. Built an Azure chatbot using Cosmos DB, NLP, and embedding pipelines to cut legal document ingestion to under 10 minutes and presented the system’s impact to stakeholders at a conference.
+            </p>
+          </div>
+
+          {/* Algoverse */}
+          <div>
+            <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-1">
+              <h3 className="text-lg font-bold text-isabelline">LLM Research Member</h3>
+              <span className="text-sm text-rose_quartz tabular-nums">2025</span>
+            </div>
+            <div className="text-sm text-rose_quartz mb-3">Algoverse AI Research</div>
+            <p className="text-pale_dogwood text-sm leading-relaxed">
+              Conducted AI research in a 12-week program under mentorship from PhDs at Meta, OpenAI, and Princeton. Improved large language model efficiency by implementing a self-contrastive Mixture-of-Experts architecture in PyTorch and co-authoring a paper under review introducing contrastive decoding methods with a 2% benchmarked efficiency gain.
+            </p>
+          </div>
+
         </div>
       </section>
-    </main>
+
+
+
+      <hr className="border-white/10" />
+
+      {/* Skills Section */}
+      <section>
+        <h2 className="text-2xl font-serif font-bold text-isabelline mb-8">Technical Skills</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-pale_dogwood">
+          <div className="flex items-baseline space-x-2">
+            <span className="font-bold text-rose_quartz w-24 shrink-0">Languages</span>
+            <span>Python, C++, TypeScript, SQL</span>
+          </div>
+          <div className="flex items-baseline space-x-2">
+            <span className="font-bold text-rose_quartz w-24 shrink-0">ML / Data</span>
+            <span>NumPy, Pandas, Scikit-learn, PyTorch</span>
+          </div>
+          <div className="flex items-baseline space-x-2">
+            <span className="font-bold text-rose_quartz w-24 shrink-0">Platforms</span>
+            <span>Azure, Copilot Studio, Power Automate</span>
+          </div>
+          <div className="flex items-baseline space-x-2">
+            <span className="font-bold text-rose_quartz w-24 shrink-0">Tools</span>
+            <span>Git, SolidWorks, VSCode, Jupyter</span>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }

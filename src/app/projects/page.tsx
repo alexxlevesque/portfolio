@@ -1,44 +1,88 @@
 import Link from 'next/link';
+import ProjectCard from '@/components/ProjectCard';
 
 export default function Projects() {
     return (
-        <main className="min-h-screen max-w-3xl mx-auto px-4 sm:px-6 py-24">
-            <header className="mb-10">
-                <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight">projects</h1>
+        <div className="space-y-16 max-w-5xl mx-auto">
+            <header className="mb-16 text-center sm:text-left">
+                <h1 className="text-4xl sm:text-5xl font-serif font-bold text-space_cadet tracking-tight mb-4">Projects</h1>
+                <p className="text-ultra_violet font-medium italic"> Implementing my passions into reality.</p>
             </header>
 
-            <section className="mb-10">
-                <h2 className="text-sm uppercase tracking-widest text-pale-dogwood">2026 — patientaware: context-aware ai platform</h2>
-                <div className="mt-3 space-y-2 text-[15px] leading-7">
-                    <p>&gt; developed ai-powered clinical platform using backboard.ai to aggregate longitudinal patient data and generate physician-facing summaries, reducing appointment prep time and improving diagnostic accuracy.</p>
-                    <p>&gt; built context-aware patient dashboard integrated with ohip for continuous symptom logging and structured clinical insights, improving appointment efficiency and care continuity.</p>
-                    <p>&gt; architected thread-based patient data storage system to maintain persistent clinical context across appointments, enabling seamless access to ai-curated summaries.</p>
-                </div>
+            <section className="space-y-12">
+
+                <ProjectCard
+                    title="PatientAware: Context-Aware AI Platform"
+                    status="CURRENT"
+                    outcome="Offline-first clinical platform enabling context-aware summaries and care continuity without relying on constant cloud connectivity."
+                    techStack="Backboard.ai, React, OHIP API, Thread-based storage architecture"
+                    constraints="Strict data privacy compliance (PHIPA), seamless OHIP integration, persistent clinical context retention despite connectivity loss."
+                    imageSrc="/patientaware.png"
+                    imagePosition="top"
+                    description={
+                        <>
+                            <p>
+                                PatientAware addresses critical inefficiencies in Canada's medical system by providing physician-facing summaries that digest longitudinal patient data.
+                            </p>
+                            <p>
+                                The system features a dashboard for continuous symptom logging and structured clinical insights, ensuring care continuity. Thread-based patient data storage allows for persistent context across appointments.
+                            </p>
+                        </>
+                    }
+                />
+
+                <ProjectCard
+                    title="Adaptive RL Ensemble Strategy"
+                    status="COMPLETED"
+                    outcome="Adaptive trading strategy that reduces portfolio volatility and improves risk-adjusted returns using an ensemble of reinforcement learning agents."
+                    techStack="Python, PyTorch, PPO, A2C, TD3, Git"
+                    constraints="Adaptive allocation across varying market regimes, effective diversification to minimize drawdown, rigorous backtesting against SPY benchmark."
+                    imageSrc="/trading.png"
+                    description={
+                        <>
+                            <p>
+                                Developed at Queen's AI Club (QMIND), this project implemented an ensemble of Reinforcement Learning agents (PPO, A2C, TD3) to manage portfolio allocation adaptively.
+                            </p>
+                            <p>
+                                The diversification framework significantly reduced volatility compared to standard benchmarks like SPY buy-and-hold, validated through extensive Sharpe ratio and drawdown analysis.
+                            </p>
+                        </>
+                    }
+                />
+
+                <ProjectCard
+                    title="Autonomous Multi-Agent Robotic Firefighting"
+                    status="COMPLETED"
+                    outcome="Optimized autonomous robot deployment system for wildfire containment, achieving a 30% reduction in cluster convergence time."
+                    techStack="MATLAB, Lloyd's Algorithm, K-Means Clustering, GIS Spatial Analysis Tools"
+                    constraints="Real-time dynamic fire hotspot data processing, accurate perimeter modeling, efficient multi-agent coordination."
+                    imageSrc="/autonomousrobot.jpg"
+                    description={
+                        <>
+                            <p>
+                                This project focused on optimizing the deployment of autonomous firefighting robots. By developing and tuning Lloyd's algorithm in MATLAB for adaptive K-Means clustering, we achieved a 30% reduction in convergence time.
+                            </p>
+                            <p>
+                                We leveraged GIS wildfire spatial data to model fire perimeters accurately, providing real-time inputs that enhanced the efficiency of the robotic cluster's containment strategies.
+                            </p>
+                        </>
+                    }
+                />
+
             </section>
 
-            <section className="mb-10">
-                <h2 className="text-sm uppercase tracking-widest text-pale-dogwood">2025 — adaptive reinforcement learning ensemble strategy, queen's ai club</h2>
-                <div className="mt-3 space-y-2 text-[15px] leading-7">
-                    <p>&gt; implemented and trained an ensemble of ppo, a2c, and td3 reinforcement learning agents, with experiment tracking and version control managed via git, enabling adaptive allocation across multiple market regimes.</p>
-                    <p>&gt; engineered a diversification framework that reduced portfolio volatility and improved risk-adjusted returns, validated by sharpe ratio and drawdown analysis versus spy buy-and-hold.</p>
-                </div>
-            </section>
+            <hr className="border-black/5 my-12" />
 
-            <section className="mb-10">
-                <h2 className="text-sm uppercase tracking-widest text-pale-dogwood">2025 — autonomous multi-agent robotic firefighting</h2>
-                <div className="mt-3 space-y-2 text-[15px] leading-7">
-                    <p>&gt; developed and optimized lloyd's algorithm in matlab for adaptive k-means clustering of dynamic fire hotspot data, reducing cluster convergence time by 30% and improving autonomous robot deployment efficiency.</p>
-                    <p>&gt; leveraged gis wildfire spatial data and analysis tools to delineate and model fire perimeters, enabling accurate real-time input for robotic firefighting cluster optimization and enhancing fire containment strategies.</p>
+            <section>
+                <div className="flex flex-wrap gap-6 text-sm text-space_cadet/80 uppercase tracking-wider font-bold">
+                    <Link href="/" className="hover:text-space_cadet transition-colors">Home</Link>
+                    <Link href="/blog" className="hover:text-space_cadet transition-colors">Notes</Link>
+                    <a href="/documents/resume.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-space_cadet transition-colors">Resume</a>
+                    <a href="https://www.linkedin.com/in/alex-levesque/" target="_blank" rel="noopener noreferrer" className="hover:text-space_cadet transition-colors">LinkedIn</a>
+                    <a href="https://github.com/alexxlevesque" target="_blank" rel="noopener noreferrer" className="hover:text-space_cadet transition-colors">GitHub</a>
+                    <a href="https://open.spotify.com/playlist/5StQUHdTuoxMFTDnhml6ot?si=56b6a2d707f64e3c" target="_blank" rel="noopener noreferrer" className="hover:text-space_cadet transition-colors">Discography</a>
                 </div>
             </section>
-
-            <section className="mt-12">
-                <h2 className="text-sm uppercase tracking-widest text-pale-dogwood">links</h2>
-                <div className="mt-3 text-[15px] leading-7 space-y-1">
-                    <p>&gt; <Link href="/" className="underline">home</Link> · <Link href="/experience" className="underline">experience</Link> · <Link href="/blog" className="underline">notes</Link></p>
-                    <p>&gt; <a href="/documents/resume.pdf" target="_blank" rel="noopener noreferrer" className="underline">resume</a> · <a href="https://www.linkedin.com/in/alex-levesque/" target="_blank" rel="noopener noreferrer" className="underline">linkedin</a> · <a href="https://github.com/alexxlevesque" target="_blank" rel="noopener noreferrer" className="underline">github</a></p>
-                </div>
-            </section>
-        </main>
+        </div>
     );
 }

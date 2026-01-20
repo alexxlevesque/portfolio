@@ -8,13 +8,12 @@ export default function TopNavigation() {
 
   const navItems = [
     { href: '/', label: 'home' },
-    { href: '/experience', label: 'experience' },
     { href: '/projects', label: 'projects' },
     { href: '/blog', label: 'notes' },
   ];
 
   return (
-    <nav className="fixed top-5 right-5 z-50">
+    <nav className="absolute top-5 left-5 z-50">
       <div className="bg-transparent px-0 py-0">
         <div className="flex items-center space-x-4 text-sm">
           {navItems.map((item) => (
@@ -22,8 +21,8 @@ export default function TopNavigation() {
               key={item.href}
               href={item.href}
               className={`px-3 py-1.5 rounded-md font-medium tracking-tight transition-all duration-200 ${pathname === item.href
-                  ? 'text-isabelline bg-ultra-violet/30'
-                  : 'text-pale-dogwood hover:text-isabelline hover:bg-ultra-violet/20'
+                ? 'text-white bg-space_cadet shadow-md'
+                : 'text-space_cadet/70 hover:text-space_cadet hover:bg-space_cadet/5'
                 }`}
             >
               {item.label}
