@@ -169,11 +169,24 @@ export default function Projects() {
                     description={
                         <>
                             <p>
-                                This project focused on optimizing the deployment of autonomous firefighting robots. By developing and tuning Lloyd's algorithm in MATLAB for adaptive K-Means clustering, we achieved a 30% reduction in convergence time.
+                                Driven by an interest in mathematical optimization, I developed a decentralized multi-agent system designed to tackle the unpredictable nature of wildfires. Moving away from rigid, centralized control, I implemented <strong>Lloyd’s Algorithm</strong> (i. e. K-Means Clustering) to allow a fleet of drones to "self-organize" based on real-time environmental data.
                             </p>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+                                <div className="rounded-lg overflow-hidden border border-black/5 shadow-sm">
+                                    <img src="/firefighting_1.png" alt="Multi-agent fire containment simulation" className="w-full h-auto" />
+                                </div>
+                                <div className="rounded-lg overflow-hidden border border-black/5 shadow-sm">
+                                    <img src="/firefighting_2.png" alt="Drone agent trajectory plots" className="w-full h-auto" />
+                                </div>
+                            </div>
                             <p>
-                                We leveraged GIS wildfire spatial data to model fire perimeters accurately, providing real-time inputs that enhanced the efficiency of the robotic cluster's containment strategies.
+                                I built a custom simulation environment in MATLAB where I experimented with:
                             </p>
+                            <ul className="list-disc ml-4 mt-2 space-y-2">
+                                <li><strong>Dynamic Spatial Partitioning:</strong> Using Voronoi regions to ensure agents automatically distribute themselves to the most critical "hotspots" without human intervention.</li>
+                                <li><strong>Sensor Fusion Logic:</strong> Designing an "Observation Set" function that allows agents to weigh environmental density, effectively giving the swarm a collective "vision" of the fire's intensity.</li>
+                                <li><strong>Robustness & Scalability:</strong> Engineering the system to be decentralized so that the failure of one drone doesn't compromise the mission, as neighboring agents autonomously re-calculate and compensate for the gap.</li>
+                            </ul>
                         </>
                     }
                 />
