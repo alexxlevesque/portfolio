@@ -12,8 +12,48 @@ export default function Projects() {
             <section className="space-y-12">
 
                 <ProjectCard
-                    title="PatientAware: Context-Aware AI Platform"
+                    title="Kalman Inventory Alpha Diagnostic"
                     status="CURRENT"
+                    outcome="Microeconomic diagnostic platform that identifies 'Phantom Demand' and 'Dead Inventory' using advanced state estimation, enabling radical inventory reduction."
+                    techStack="Python (Streamlit, Polars, NumPy, SciPy), Recursive Kalman Filter, Poetry"
+                    constraints="Extracting true demand signals from noisy sales data (M5 dataset), modeling process uncertainty vs. measurement noise, and calculating dynamic safety stock."
+                    imageSrc="/inventory.jpg"
+                    grayscale={true}
+                    contrast={true}
+                    description={
+                        <>
+                            <p>
+                                Inventory Alpha identifies inefficiencies in retail supply chains by applying a <strong>Recursive Kalman Filter</strong> to sales data. Unlike static models, it separates random noise from actual trends, allowing for reduction of excess inventory without sacrificing sales.
+                            </p>
+                            <h4 className="font-bold text-space_cadet mt-4 mb-2">The Kalman Advantage</h4>
+                            <p>
+                                By treating demand as a latent state in a 1D Random Walk, the system accounts for:
+                            </p>
+                            <ul className="list-disc ml-4 mt-2 space-y-1">
+                                <li><strong>Measurement Noise (R):</strong> Filtering out random daily fluctuations and measurement errors.</li>
+                                <li><strong>Process Uncertainty (Q):</strong> Adapting to how fast underlying demand signals actually shift.</li>
+                                <li><strong>Dynamic Covariance (P):</strong> Driving Z-score based safety stocks directly from real-time signal uncertainty.</li>
+                            </ul>
+                            <div className="mt-6 pt-4 border-t border-black/5">
+                                <a
+                                    href="https://github.com/alexxlevesque/inventoryalpha"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 font-bold text-space_cadet hover:text-ultra_violet transition-colors"
+                                >
+                                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.645-.735-3.885-1.395-.135-.345-.72-1.395-1.23-1.68-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                                    </svg>
+                                    View Source Code
+                                </a>
+                            </div>
+                        </>
+                    }
+                />
+
+                <ProjectCard
+                    title="PatientAware: Context-Aware AI Platform"
+                    status="COMPLETED"
                     outcome="Offline-first clinical platform enabling context-aware summaries and care continuity without relying on constant cloud connectivity."
                     techStack="Backboard.ai, React, OHIP API, Thread-based storage architecture"
                     constraints="Strict data privacy compliance (PHIPA), seamless OHIP integration, persistent clinical context retention despite connectivity loss."
@@ -27,6 +67,19 @@ export default function Projects() {
                             <p>
                                 The system features a dashboard for continuous symptom logging and structured clinical insights, ensuring care continuity. Thread-based patient data storage allows for persistent context across appointments.
                             </p>
+                            <div className="mt-6 pt-4 border-t border-black/5">
+                                <a
+                                    href="https://github.com/alexxlevesque/patientaware"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 font-bold text-space_cadet hover:text-ultra_violet transition-colors"
+                                >
+                                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.645-.735-3.885-1.395-.135-.345-.72-1.395-1.23-1.68-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                                    </svg>
+                                    View Source Code
+                                </a>
+                            </div>
                         </>
                     }
                 />
@@ -46,6 +99,19 @@ export default function Projects() {
                             <p>
                                 The diversification framework significantly reduced volatility compared to standard benchmarks like SPY buy-and-hold, validated through extensive Sharpe ratio and drawdown analysis.
                             </p>
+                            <div className="mt-6 pt-4 border-t border-black/5">
+                                <a
+                                    href="https://github.com/ary4f/QMINDARES/tree/main"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 font-bold text-space_cadet hover:text-ultra_violet transition-colors"
+                                >
+                                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.645-.735-3.885-1.395-.135-.345-.72-1.395-1.23-1.68-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                                    </svg>
+                                    View Source Code
+                                </a>
+                            </div>
                         </>
                     }
                 />
@@ -76,6 +142,19 @@ export default function Projects() {
                                 <li><strong>Bayesian Updates:</strong> When a player shows a card they previously hid, the system uses a DecreaseFactor to adjust probabilities based on information theory principles.</li>
                                 <li><strong>Distribution Normalization:</strong> Suspect, weapon, and room probabilities each maintain a normalized sum of 1.0 within their respective categories.</li>
                             </ul>
+                            <div className="mt-6 pt-4 border-t border-black/5">
+                                <a
+                                    href="https://github.com/alexxlevesque/cluegamesolver"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 font-bold text-space_cadet hover:text-ultra_violet transition-colors"
+                                >
+                                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.645-.735-3.885-1.395-.135-.345-.72-1.395-1.23-1.68-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                                    </svg>
+                                    View Source Code
+                                </a>
+                            </div>
                         </>
                     }
                 />
