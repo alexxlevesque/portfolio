@@ -168,6 +168,9 @@ export default function Projects() {
                     imageSrc="/autonomousrobot.jpg"
                     description={
                         <>
+                            <p className="font-bold text-space_cadet mb-4 italic">
+                                Course project for APSC 200: Engineering Design and Practice. Course Grade: A+ | Role: Primary Technical Contributor
+                            </p>
                             <p>
                                 Driven by an interest in mathematical optimization, I developed a decentralized multi-agent system designed to tackle the unpredictable nature of wildfires. Moving away from rigid, centralized control, I implemented <strong>Lloyd’s Algorithm</strong> (i. e. K-Means Clustering) to allow a fleet of drones to "self-organize" based on real-time environmental data.
                             </p>
