@@ -6,7 +6,7 @@ export default function Home() {
     <div className="space-y-16">
       {/* Hero Section */}
       <section className="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
-        <div className="shrink-0 w-32 h-32 sm:w-40 sm:h-40 rounded-xl overflow-hidden border border-white/10 shadow-lg relative">
+        <div className="shrink-0 w-48 h-48 sm:w-64 sm:h-64 rounded-xl overflow-hidden border border-white/10 shadow-lg relative">
           <Image
             src="/headshot.jpg"
             alt="Alex Levesque"
