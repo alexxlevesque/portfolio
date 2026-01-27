@@ -9,7 +9,7 @@ export default function TopNavigation() {
   const navItems = [
     { href: '/', label: 'home' },
     { href: '/projects', label: 'projects' },
-    { href: '/blog', label: 'notes' },
+    { href: '/library', label: 'library' },
   ];
 
   return (
