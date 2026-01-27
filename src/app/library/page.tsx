@@ -11,14 +11,14 @@ export default function Library() {
             author: "Sheldon Ross",
             rating: "4/5",
             thoughts: "A thorough walkthrough of the mathematical foundations of finance. I'm not sure if I took much away from this book as I read this book early in my undergrad, however it definitely spiked my interest in understanding mathematical systems behind finance and data science implications.",
-            imageSrc: "/images/books/elementaryintroductiontomathematicalfinance.jpg" // Placeholder path, user can update
+            imageSrc: "/books/elementaryintroductiontomathematicalfinance.jpg" // Placeholder path, user can update
         },
         {
             title: "Critique of Pure Reason",
             author: "Immanuel Kant",
             rating: "4/5",
             thoughts: "Incredibly dense and a hard read, but perfect for one who follows rationalist philosophy. Although Kant's ideas were very disputed, they follow strict logic and are present thoroughly. As a beginner, I found it to be tough to grasp, but it was a good introduction to the subject.",
-            imageSrc: "/images/books/critiqueofpurereason.jpg" // Placeholder path
+            imageSrc: "/books/critiqueofpurereason.jpg" // Placeholder path
         },
         // Add more books here
     ];
