@@ -20,6 +20,13 @@ export default function Library() {
             thoughts: "Incredibly dense and a hard read, but perfect for one who follows rationalist philosophy. Although Kant's ideas were very disputed, they follow strict logic and are present thoroughly. As a beginner, I found it to be tough to grasp, but it was a good introduction to the subject.",
             imageSrc: "/books/critiqueofpurereason.jpg" // Placeholder path
         },
+        {
+            title: "Becoming a Data Head",
+            author: "Alex J. Gutman and Jordan Goldmeier",
+            rating: "5/5",
+            thoughts: "Excellent book for anyone from an experienced data scientist to someone looking for a spark of interest in the field and usage of data. I remember using some ideas from this book in interviews to articulate my interest in data science.",
+            imageSrc: "/books/datahead.jpg" // Placeholder path
+        },
         // Add more books here
     ];
 
