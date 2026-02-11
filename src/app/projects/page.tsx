@@ -9,7 +9,7 @@ export default function Projects() {
                 <p className="text-ultra_violet font-medium italic"> Implementing my passions into reality.</p>
             </header>
 
-            <section className="space-y-12">
+            <section className="space-y-6">
 
                 <ProjectCard
                     title="Kalman Inventory Alpha Diagnostic"

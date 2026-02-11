@@ -24,7 +24,7 @@ export default function Library() {
             title: "Becoming a Data Head",
             author: "Alex J. Gutman and Jordan Goldmeier",
             rating: "5/5",
-            thoughts: "Excellent book for anyone from an experienced data scientist to someone looking for a spark of interest in the field and usage of data. I remember using some ideas from this book in interviews to articulate my interest in data science.",
+            thoughts: "Excellent book for anyone from an experienced data scientist to someone looking for a spark of interest in the field and usage of data. I remember using some ideas from this book in interviews to effectively articulate my interest in data science.",
             imageSrc: "/books/datahead.jpg" // Placeholder path
         },
         // Add more books here
@@ -135,16 +135,16 @@ export default function Library() {
                     <h2 className="text-xl font-serif font-bold text-pale_dogwood">
                         Lecture Notes
                     </h2>
-                    <span className="text-xs text-white/30 uppercase tracking-wider">University of Queen's</span>
+                    <span className="text-xs text-white/30 uppercase tracking-wider">Queen's University</span>
                 </div>
 
-                <div className="space-y-16">
+                <div className="space-y-10">
                     {terms.map((term) => (
-                        <div key={term.name} className="space-y-6">
+                        <div key={term.name} className="space-y-4">
                             <h3 className="text-sm font-bold text-rose_quartz uppercase tracking-wider">
                                 {term.name}
                             </h3>
-                            <div className="grid grid-cols-1 gap-4">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 {term.courses.map((repo) => (
                                     <div key={repo.code} className="flex flex-col sm:flex-row gap-4 items-start sm:items-center group bg-white/5 rounded-lg p-4 hover:bg-white/10 transition-colors border border-white/5 hover:border-white/10">
                                         {/* Icon/Code Box */}
@@ -174,8 +174,6 @@ export default function Library() {
                     ))}
                 </div>
             </section>
-
-            <hr className="border-white/10" />
 
             <section>
                 <div className="flex flex-wrap gap-6 text-sm text-pale_dogwood uppercase tracking-wider font-medium">

@@ -9,7 +9,14 @@ export default function Experience() {
       </header>
 
       <section className="glass-panel p-8 mb-10">
-        <h2 className="text-sm font-bold uppercase tracking-widest text-aero-green mb-4 border-b border-white/10 pb-2">2025 — ai researcher, algoverse ai research</h2>
+        <h2 className="text-sm font-bold uppercase tracking-widest text-aero-green mb-4 border-b border-white/10 pb-2">2026 — data science intern, scotiabank velocity program (Toronto, ON)</h2>
+        <div className="space-y-4 text-[15px] leading-relaxed text-gray-200">
+          <p>&gt; incoming summer 2026</p>
+        </div>
+      </section>
+
+      <section className="glass-panel p-8 mb-10">
+        <h2 className="text-sm font-bold uppercase tracking-widest text-aero-green mb-4 border-b border-white/10 pb-2">2025 — ai researcher, algoverse ai research (Remote)</h2>
         <div className="space-y-4 text-[15px] leading-relaxed text-gray-200">
           <p>&gt; conducted ai research in a 12-week program with mentorship from phds at meta, openai, and princeton.</p>
           <p>&gt; enhanced large language models (qwen3-235b-a22b, gpt-oss) by implementing a self-contrastive mixture-of-experts (moe) architecture using pytorch and jupyter notebooks.</p>
@@ -18,7 +25,7 @@ export default function Experience() {
       </section>
 
       <section className="glass-panel p-8 mb-10">
-        <h2 className="text-sm font-bold uppercase tracking-widest text-aero-green mb-4 border-b border-white/10 pb-2">2025 — genai intern, government of canada – immigration board</h2>
+        <h2 className="text-sm font-bold uppercase tracking-widest text-aero-green mb-4 border-b border-white/10 pb-2">2025 — genai intern, government of canada – immigration board (Ottawa, ON)</h2>
         <div className="space-y-4 text-[15px] leading-relaxed text-gray-200">
           <p>&gt; developed and tested an azure workflow to transcribe, classify, and organize refugee basis of claim documents with 93% accuracy, reducing manual processing time.</p>
           <p>&gt; engineered an azure-based chatbot leveraging cosmos db (nosql), nlp, and embedding pipelines, reducing legal document ingestion time to under 10 minutes.</p>

@@ -21,7 +21,7 @@ export default function Home() {
             <p className="mt-2 text-lg text-rose_quartz font-medium">Applied Math & Computer Engineering<br /><span className="text-sm opacity-80">Queen's University</span></p>
           </div>
           <p className="text-base text-pale_dogwood leading-relaxed max-w-lg">
-            I focus on computer science, real analysis, probability theory, control systems, and stochastic calculus. My goal is to build intelligent systems that bridge the gap between theory and application.
+            Interested in all related to computer science, data science, probability theory, and statistics. My goal is to build intelligent systems to solve real-world problems.
           </p>
           <div className="pt-4 flex flex-wrap gap-6 text-sm text-pale_dogwood uppercase tracking-wider font-medium">
             <a href="/documents/resume.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-isabelline transition-colors">Resume</a>
@@ -33,12 +33,23 @@ export default function Home() {
         </div>
       </section>
 
-      <hr className="border-white/10" />
-
       {/* Experience Section */}
       <section>
         <h2 className="text-2xl font-serif font-bold text-isabelline mb-8">Experience</h2>
         <div className="space-y-12">
+
+          {/* Scotiabank */}
+          <div>
+            <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-1">
+              <h3 className="text-lg font-bold text-isabelline">Data Science Intern</h3>
+              <span className="text-sm text-rose_quartz tabular-nums">2026</span>
+            </div>
+            <div className="text-sm text-rose_quartz mb-3 italic">Scotiabank Velocity Program &bull; Toronto, ON</div>
+            <p className="text-pale_dogwood text-sm leading-relaxed">
+              Incoming Summer 2026
+            </p>
+          </div>
+
 
           {/* IRB */}
           <div>
@@ -46,7 +57,7 @@ export default function Home() {
               <h3 className="text-lg font-bold text-isabelline">AI Technician Intern</h3>
               <span className="text-sm text-rose_quartz tabular-nums">2025</span>
             </div>
-            <div className="text-sm text-rose_quartz mb-3">Immigration and Refugee Board of Canada</div>
+            <div className="text-sm text-rose_quartz mb-3 italic">Immigration and Refugee Board of Canada &bull; Ottawa, ON</div>
             <p className="text-pale_dogwood text-sm leading-relaxed">
               Developed and deployed Azure-based workflows to transcribe, classify, and organize refugee basis-of-claim documents with 93% accuracy, significantly reducing manual processing time. Built an Azure chatbot using Cosmos DB, NLP, and embedding pipelines to cut legal document ingestion to under 10 minutes and presented the system’s impact to stakeholders at a conference.
             </p>
@@ -58,7 +69,7 @@ export default function Home() {
               <h3 className="text-lg font-bold text-isabelline">LLM Research Member</h3>
               <span className="text-sm text-rose_quartz tabular-nums">2025</span>
             </div>
-            <div className="text-sm text-rose_quartz mb-3">Algoverse AI Research</div>
+            <div className="text-sm text-rose_quartz mb-3 italic">Algoverse AI Research &bull; Remote</div>
             <p className="text-pale_dogwood text-sm leading-relaxed">
               Conducted AI research in a 12-week program under mentorship from PhDs at Meta, OpenAI, and Princeton. Improved large language model efficiency by implementing a self-contrastive Mixture-of-Experts architecture in PyTorch and co-authoring a paper under review introducing contrastive decoding methods with a 2% benchmarked efficiency gain.
             </p>
@@ -66,10 +77,6 @@ export default function Home() {
 
         </div>
       </section>
-
-
-
-      <hr className="border-white/10" />
 
       {/* Skills Section */}
       <section>
