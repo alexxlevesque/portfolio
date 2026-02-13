@@ -10,6 +10,7 @@ export default function TopNavigation() {
     { href: '/', label: 'home' },
     { href: '/projects', label: 'projects' },
     { href: '/library', label: 'library' },
+    { href: '/music', label: 'music' },
   ];
 
   return (

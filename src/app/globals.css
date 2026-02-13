@@ -1,9 +1,5 @@
 /* Modern, friendly typography with Inter font */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
-
 
 @tailwind base;
 @tailwind components;
@@ -50,48 +46,4 @@ a {
 
 a:hover {
   @apply brightness-110;
-}
-
-/* Remove glassy cards for a pure text-first layout - DEFAULT THEME */
-.section-card {
-  @apply max-w-3xl mx-auto mb-10 p-0 shadow-none bg-transparent;
-}
-
-/* Subtle fade-in animation */
-.fade-in {
-  @apply opacity-100 translate-y-0;
-}
-
-/* Animation Keyframes */
-@keyframes pulse-slow {
-  0% {
-    opacity: 0.8;
-    transform: scale(1);
-  }
-
-  100% {
-    opacity: 1;
-    transform: scale(1.05);
-  }
-}
-
-/* Custom prose styles for blog content */
-.prose {
-  @apply text-pale_dogwood;
-}
-
-.prose h3 {
-  @apply text-isabelline font-semibold mt-6 mb-3;
-}
-
-.prose p {
-  @apply mb-4 leading-relaxed;
-}
-
-.prose ul {
-  @apply mb-4;
-}
-
-.prose li {
-  @apply mb-2;
 }

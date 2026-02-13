@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Script from "next/script"; // 1. Import Script component
 import "./globals.css";
 import TopNavigation from "@/components/TopNavigation";
 
@@ -19,14 +18,6 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className="min-h-screen antialiased transition-colors duration-500">
-        {/* 2. Add the AdSense Script here. Next.js handles the placement optimization. */}
-        <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1118550749854810"
-          crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
-
         <TopNavigation />
 
         <div className="min-h-screen flex items-center justify-center py-20 px-4 sm:px-6">

@@ -176,9 +176,10 @@ export default function Library() {
             </section>
 
             <section>
-                <div className="flex flex-wrap gap-6 text-sm text-pale_dogwood uppercase tracking-wider font-medium">
-                    <Link href="/" className="hover:text-isabelline transition-colors">Home</Link>
-                    <Link href="/projects" className="hover:text-isabelline transition-colors">Projects</Link>
+                <div className="flex flex-wrap gap-6 text-sm text-space_cadet/80 uppercase tracking-wider font-bold">
+                    <Link href="/" className="hover:text-space_cadet transition-colors">Home</Link>
+                    <Link href="/projects" className="hover:text-space_cadet transition-colors">Projects</Link>
+                    <Link href="/music" className="hover:text-space_cadet transition-colors">Music</Link>
                 </div>
             </section>
 

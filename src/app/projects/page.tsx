@@ -201,11 +201,8 @@ export default function Projects() {
             <section>
                 <div className="flex flex-wrap gap-6 text-sm text-space_cadet/80 uppercase tracking-wider font-bold">
                     <Link href="/" className="hover:text-space_cadet transition-colors">Home</Link>
-                    <Link href="/blog" className="hover:text-space_cadet transition-colors">Notes</Link>
-                    <a href="/documents/resume.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-space_cadet transition-colors">Resume</a>
-                    <a href="https://www.linkedin.com/in/alex-levesque/" target="_blank" rel="noopener noreferrer" className="hover:text-space_cadet transition-colors">LinkedIn</a>
-                    <a href="https://github.com/alexxlevesque" target="_blank" rel="noopener noreferrer" className="hover:text-space_cadet transition-colors">GitHub</a>
-                    <a href="https://open.spotify.com/playlist/5StQUHdTuoxMFTDnhml6ot?si=56b6a2d707f64e3c" target="_blank" rel="noopener noreferrer" className="hover:text-space_cadet transition-colors">Discography</a>
+                    <Link href="/library" className="hover:text-space_cadet transition-colors">Library</Link>
+                    <Link href="/music" className="hover:text-space_cadet transition-colors">Music</Link>
                 </div>
             </section>
         </div>
