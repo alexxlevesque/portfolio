@@ -13,8 +13,10 @@ interface ProjectCardProps {
     description?: React.ReactNode;
     imageSrc?: string;
     imagePosition?: string;
+    imageScale?: number;
     grayscale?: boolean;
     contrast?: boolean;
+    customFilter?: string;
 }
 
 export default function ProjectCard({
@@ -27,8 +29,10 @@ export default function ProjectCard({
     description,
     imageSrc,
     imagePosition = 'center',
+    imageScale = 1,
     grayscale = false,
-    contrast = false
+    contrast = false,
+    customFilter = ''
 }: ProjectCardProps) {
     const [isExpanded, setIsExpanded] = useState(false);
 
@@ -42,7 +46,11 @@ export default function ProjectCard({
                         alt={`${title} Preview`}
                         fill
                         className={`object-cover ${grayscale ? 'grayscale' : ''} ${contrast ? 'contrast-150' : ''}`}
-                        style={{ objectPosition: imagePosition }}
+                        style={{
+                            objectPosition: imagePosition,
+                            transform: `scale(${imageScale})`,
+                            filter: customFilter
+                        }}
                         priority
                     />
                 ) : (

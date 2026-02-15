@@ -18,8 +18,7 @@ export default function Projects() {
                     techStack="Python (Streamlit, Polars, NumPy, SciPy), Recursive Kalman Filter, Poetry"
                     constraints="Extracting true demand signals from noisy sales data (M5 dataset), modeling process uncertainty vs. measurement noise, and calculating dynamic safety stock."
                     imageSrc="/inventory.jpg"
-                    grayscale={true}
-                    contrast={true}
+                    customFilter="grayscale(100%) sepia(100%) hue-rotate(180deg) saturate(3) brightness(0.8) contrast(1.2)"
                     description={
                         <>
                             <p>
@@ -59,6 +58,7 @@ export default function Projects() {
                     constraints="Strict data privacy compliance (PHIPA), seamless OHIP integration, persistent clinical context retention despite connectivity loss."
                     imageSrc="/patientaware.png"
                     imagePosition="top"
+                    customFilter="grayscale(100%) sepia(100%) hue-rotate(180deg) saturate(3) brightness(0.8) contrast(1.2)"
                     description={
                         <>
                             <p>
@@ -91,6 +91,8 @@ export default function Projects() {
                     techStack="Python, PyTorch, PPO, A2C, TD3, Git"
                     constraints="Adaptive allocation across varying market regimes, effective diversification to minimize drawdown, rigorous backtesting against SPY benchmark."
                     imageSrc="/trading.png"
+                    imageScale={1.3}
+                    customFilter="grayscale(100%) sepia(100%) hue-rotate(180deg) saturate(3) brightness(0.8) contrast(1.2)"
                     description={
                         <>
                             <p>
@@ -123,7 +125,7 @@ export default function Projects() {
                     techStack="Python, Streamlit, Pandas, NumPy, Bayesian Inference"
                     constraints="Real-time probability updates for 324 possible envelope combinations, handling imperfect information from player suggestions and refutations."
                     imageSrc="/clue.jpg"
-                    grayscale={true}
+                    customFilter="grayscale(100%) sepia(100%) hue-rotate(180deg) saturate(3) brightness(0.8) contrast(1.2)"
                     description={
                         <>
                             <p>
@@ -166,6 +168,7 @@ export default function Projects() {
                     techStack="MATLAB, Lloyd's Algorithm, K-Means Clustering, GIS Spatial Analysis Tools"
                     constraints="Real-time dynamic fire hotspot data processing, accurate perimeter modeling, efficient multi-agent coordination."
                     imageSrc="/autonomousrobot.jpg"
+                    customFilter="grayscale(100%) sepia(100%) hue-rotate(180deg) saturate(3) brightness(0.8) contrast(1.2)"
                     description={
                         <>
                             <p className="font-bold text-space_cadet mb-4 italic">
