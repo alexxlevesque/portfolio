@@ -148,7 +148,7 @@ export default function Library() {
                                 {term.courses.map((repo) => (
                                     <div key={repo.code} className="flex flex-col sm:flex-row gap-4 items-start sm:items-center group bg-white/5 rounded-lg p-4 hover:bg-white/10 transition-colors border border-white/5 hover:border-white/10">
                                         {/* Icon/Code Box */}
-                                        <div className="shrink-0 w-12 h-12 rounded bg-space_cadet/30 border border-white/10 flex items-center justify-center text-[10px] font-bold text-center text-pale_dogwood">
+                                        <div className="shrink-0 w-12 h-12 rounded bg-steel_blue/20 border border-steel_blue/30 flex items-center justify-center text-[10px] font-bold text-center text-steel_blue">
                                             {repo.code}
                                         </div>
 
@@ -159,7 +159,7 @@ export default function Library() {
                                                 </a>
                                             </h4>
                                             <div className="flex items-center gap-2 mt-1">
-                                                <a href={repo.repository} target="_blank" rel="noopener noreferrer" className="text-xs text-rose_quartz hover:text-isabelline transition-colors flex items-center gap-1">
+                                                <a href={repo.repository} target="_blank" rel="noopener noreferrer" className="text-xs text-rose_quartz hover:text-steel_blue transition-colors flex items-center gap-1">
                                                     <span>View PDF</span>
                                                     <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
@@ -177,9 +177,9 @@ export default function Library() {
 
             <section>
                 <div className="flex flex-wrap gap-6 text-sm text-space_cadet/80 uppercase tracking-wider font-bold">
-                    <Link href="/" className="hover:text-space_cadet transition-colors">Home</Link>
-                    <Link href="/projects" className="hover:text-space_cadet transition-colors">Projects</Link>
-                    <Link href="/music" className="hover:text-space_cadet transition-colors">Music</Link>
+                    <Link href="/" className="hover:text-steel_blue transition-colors">Home</Link>
+                    <Link href="/projects" className="hover:text-steel_blue transition-colors">Projects</Link>
+                    <Link href="/music" className="hover:text-steel_blue transition-colors">Music</Link>
                 </div>
             </section>
 

@@ -203,9 +203,9 @@ export default function Projects() {
 
             <section>
                 <div className="flex flex-wrap gap-6 text-sm text-space_cadet/80 uppercase tracking-wider font-bold">
-                    <Link href="/" className="hover:text-space_cadet transition-colors">Home</Link>
-                    <Link href="/library" className="hover:text-space_cadet transition-colors">Library</Link>
-                    <Link href="/music" className="hover:text-space_cadet transition-colors">Music</Link>
+                    <Link href="/" className="hover:text-steel_blue transition-colors">Home</Link>
+                    <Link href="/library" className="hover:text-steel_blue transition-colors">Library</Link>
+                    <Link href="/music" className="hover:text-steel_blue transition-colors">Music</Link>
                 </div>
             </section>
         </div>

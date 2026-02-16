@@ -42,7 +42,7 @@ export default function BookCard({
 
                 {/* Overlay Rating */}
                 {rating && (
-                    <div className="absolute top-3 right-3 bg-space_cadet/90 backdrop-blur-md text-white text-xs font-bold px-2 py-1 rounded shadow-lg border border-white/10">
+                    <div className="absolute top-3 right-3 bg-steel_blue/90 backdrop-blur-md text-white text-xs font-bold px-2 py-1 rounded shadow-lg border border-steel_blue/30">
                         {rating}
                     </div>
                 )}
@@ -53,7 +53,7 @@ export default function BookCard({
                 <div className="mb-3">
                     <h3 className="text-lg font-serif font-bold text-space_cadet leading-tight mb-1">
                         {link ? (
-                            <a href={link} target="_blank" rel="noopener noreferrer" className="hover:text-rose_quartz transition-colors">
+                            <a href={link} target="_blank" rel="noopener noreferrer" className="hover:text-steel_blue transition-colors">
                                 {title}
                             </a>
                         ) : (
@@ -74,7 +74,7 @@ export default function BookCard({
                 <div className="pt-4 mt-auto border-t border-black/5 flex justify-end">
                     <button
                         onClick={() => setIsExpanded(!isExpanded)}
-                        className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-space_cadet/60 hover:text-space_cadet transition-colors"
+                        className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-space_cadet/60 hover:text-steel_blue transition-colors"
                     >
                         {isExpanded ? 'Less' : 'More'}
                         <svg

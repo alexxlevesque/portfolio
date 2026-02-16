@@ -21,7 +21,7 @@ export default function RootLayout({
         <TopNavigation />
 
         <div className="min-h-screen flex items-center justify-center py-20 px-4 sm:px-6">
-          <div className="w-full max-w-4xl bg-white/80 backdrop-blur-md rounded-2xl shadow-xl border border-black/5 p-8 sm:p-12 transition-colors duration-500">
+          <div className="w-full max-w-4xl bg-white/80 backdrop-blur-md rounded-2xl shadow-xl border border-steel_blue/10 p-8 sm:p-12 transition-colors duration-500">
             {children}
           </div>
         </div>

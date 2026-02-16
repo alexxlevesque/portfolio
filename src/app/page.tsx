@@ -6,7 +6,7 @@ export default function Home() {
     <div className="space-y-16">
       {/* Hero Section */}
       <section className="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
-        <div className="shrink-0 w-48 h-48 sm:w-64 sm:h-64 rounded-xl overflow-hidden border border-white/10 shadow-lg relative">
+        <div className="shrink-0 w-48 h-48 sm:w-64 sm:h-64 rounded-xl overflow-hidden border border-steel_blue/20 shadow-lg hover:border-steel_blue/40 transition-all relative">
           <Image
             src="/headshot.jpg"
             alt="Alex Levesque"
@@ -24,11 +24,11 @@ export default function Home() {
             Interested in all related to computer science, data science, probability theory, and statistics. My goal is to build intelligent systems to solve real-world problems.
           </p>
           <div className="pt-4 flex flex-wrap gap-6 text-sm text-pale_dogwood uppercase tracking-wider font-medium">
-            <a href="/documents/resume.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-isabelline transition-colors">Resume</a>
-            <a href="https://www.linkedin.com/in/alex-levesque/" target="_blank" rel="noopener noreferrer" className="hover:text-isabelline transition-colors">LinkedIn</a>
-            <a href="https://github.com/alexxlevesque" target="_blank" rel="noopener noreferrer" className="hover:text-isabelline transition-colors">GitHub</a>
-            <a href="mailto:alex.levesque@queensu.ca" className="hover:text-isabelline transition-colors">Email</a>
-            <a href="https://open.spotify.com/playlist/5StQUHdTuoxMFTDnhml6ot?si=56b6a2d707f64e3c" target="_blank" rel="noopener noreferrer" className="hover:text-isabelline transition-colors">Discography</a>
+            <a href="/documents/resume.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-steel_blue transition-colors">Resume</a>
+            <a href="https://www.linkedin.com/in/alex-levesque/" target="_blank" rel="noopener noreferrer" className="hover:text-steel_blue transition-colors">LinkedIn</a>
+            <a href="https://github.com/alexxlevesque" target="_blank" rel="noopener noreferrer" className="hover:text-steel_blue transition-colors">GitHub</a>
+            <a href="mailto:alex.levesque@queensu.ca" className="hover:text-steel_blue transition-colors">Email</a>
+            <a href="https://open.spotify.com/playlist/5StQUHdTuoxMFTDnhml6ot?si=56b6a2d707f64e3c" target="_blank" rel="noopener noreferrer" className="hover:text-steel_blue transition-colors">Discography</a>
           </div>
         </div>
       </section>
@@ -83,19 +83,19 @@ export default function Home() {
         <h2 className="text-2xl font-serif font-bold text-isabelline mb-8">Technical Skills</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-pale_dogwood">
           <div className="flex items-baseline space-x-2">
-            <span className="font-bold text-rose_quartz w-24 shrink-0">Languages</span>
+            <span className="font-bold text-steel_blue w-24 shrink-0">Languages</span>
             <span>Python, C++, TypeScript, SQL</span>
           </div>
           <div className="flex items-baseline space-x-2">
-            <span className="font-bold text-rose_quartz w-24 shrink-0">ML / Data</span>
+            <span className="font-bold text-steel_blue w-24 shrink-0">ML / Data</span>
             <span>NumPy, Pandas, Scikit-learn, PyTorch</span>
           </div>
           <div className="flex items-baseline space-x-2">
-            <span className="font-bold text-rose_quartz w-24 shrink-0">Platforms</span>
+            <span className="font-bold text-steel_blue w-24 shrink-0">Platforms</span>
             <span>Azure, Copilot Studio, Power Automate</span>
           </div>
           <div className="flex items-baseline space-x-2">
-            <span className="font-bold text-rose_quartz w-24 shrink-0">Tools</span>
+            <span className="font-bold text-steel_blue w-24 shrink-0">Tools</span>
             <span>Git, SolidWorks, VSCode, Jupyter</span>
           </div>
         </div>

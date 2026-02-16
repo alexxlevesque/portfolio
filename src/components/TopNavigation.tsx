@@ -22,8 +22,8 @@ export default function TopNavigation() {
               key={item.href}
               href={item.href}
               className={`px-3 py-1.5 rounded-md font-medium tracking-tight transition-all duration-200 ${pathname === item.href
-                ? 'text-white bg-space_cadet shadow-md'
-                : 'text-space_cadet/70 hover:text-space_cadet hover:bg-space_cadet/5'
+                ? 'text-white bg-steel_blue shadow-md shadow-steel_blue/20'
+                : 'text-space_cadet/70 hover:text-steel_blue hover:bg-steel_blue/5'
                 }`}
             >
               {item.label}
