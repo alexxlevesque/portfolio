@@ -12,6 +12,50 @@ export default function Projects() {
             <section className="space-y-6">
 
                 <ProjectCard
+                    title="My Spaced Repetition"
+                    status="COMPLETED"
+                    outcome="Beautiful web application for mastering any subject using scientifically-proven spaced repetition techniques with automated email reminders and cloud sync."
+                    techStack="Next.js 16, React 19, TypeScript, Tailwind CSS v4, Supabase (PostgreSQL), Resend, Vercel"
+                    constraints="Implementing multiple research-backed spaced repetition algorithms, reliable email scheduling system, cross-device data synchronization, and intuitive progress tracking."
+                    imageSrc="/spaced.jpg"
+                    customFilter="grayscale(100%) sepia(100%) hue-rotate(180deg) saturate(2) brightness(0.8) contrast(1.2)"
+                    description={
+                        <>
+                            <p>
+                                My Spaced Repetition leverages cognitive science research to help users retain information long-term by scheduling reviews at optimal intervals. Instead of cramming or random reviewing, the app creates personalized review schedules that move information from short-term to long-term memory.
+                            </p>
+                            <h4 className="font-bold text-space_cadet mt-4 mb-2">Four Research-Backed Algorithms</h4>
+                            <ul className="list-disc ml-4 mt-2 space-y-1">
+                                <li><strong>Leitner System:</strong> Classic flashcard method with progressively longer intervals (1, 3, 7, 14, 30 days)</li>
+                                <li><strong>SM-2 Classic:</strong> Based on the SuperMemo algorithm with aggressive early reviews (1, 6, 15, 35, 70 days)</li>
+                                <li><strong>Aggressive:</strong> Frequent early reviews for difficult material (1, 2, 4, 7, 14, 30 days)</li>
+                                <li><strong>Relaxed:</strong> Gentle schedule for lighter material (1, 3, 7, 21, 60, 120 days)</li>
+                            </ul>
+                            <h4 className="font-bold text-space_cadet mt-4 mb-2">Key Features</h4>
+                            <ul className="list-disc ml-4 mt-2 space-y-1">
+                                <li><strong>Email Reminders:</strong> Automatic notifications when it's time to review a topic</li>
+                                <li><strong>Visual Timeline:</strong> Interactive timeline showing your entire learning journey</li>
+                                <li><strong>Progress Tracking:</strong> Completion status, statistics, and visual indicators for each task</li>
+                                <li><strong>Cloud Sync:</strong> Supabase-powered data storage syncs across all devices</li>
+                            </ul>
+                            <div className="mt-6 pt-4 border-t border-black/5">
+                                <a
+                                    href="https://github.com/alexxlevesque/myspacedrepetition"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 font-bold text-space_cadet hover:text-ultra_violet transition-colors"
+                                >
+                                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.645-.735-3.885-1.395-.135-.345-.72-1.395-1.23-1.68-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                                    </svg>
+                                    View Source Code
+                                </a>
+                            </div>
+                        </>
+                    }
+                />
+
+                <ProjectCard
                     title="Kalman Inventory Alpha Diagnostic"
                     status="CURRENT"
                     outcome="Microeconomic diagnostic platform that identifies 'Phantom Demand' and 'Dead Inventory' using advanced state estimation, enabling radical inventory reduction."
@@ -168,7 +212,7 @@ export default function Projects() {
                     techStack="MATLAB, Lloyd's Algorithm, K-Means Clustering, GIS Spatial Analysis Tools"
                     constraints="Real-time dynamic fire hotspot data processing, accurate perimeter modeling, efficient multi-agent coordination."
                     imageSrc="/autonomousrobot.jpg"
-                    customFilter="grayscale(100%) sepia(100%) hue-rotate(180deg) saturate(3) brightness(0.8) contrast(1.2)"
+                    customFilter="grayscale(100%) sepia(100%) hue-rotate(180deg) saturate(2.3) brightness(0.8) contrast(1.2)"
                     description={
                         <>
                             <p className="font-bold text-space_cadet mb-4 italic">
