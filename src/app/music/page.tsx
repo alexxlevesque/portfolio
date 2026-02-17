@@ -72,6 +72,20 @@ export default function Music() {
                 <p className="text-rose_quartz text-sm leading-relaxed max-w-2xl">
                     I thought I would share my journey in the music industry, the story of how I got here, and some of the works I've created. My objective with sharing my music journey is to inspire others to have the right thought process is realizing whatever dreams they may have.
                 </p>
+                <a
+                    href="https://alyxmusic.vercel.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 bg-steel_blue hover:bg-steel_blue/80 text-white text-sm font-medium uppercase tracking-wider rounded-lg transition-all duration-300 shadow-md hover:shadow-lg"
+                >
+                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z" />
+                    </svg>
+                    Try My Music Player App
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                </a>
             </header>
 
             {/* ───────── Story: Timeline ───────── */}
