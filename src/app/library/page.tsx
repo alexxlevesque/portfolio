@@ -11,23 +11,29 @@ export default function Library() {
             author: "Sheldon Ross",
             rating: "4/5",
             thoughts: "A thorough walkthrough of the mathematical foundations of finance. I'm not sure if I took much away from this book as I read this book early in my undergrad, however it definitely spiked my interest in understanding mathematical systems behind finance and data science implications.",
-            imageSrc: "/books/elementaryintroductiontomathematicalfinance.jpg" // Placeholder path, user can update
+            imageSrc: "/books/elementaryintroductiontomathematicalfinance.jpg"
         },
         {
             title: "Critique of Pure Reason",
             author: "Immanuel Kant",
             rating: "4/5",
             thoughts: "Incredibly dense and a hard read, but perfect for one who follows rationalist philosophy. Although Kant's ideas were very disputed, they follow strict logic and are present thoroughly. As a beginner, I found it to be tough to grasp, but it was a good introduction to the subject.",
-            imageSrc: "/books/critiqueofpurereason.jpg" // Placeholder path
+            imageSrc: "/books/critiqueofpurereason.jpg"
         },
         {
             title: "Becoming a Data Head",
             author: "Alex J. Gutman and Jordan Goldmeier",
             rating: "5/5",
             thoughts: "Excellent book for anyone from an experienced data scientist to someone looking for a spark of interest in the field and usage of data. I remember using some ideas from this book in interviews to effectively articulate my interest in data science.",
-            imageSrc: "/books/datahead.jpg" // Placeholder path
+            imageSrc: "/books/datahead.jpg"
         },
-        // Add more books here
+        {
+            title: "Bugonia",
+            author: "Yorgos Lanthimos",
+            rating: "5/5",
+            thoughts: "An awesome darkly comedic movie that explores the idea of an echo chamber and themes of psychosis and the human condition. The movie is darkly comedic and masterfully told and screenplayed.",
+            imageSrc: "/books/bugonia.jpg"
+        }
     ];
 
     const terms = [
@@ -109,7 +115,7 @@ export default function Library() {
             <header className="space-y-4">
                 <h1 className="text-3xl sm:text-4xl font-serif font-bold text-isabelline tracking-tight">Library</h1>
                 <p className="text-rose_quartz text-sm leading-relaxed max-w-2xl">
-                    A collection of books that have shaped my thinking and lecture notes from my engineering studies.
+                    A collection of media that have shaped my thinking, and lecture notes from my engineering studies.
                 </p>
             </header>
 
