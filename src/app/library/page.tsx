@@ -31,7 +31,7 @@ export default function Library() {
             title: "Bugonia",
             author: "Yorgos Lanthimos",
             rating: "5/5",
-            thoughts: "An awesome darkly comedic movie that explores the idea of an echo chamber and themes of psychosis and the human condition. The movie is darkly comedic and masterfully told and screenplayed.",
+            thoughts: "An awesome movie that explores the idea of an echo chamber, themes of psychosis, and the perceived evil of big corporations. I love the dark comedy of this movie and how masterfully it was told and screenplayed.",
             imageSrc: "/books/bugonia.jpg"
         }
     ];
