@@ -12,35 +12,44 @@ export default function Projects() {
             <section className="space-y-6">
 
                 <ProjectCard
-                    title="My Spaced Repetition"
+                    title="Personal Music Player"
                     status="COMPLETED"
-                    outcome="Beautiful web application for mastering any subject using scientifically-proven spaced repetition techniques with automated email reminders and cloud sync."
-                    techStack="Next.js 16, React 19, TypeScript, Tailwind CSS v4, Supabase (PostgreSQL), Resend, Vercel"
-                    constraints="Implementing multiple research-backed spaced repetition algorithms, reliable email scheduling system, cross-device data synchronization, and intuitive progress tracking."
+                    outcome="A personal, cloud-backed music player that streams your own library from Firebase Storage and plays tracks randomly — no playlists, no algorithms, just your music on shuffle."
+                    techStack="React 19, Vite, Howler.js, Firebase Storage, Framer Motion, Vanilla CSS, Vercel"
+                    constraints="Streaming audio files via signed Firebase URLs, deriving readable song names from raw filenames, and building a polished player UI with visualizer, seek bar, and smooth animations."
                     imageSrc="/spaced.jpg"
-                    customFilter="grayscale(100%) sepia(100%) hue-rotate(180deg) saturate(2) brightness(0.8) contrast(1.2)"
+                    customFilter="grayscale(100%) sepia(100%) hue-rotate(180deg) saturate(2.5) brightness(0.8) contrast(1.2)"
                     description={
                         <>
                             <p>
-                                My Spaced Repetition leverages cognitive science research to help users retain information long-term by scheduling reviews at optimal intervals. Instead of cramming or random reviewing, the app creates personalized review schedules that move information from short-term to long-term memory.
+                                Shuffle is a minimal, single-purpose music player. Audio files live in a <code>/music</code> folder in Firebase Storage; the app fetches the full list on load, picks a random track when you hit shuffle, generates a signed download URL, and streams it through <strong>Howler.js</strong>. When a song ends the next one plays automatically.
                             </p>
-                            <h4 className="font-bold text-space_cadet mt-4 mb-2">Four Research-Backed Algorithms</h4>
+                            <h4 className="font-bold text-space_cadet mt-4 mb-2">UI Highlights</h4>
                             <ul className="list-disc ml-4 mt-2 space-y-1">
-                                <li><strong>Leitner System:</strong> Classic flashcard method with progressively longer intervals (1, 3, 7, 14, 30 days)</li>
-                                <li><strong>SM-2 Classic:</strong> Based on the SuperMemo algorithm with aggressive early reviews (1, 6, 15, 35, 70 days)</li>
-                                <li><strong>Aggressive:</strong> Frequent early reviews for difficult material (1, 2, 4, 7, 14, 30 days)</li>
-                                <li><strong>Relaxed:</strong> Gentle schedule for lighter material (1, 3, 7, 21, 60, 120 days)</li>
+                                <li><strong>Animated vinyl disc</strong> that spins during playback</li>
+                                <li><strong>Audio visualizer</strong> with 7 bars that animate while playing</li>
+                                <li><strong>Seekable progress bar</strong> with elapsed / total time display</li>
+                                <li><strong>Volume slider</strong> with mute toggle</li>
+                                <li>Smooth transitions via <strong>Framer Motion</strong> and a dark glassmorphism card</li>
                             </ul>
-                            <h4 className="font-bold text-space_cadet mt-4 mb-2">Key Features</h4>
-                            <ul className="list-disc ml-4 mt-2 space-y-1">
-                                <li><strong>Email Reminders:</strong> Automatic notifications when it's time to review a topic</li>
-                                <li><strong>Visual Timeline:</strong> Interactive timeline showing your entire learning journey</li>
-                                <li><strong>Progress Tracking:</strong> Completion status, statistics, and visual indicators for each task</li>
-                                <li><strong>Cloud Sync:</strong> Supabase-powered data storage syncs across all devices</li>
-                            </ul>
-                            <div className="mt-6 pt-4 border-t border-black/5">
+                            <h4 className="font-bold text-space_cadet mt-4 mb-2">How It Works</h4>
+                            <p>
+                                Song names are derived from filenames — dashes and underscores are replaced with spaces and the result is title-cased. Progress, volume, and playback state are all managed locally in React. The entire player UI and logic lives in a single <code>MusicPlayer.jsx</code> component.
+                            </p>
+                            <div className="mt-6 pt-4 border-t border-black/5 flex flex-wrap gap-6">
                                 <a
-                                    href="https://github.com/alexxlevesque/myspacedrepetition"
+                                    href="https://alyxmusic.vercel.app"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 font-bold text-space_cadet hover:text-ultra_violet transition-colors"
+                                >
+                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                                    </svg>
+                                    Live Demo
+                                </a>
+                                <a
+                                    href="https://github.com/alexxlevesque/shuffle"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center gap-2 font-bold text-space_cadet hover:text-ultra_violet transition-colors"
