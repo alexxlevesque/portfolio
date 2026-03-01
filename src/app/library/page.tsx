@@ -2,40 +2,8 @@
 
 import Link from 'next/link';
 import { Analytics } from "@vercel/analytics/next"
-import BookCard from '@/components/BookCard';
 
 export default function Library() {
-    const books = [
-        {
-            title: "Elementary Introduction to Mathematical Finance",
-            author: "Sheldon Ross",
-            rating: "4/5",
-            thoughts: "A thorough walkthrough of the mathematical foundations of finance. I'm not sure if I took much away from this book as I read this book early in my undergrad, however it definitely spiked my interest in understanding mathematical systems behind finance and data science implications.",
-            imageSrc: "/books/elementaryintroductiontomathematicalfinance.jpg"
-        },
-        {
-            title: "Critique of Pure Reason",
-            author: "Immanuel Kant",
-            rating: "4/5",
-            thoughts: "Incredibly dense and a hard read, but perfect for one who follows rationalist philosophy. Although Kant's ideas were very disputed, they follow strict logic and are present thoroughly. As a beginner, I found it to be tough to grasp, but it was a good introduction to the subject.",
-            imageSrc: "/books/critiqueofpurereason.jpg"
-        },
-        {
-            title: "Becoming a Data Head",
-            author: "Alex J. Gutman and Jordan Goldmeier",
-            rating: "5/5",
-            thoughts: "Excellent book for anyone from an experienced data scientist to someone looking for a spark of interest in the field and usage of data. I remember using some ideas from this book in interviews to effectively articulate my interest in data science.",
-            imageSrc: "/books/datahead.jpg"
-        },
-        {
-            title: "Bugonia",
-            author: "Yorgos Lanthimos",
-            rating: "5/5",
-            thoughts: "An awesome movie that explores the idea of an echo chamber, themes of psychosis, and the perceived evil of big corporations. I love the dark comedy of this movie and how masterfully it was told and screenplayed.",
-            imageSrc: "/books/bugonia.jpg"
-        }
-    ];
-
     const terms = [
         {
             name: 'Winter 2026',
@@ -115,25 +83,9 @@ export default function Library() {
             <header className="space-y-4">
                 <h1 className="text-3xl sm:text-4xl font-serif font-bold text-isabelline tracking-tight">Library</h1>
                 <p className="text-rose_quartz text-sm leading-relaxed max-w-2xl">
-                    A collection of media that have shaped my thinking, and lecture notes from my engineering studies.
+                    Lecture notes from my engineering studies at Queen&apos;s University.
                 </p>
             </header>
-
-            {/* Books Section */}
-            <section className="space-y-8">
-                <div className="flex items-center justify-between border-b border-white/5 pb-2">
-                    <h2 className="text-xl font-serif font-bold text-pale_dogwood">
-                        Bookshelf
-                    </h2>
-                    <span className="text-xs text-white/30 uppercase tracking-wider">Reading List</span>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {books.map((book, index) => (
-                        <BookCard key={index} {...book} />
-                    ))}
-                </div>
-            </section>
 
             {/* Notes Section */}
             <section className="space-y-12">
@@ -141,7 +93,7 @@ export default function Library() {
                     <h2 className="text-xl font-serif font-bold text-pale_dogwood">
                         Lecture Notes
                     </h2>
-                    <span className="text-xs text-white/30 uppercase tracking-wider">Queen's University</span>
+                    <span className="text-xs text-white/30 uppercase tracking-wider">Queen&apos;s University</span>
                 </div>
 
                 <div className="space-y-10">
