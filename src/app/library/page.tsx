@@ -81,7 +81,7 @@ export default function Library() {
         <div className="space-y-16">
             {/* Header */}
             <header className="space-y-4">
-                <h1 className="text-3xl sm:text-4xl font-serif font-bold text-isabelline tracking-tight">Library</h1>
+                <h1 className="text-3xl sm:text-4xl font-serif font-bold text-isabelline tracking-tight">Notes</h1>
                 <p className="text-rose_quartz text-sm leading-relaxed max-w-2xl">
                     Lecture notes from my engineering studies at Queen&apos;s University.
                 </p>
@@ -137,7 +137,6 @@ export default function Library() {
                 <div className="flex flex-wrap gap-6 text-sm text-space_cadet/80 uppercase tracking-wider font-bold">
                     <Link href="/" className="hover:text-steel_blue transition-colors">Home</Link>
                     <Link href="/projects" className="hover:text-steel_blue transition-colors">Projects</Link>
-                    <Link href="/music" className="hover:text-steel_blue transition-colors">Music</Link>
                 </div>
             </section>
 

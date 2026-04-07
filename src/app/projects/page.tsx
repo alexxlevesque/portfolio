@@ -12,132 +12,6 @@ export default function Projects() {
             <section className="space-y-6">
 
                 <ProjectCard
-                    title="Personal Music Player"
-                    status="COMPLETED"
-                    outcome="A personal, cloud-backed music player that streams your own library from Firebase Storage and plays tracks randomly — no playlists, no algorithms, just your music on shuffle."
-                    techStack="React 19, Vite, Howler.js, Firebase Storage, Framer Motion, Vanilla CSS, Vercel"
-                    constraints="Streaming audio files via signed Firebase URLs, deriving readable song names from raw filenames, and building a polished player UI with visualizer, seek bar, and smooth animations."
-                    imageSrc="/spaced.jpg"
-                    customFilter="grayscale(100%) sepia(100%) hue-rotate(180deg) saturate(2.5) brightness(0.8) contrast(1.2)"
-                    description={
-                        <>
-                            <p>
-                                Shuffle is a minimal, single-purpose music player. Audio files live in a <code>/music</code> folder in Firebase Storage; the app fetches the full list on load, picks a random track when you hit shuffle, generates a signed download URL, and streams it through <strong>Howler.js</strong>. When a song ends the next one plays automatically.
-                            </p>
-                            <h4 className="font-bold text-space_cadet mt-4 mb-2">UI Highlights</h4>
-                            <ul className="list-disc ml-4 mt-2 space-y-1">
-                                <li><strong>Animated vinyl disc</strong> that spins during playback</li>
-                                <li><strong>Audio visualizer</strong> with 7 bars that animate while playing</li>
-                                <li><strong>Seekable progress bar</strong> with elapsed / total time display</li>
-                                <li><strong>Volume slider</strong> with mute toggle</li>
-                                <li>Smooth transitions via <strong>Framer Motion</strong> and a dark glassmorphism card</li>
-                            </ul>
-                            <h4 className="font-bold text-space_cadet mt-4 mb-2">How It Works</h4>
-                            <p>
-                                Song names are derived from filenames — dashes and underscores are replaced with spaces and the result is title-cased. Progress, volume, and playback state are all managed locally in React. The entire player UI and logic lives in a single <code>MusicPlayer.jsx</code> component.
-                            </p>
-                            <div className="mt-6 pt-4 border-t border-black/5 flex flex-wrap gap-6">
-                                <a
-                                    href="https://alyxmusic.vercel.app"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 font-bold text-space_cadet hover:text-ultra_violet transition-colors"
-                                >
-                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
-                                    </svg>
-                                    Live Demo
-                                </a>
-                                <a
-                                    href="https://github.com/alexxlevesque/shuffle"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 font-bold text-space_cadet hover:text-ultra_violet transition-colors"
-                                >
-                                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.645-.735-3.885-1.395-.135-.345-.72-1.395-1.23-1.68-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
-                                    </svg>
-                                    View Source Code
-                                </a>
-                            </div>
-                        </>
-                    }
-                />
-
-                <ProjectCard
-                    title="Kalman Inventory Alpha Diagnostic"
-                    status="CURRENT"
-                    outcome="Microeconomic diagnostic platform that identifies 'Phantom Demand' and 'Dead Inventory' using advanced state estimation, enabling radical inventory reduction."
-                    techStack="Python (Streamlit, Polars, NumPy, SciPy), Recursive Kalman Filter, Poetry"
-                    constraints="Extracting true demand signals from noisy sales data (M5 dataset), modeling process uncertainty vs. measurement noise, and calculating dynamic safety stock."
-                    imageSrc="/inventory.jpg"
-                    customFilter="grayscale(100%) sepia(100%) hue-rotate(180deg) saturate(3) brightness(0.8) contrast(1.2)"
-                    description={
-                        <>
-                            <p>
-                                Inventory Alpha identifies inefficiencies in retail supply chains by applying a <strong>Recursive Kalman Filter</strong> to sales data. Unlike static models, it separates random noise from actual trends, allowing for reduction of excess inventory without sacrificing sales.
-                            </p>
-                            <h4 className="font-bold text-space_cadet mt-4 mb-2">The Kalman Advantage</h4>
-                            <p>
-                                By treating demand as a latent state in a 1D Random Walk, the system accounts for:
-                            </p>
-                            <ul className="list-disc ml-4 mt-2 space-y-1">
-                                <li><strong>Measurement Noise (R):</strong> Filtering out random daily fluctuations and measurement errors.</li>
-                                <li><strong>Process Uncertainty (Q):</strong> Adapting to how fast underlying demand signals actually shift.</li>
-                                <li><strong>Dynamic Covariance (P):</strong> Driving Z-score based safety stocks directly from real-time signal uncertainty.</li>
-                            </ul>
-                            <div className="mt-6 pt-4 border-t border-black/5">
-                                <a
-                                    href="https://github.com/alexxlevesque/inventoryalpha"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 font-bold text-space_cadet hover:text-ultra_violet transition-colors"
-                                >
-                                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.645-.735-3.885-1.395-.135-.345-.72-1.395-1.23-1.68-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
-                                    </svg>
-                                    View Source Code
-                                </a>
-                            </div>
-                        </>
-                    }
-                />
-
-                <ProjectCard
-                    title="PatientAware: Context-Aware AI Platform"
-                    status="COMPLETED"
-                    outcome="Offline-first clinical platform enabling context-aware summaries and care continuity without relying on constant cloud connectivity."
-                    techStack="Backboard.ai, React, OHIP API, Thread-based storage architecture"
-                    constraints="Strict data privacy compliance (PHIPA), seamless OHIP integration, persistent clinical context retention despite connectivity loss."
-                    imageSrc="/patientaware.png"
-                    imagePosition="top"
-                    customFilter="grayscale(100%) sepia(100%) hue-rotate(180deg) saturate(3) brightness(0.8) contrast(1.2)"
-                    description={
-                        <>
-                            <p>
-                                PatientAware addresses critical inefficiencies in Canada's medical system by providing physician-facing summaries that digest longitudinal patient data.
-                            </p>
-                            <p>
-                                The system features a dashboard for continuous symptom logging and structured clinical insights, ensuring care continuity. Thread-based patient data storage allows for persistent context across appointments.
-                            </p>
-                            <div className="mt-6 pt-4 border-t border-black/5">
-                                <a
-                                    href="https://github.com/alexxlevesque/patientaware"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 font-bold text-space_cadet hover:text-ultra_violet transition-colors"
-                                >
-                                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.645-.735-3.885-1.395-.135-.345-.72-1.395-1.23-1.68-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
-                                    </svg>
-                                    View Source Code
-                                </a>
-                            </div>
-                        </>
-                    }
-                />
-
-                <ProjectCard
                     title="Adaptive RL Ensemble Strategy"
                     status="COMPLETED"
                     outcome="Adaptive trading strategy that reduces portfolio volatility and improves risk-adjusted returns using an ensemble of reinforcement learning agents."
@@ -157,49 +31,6 @@ export default function Projects() {
                             <div className="mt-6 pt-4 border-t border-black/5">
                                 <a
                                     href="https://github.com/ary4f/QMINDARES/tree/main"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 font-bold text-space_cadet hover:text-ultra_violet transition-colors"
-                                >
-                                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.645-.735-3.885-1.395-.135-.345-.72-1.395-1.23-1.68-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
-                                    </svg>
-                                    View Source Code
-                                </a>
-                            </div>
-                        </>
-                    }
-                />
-
-                <ProjectCard
-                    title="Bayesian Clue Solver"
-                    status="COMPLETED"
-                    outcome="A real-time game assistant utilizing Bayesian reasoning and probabilistic inference to win Clue in under 7 turns."
-                    techStack="Python, Streamlit, Pandas, NumPy, Bayesian Inference"
-                    constraints="Real-time probability updates for 324 possible envelope combinations, handling imperfect information from player suggestions and refutations."
-                    imageSrc="/clue.jpg"
-                    customFilter="grayscale(100%) sepia(100%) hue-rotate(180deg) saturate(3) brightness(0.8) contrast(1.2)"
-                    description={
-                        <>
-                            <p>
-                                This game assistant uses <strong>Bayesian inference</strong> to model and update beliefs about the hidden state of the game. It tracks all player suggestions, responses, and seen cards to continuously calculate the probability distribution of the cards in the murder envelope.
-                            </p>
-                            <h4 className="font-bold text-space_cadet mt-4 mb-2">Technical Overview</h4>
-                            <p>
-                                For each card, the system estimates the probability of it being in the envelope given the history of observations:
-                                <br />
-                                <code className="block bg-space_cadet/5 p-2 rounded mt-2 text-xs">
-                                    P(Card ∈ Envelope | History) ∝ P(Card) × P(Evidence | Card ∈ Envelope)
-                                </code>
-                            </p>
-                            <ul className="list-disc ml-4 mt-2 space-y-1">
-                                <li><strong>Inference Rules:</strong> When no one refutes a suggestion, the specific cards are immediately assigned a probability of 1.0 (certainty).</li>
-                                <li><strong>Bayesian Updates:</strong> When a player shows a card they previously hid, the system uses a DecreaseFactor to adjust probabilities based on information theory principles.</li>
-                                <li><strong>Distribution Normalization:</strong> Suspect, weapon, and room probabilities each maintain a normalized sum of 1.0 within their respective categories.</li>
-                            </ul>
-                            <div className="mt-6 pt-4 border-t border-black/5">
-                                <a
-                                    href="https://github.com/alexxlevesque/cluegamesolver"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center gap-2 font-bold text-space_cadet hover:text-ultra_violet transition-colors"
@@ -258,7 +89,6 @@ export default function Projects() {
                 <div className="flex flex-wrap gap-6 text-sm text-space_cadet/80 uppercase tracking-wider font-bold">
                     <Link href="/" className="hover:text-steel_blue transition-colors">Home</Link>
                     <Link href="/library" className="hover:text-steel_blue transition-colors">Library</Link>
-                    <Link href="/music" className="hover:text-steel_blue transition-colors">Music</Link>
                 </div>
             </section>
         </div>

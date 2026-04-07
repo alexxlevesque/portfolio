@@ -28,7 +28,6 @@ export default function Home() {
             <a href="https://www.linkedin.com/in/alex-levesque/" target="_blank" rel="noopener noreferrer" className="hover:text-steel_blue transition-colors">LinkedIn</a>
             <a href="https://github.com/alexxlevesque" target="_blank" rel="noopener noreferrer" className="hover:text-steel_blue transition-colors">GitHub</a>
             <a href="mailto:alex.levesque@queensu.ca" className="hover:text-steel_blue transition-colors">Email</a>
-            <a href="https://open.spotify.com/playlist/5StQUHdTuoxMFTDnhml6ot?si=56b6a2d707f64e3c" target="_blank" rel="noopener noreferrer" className="hover:text-steel_blue transition-colors">Discography</a>
           </div>
         </div>
       </section>
@@ -54,7 +53,7 @@ export default function Home() {
           {/* IRB */}
           <div>
             <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-1">
-              <h3 className="text-lg font-bold text-isabelline">AI Technician Intern</h3>
+              <h3 className="text-lg font-bold text-isabelline">Generative AI Engineering Intern</h3>
               <span className="text-sm text-rose_quartz tabular-nums">2025</span>
             </div>
             <div className="text-sm text-rose_quartz mb-3 italic">Immigration and Refugee Board of Canada &bull; Ottawa, ON</div>

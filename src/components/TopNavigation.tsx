@@ -7,10 +7,9 @@ export default function TopNavigation() {
   const pathname = usePathname();
 
   const navItems = [
-    { href: '/', label: 'home' },
-    { href: '/projects', label: 'projects' },
-    { href: '/library', label: 'library' },
-    { href: '/music', label: 'music' },
+    { href: '/', label: 'Home' },
+    { href: '/projects', label: 'Projects' },
+    { href: '/library', label: 'Notes' },
   ];
 
   return (
