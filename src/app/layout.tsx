@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
+import { EB_Garamond } from "next/font/google";
 import "./globals.css";
 import TopNavigation from "@/components/TopNavigation";
+
+const garamond = EB_Garamond({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-garamond",
+});
 
 
 
@@ -16,8 +23,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className="min-h-screen antialiased transition-colors duration-500">
+    <html lang="en" className={`scroll-smooth ${garamond.variable}`}>
+      <body className={`${garamond.className} min-h-screen antialiased transition-colors duration-500`}>
         <TopNavigation />
 
         <div className="min-h-screen flex items-center justify-center py-20 px-4 sm:px-6">

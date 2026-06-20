@@ -7,6 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['var(--font-garamond)', 'Garamond', 'Times New Roman', 'serif'],
+        serif: ['var(--font-garamond)', 'Garamond', 'Times New Roman', 'serif'],
+      },
       colors: {
         space_cadet: {
           DEFAULT: '#22223b',

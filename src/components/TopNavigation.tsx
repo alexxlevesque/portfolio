@@ -15,7 +15,7 @@ export default function TopNavigation() {
   return (
     <nav className="absolute top-5 left-5 z-50">
       <div className="bg-transparent px-0 py-0">
-        <div className="flex items-center space-x-4 text-sm">
+        <div className="flex items-center space-x-4 text-base">
           {navItems.map((item) => (
             <Link
               key={item.href}

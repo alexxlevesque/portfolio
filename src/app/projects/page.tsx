@@ -86,7 +86,7 @@ export default function Projects() {
             <hr className="border-black/5 my-12" />
 
             <section>
-                <div className="flex flex-wrap gap-6 text-sm text-space_cadet/80 uppercase tracking-wider font-bold">
+                <div className="flex flex-wrap gap-6 text-base text-space_cadet/80 uppercase tracking-wider font-bold">
                     <Link href="/" className="hover:text-steel_blue transition-colors">Home</Link>
                     <Link href="/library" className="hover:text-steel_blue transition-colors">Library</Link>
                 </div>

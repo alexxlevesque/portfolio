@@ -82,24 +82,18 @@ export default function Library() {
             {/* Header */}
             <header className="space-y-4">
                 <h1 className="text-3xl sm:text-4xl font-serif font-bold text-isabelline tracking-tight">Notes</h1>
-                <p className="text-rose_quartz text-sm leading-relaxed max-w-2xl">
+                <p className="text-rose_quartz text-base leading-relaxed max-w-2xl">
                     Lecture notes from my engineering studies at Queen&apos;s University.
                 </p>
             </header>
 
             {/* Notes Section */}
             <section className="space-y-12">
-                <div className="flex items-center justify-between border-b border-white/5 pb-2">
-                    <h2 className="text-xl font-serif font-bold text-pale_dogwood">
-                        Lecture Notes
-                    </h2>
-                    <span className="text-xs text-white/30 uppercase tracking-wider">Queen&apos;s University</span>
-                </div>
 
                 <div className="space-y-10">
                     {terms.map((term) => (
                         <div key={term.name} className="space-y-4">
-                            <h3 className="text-sm font-bold text-rose_quartz uppercase tracking-wider">
+                            <h3 className="text-base font-bold text-rose_quartz uppercase tracking-wider">
                                 {term.name}
                             </h3>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -111,13 +105,13 @@ export default function Library() {
                                         </div>
 
                                         <div className="flex-1 min-w-0">
-                                            <h4 className="text-base font-bold text-isabelline group-hover:text-white transition-colors truncate">
+                                            <h4 className="text-lg font-bold text-isabelline group-hover:text-white transition-colors truncate">
                                                 <a href={repo.repository} target="_blank" rel="noopener noreferrer" className="hover:underline decoration-white/30 underline-offset-4">
                                                     {repo.title}
                                                 </a>
                                             </h4>
                                             <div className="flex items-center gap-2 mt-1">
-                                                <a href={repo.repository} target="_blank" rel="noopener noreferrer" className="text-xs text-rose_quartz hover:text-steel_blue transition-colors flex items-center gap-1">
+                                                <a href={repo.repository} target="_blank" rel="noopener noreferrer" className="text-sm text-rose_quartz hover:text-steel_blue transition-colors flex items-center gap-1">
                                                     <span>View PDF</span>
                                                     <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
@@ -134,7 +128,7 @@ export default function Library() {
             </section>
 
             <section>
-                <div className="flex flex-wrap gap-6 text-sm text-space_cadet/80 uppercase tracking-wider font-bold">
+                <div className="flex flex-wrap gap-6 text-base text-space_cadet/80 uppercase tracking-wider font-bold">
                     <Link href="/" className="hover:text-steel_blue transition-colors">Home</Link>
                     <Link href="/projects" className="hover:text-steel_blue transition-colors">Projects</Link>
                 </div>

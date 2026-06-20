@@ -76,7 +76,7 @@ export default function ProjectCard({
                 </div>
 
                 {/* Metadata Block */}
-                <div className="space-y-3 text-sm leading-relaxed text-space_cadet mb-6">
+                <div className="space-y-3 text-base leading-relaxed text-space_cadet mb-6">
                     <p>
                         <strong className="font-semibold text-space_cadet">Outcome:</strong> {outcome}
                     </p>
@@ -93,7 +93,7 @@ export default function ProjectCard({
                     <div className="border-t border-black/5 pt-4">
                         <button
                             onClick={() => setIsExpanded(!isExpanded)}
-                            className="w-full flex items-center justify-end gap-2 text-xs font-bold uppercase tracking-wider text-space_cadet/60 hover:text-space_cadet transition-colors"
+                            className="w-full flex items-center justify-end gap-2 text-sm font-bold uppercase tracking-wider text-space_cadet/60 hover:text-space_cadet transition-colors"
                         >
                             {isExpanded ? 'Collapse' : 'Click to expand'}
                             <svg
@@ -108,7 +108,7 @@ export default function ProjectCard({
 
                         <div className={`grid transition-all duration-300 ease-in-out ${isExpanded ? 'grid-rows-[1fr] opacity-100 mt-4' : 'grid-rows-[0fr] opacity-0'}`}>
                             <div className="overflow-hidden">
-                                <div className="text-sm text-space_cadet/80 leading-relaxed space-y-4">
+                                <div className="text-base text-space_cadet/80 leading-relaxed space-y-4">
                                     {description}
                                 </div>
                             </div>
