@@ -69,16 +69,10 @@ export default function ProjectCard({
 
             <div className="p-6 sm:p-8">
                 {/* Header */}
-                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-6">
+                <div className="flex flex-col gap-2 mb-6">
                     <h3 className="text-xl sm:text-2xl font-serif font-bold text-space_cadet tracking-tight max-w-xl">
                         {title}
                     </h3>
-                    <span className={`shrink-0 inline-flex items-center justify-center px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase border ${status === 'CURRENT'
-                            ? 'bg-steel_blue text-white border-steel_blue'
-                            : 'bg-space_cadet text-white border-steel_blue/30'
-                        }`}>
-                        {status}
-                    </span>
                 </div>
 
                 {/* Metadata Block */}

@@ -20,8 +20,8 @@ export default function Home() {
             <h1 className="text-4xl sm:text-5xl font-serif font-bold tracking-tight text-isabelline">Alex Levesque</h1>
             <p className="mt-2 text-lg text-rose_quartz font-medium">Applied Math & Computer Engineering<br /><span className="text-sm opacity-80">Queen's University</span></p>
           </div>
-          <p className="text-base text-pale_dogwood leading-relaxed max-w-lg">
-            Interested in all related to computer science, data science, probability theory, and statistics. My goal is to build intelligent systems to solve real-world problems.
+          <p className="text-base text-pale_dogwood leading-relaxed max-w-2xl">
+            I&apos;m interested in machine learning, quantitative systems, and the mathematical structure behind intelligent software. I like building practical tools that make difficult technical work more accurate, faster, and easier to reason about.
           </p>
           <div className="pt-4 flex flex-wrap gap-6 text-sm text-pale_dogwood uppercase tracking-wider font-medium">
             <a href="/documents/resume.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-steel_blue transition-colors">Resume</a>
@@ -32,71 +32,43 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Experience Section */}
-      <section>
-        <h2 className="text-2xl font-serif font-bold text-isabelline mb-8">Experience</h2>
-        <div className="space-y-12">
+      <section className="space-y-8">
+        <header className="space-y-3">
+          <h2 className="text-2xl font-serif font-bold text-isabelline">Experience and Areas of Interest</h2>
 
-          {/* Scotiabank */}
-          <div>
-            <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-1">
-              <h3 className="text-lg font-bold text-isabelline">Data Science Intern</h3>
-              <span className="text-sm text-rose_quartz tabular-nums">2026</span>
-            </div>
-            <div className="text-sm text-rose_quartz mb-3 italic">Scotiabank Velocity Program &bull; Toronto, ON</div>
-            <p className="text-pale_dogwood text-sm leading-relaxed">
-              Incoming Summer 2026
-            </p>
-          </div>
+        </header>
+
+        <div className="space-y-6 text-pale_dogwood leading-relaxed">
+          <p>
+            <strong className="text-isabelline">Data science infrastructure:</strong> At Scotiabank, I designed and deployed an end-to-end LLM parsing pipeline for unstructured audit files using Vertex AI and Openpyxl, delivering 25%+ labor savings with near-constant time behavior at scale. I also built a Power BI dashboard for CAD spend and policy violations that saved the expense team about five hours per week, and developed an HDBSCAN-based clustering pipeline that reduced tech risk event loss exposure across $70M+ in scenarios while cutting LLM calls by 66.7%.
+          </p>
+
+          <p>
+            <strong className="text-isabelline">Generative AI engineering:</strong> At the Immigration and Refugee Board of Canada, I developed Azure-based workflows to transcribe, classify, and organize refugee claim documents with high accuracy, and built a chatbot pipeline for legal document retrieval and ingestion. I&apos;m especially interested in applied LLM systems that need to be useful under real operational constraints, not just impressive in demos.
+          </p>
 
 
-          {/* IRB */}
-          <div>
-            <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-1">
-              <h3 className="text-lg font-bold text-isabelline">Generative AI Engineering Intern</h3>
-              <span className="text-sm text-rose_quartz tabular-nums">2025</span>
-            </div>
-            <div className="text-sm text-rose_quartz mb-3 italic">Immigration and Refugee Board of Canada &bull; Ottawa, ON</div>
-            <p className="text-pale_dogwood text-sm leading-relaxed">
-              Developed and deployed Azure-based workflows to transcribe, classify, and organize refugee basis-of-claim documents with 93% accuracy, significantly reducing manual processing time. Built an Azure chatbot using Cosmos DB, NLP, and embedding pipelines to cut legal document ingestion to under 10 minutes and presented the system’s impact to stakeholders at a conference.
-            </p>
-          </div>
+          <p>
+            <strong className="text-isabelline">Quantitative modeling:</strong> I&apos;m drawn to probability, statistics, and optimization problems where modeling choices matter as much as implementation details. My reinforcement learning trading project explored adaptive portfolio allocation through PPO, A2C, and TD3 ensembles with a focus on volatility reduction and risk-adjusted performance.
+          </p>
 
-          {/* Algoverse */}
-          <div>
-            <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-1">
-              <h3 className="text-lg font-bold text-isabelline">LLM Research Member</h3>
-              <span className="text-sm text-rose_quartz tabular-nums">2025</span>
-            </div>
-            <div className="text-sm text-rose_quartz mb-3 italic">Algoverse AI Research &bull; Remote</div>
-            <p className="text-pale_dogwood text-sm leading-relaxed">
-              Conducted AI research in a 12-week program under mentorship from PhDs at Meta, OpenAI, and Princeton. Improved large language model efficiency by implementing a self-contrastive Mixture-of-Experts architecture in PyTorch and co-authoring a paper under review introducing contrastive decoding methods with a 2% benchmarked efficiency gain.
-            </p>
-          </div>
+          <p>
+            <strong className="text-isabelline">Engineering systems:</strong> I enjoy building systems that combine mathematical structure with practical constraints. My autonomous robotic firefighting project used decentralized clustering and spatial partitioning to model wildfire containment, reflecting a broader interest in control, coordination, and decision-making under uncertainty.
+          </p>
 
+          <p>
+            <strong className="text-isabelline">Philosophy, writing, and music.</strong> I like ideas that sit a little outside engineering too. I produced music throughout high school, winning a GRAMMY award for my work. I am also an avid reader, I practice piano, and I love exploring the world on a bicycle. I enjoy researching topics outside of my field of study, such as economics, psychology, human behavior, geopolitics, and image processing.
+          </p>
         </div>
       </section>
 
-      {/* Skills Section */}
-      <section>
-        <h2 className="text-2xl font-serif font-bold text-isabelline mb-8">Technical Skills</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-pale_dogwood">
-          <div className="flex items-baseline space-x-2">
-            <span className="font-bold text-steel_blue w-24 shrink-0">Languages</span>
-            <span>Python, C++, TypeScript, SQL</span>
-          </div>
-          <div className="flex items-baseline space-x-2">
-            <span className="font-bold text-steel_blue w-24 shrink-0">ML / Data</span>
-            <span>NumPy, Pandas, Scikit-learn, PyTorch</span>
-          </div>
-          <div className="flex items-baseline space-x-2">
-            <span className="font-bold text-steel_blue w-24 shrink-0">Platforms</span>
-            <span>Azure, Copilot Studio, Power Automate</span>
-          </div>
-          <div className="flex items-baseline space-x-2">
-            <span className="font-bold text-steel_blue w-24 shrink-0">Tools</span>
-            <span>Git, SolidWorks, VSCode, Jupyter</span>
-          </div>
+      <section className="space-y-4">
+        <p className="text-sm text-pale_dogwood leading-relaxed">
+          For selected projects and lecture notes, see the pages below.
+        </p>
+        <div className="flex flex-wrap gap-6 text-sm text-pale_dogwood uppercase tracking-wider font-medium">
+          <Link href="/projects" className="hover:text-steel_blue transition-colors">Projects</Link>
+          <Link href="/library" className="hover:text-steel_blue transition-colors">Library</Link>
         </div>
       </section>
     </div>
