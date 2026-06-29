@@ -19,7 +19,6 @@ export default function Projects() {
                     constraints="Provably optimal allocations via convex programming, real-world return/covariance estimation, sub-second efficient frontier generation, full test coverage."
                     imageSrc="/convex.png"
                     imageScale={1.3}
-                    customFilter="grayscale(100%) sepia(100%) hue-rotate(80deg) saturate(2.5) brightness(0.85) contrast(1.2)"
                     description={
                         <>
                             <p>
