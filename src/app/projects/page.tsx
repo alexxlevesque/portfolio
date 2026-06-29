@@ -35,7 +35,7 @@ export default function Projects() {
                             </ul>
                             <div className="mt-6 pt-4 border-t border-black/5">
                                 <a
-                                    href="#"
+                                    href="https://github.com/alexxlevesque/convexoptimization"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center gap-2 font-bold text-space_cadet hover:text-ultra_violet transition-colors"
