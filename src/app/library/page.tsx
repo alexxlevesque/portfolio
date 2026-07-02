@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { Analytics } from "@vercel/analytics/next"
 
-export default function Library() {
+export default function Notes() {
     const terms = [
         {
             name: 'Winter 2026',
@@ -85,6 +85,12 @@ export default function Library() {
                 <p className="text-rose_quartz text-base leading-relaxed max-w-2xl">
                     Lecture notes from my engineering studies at Queen&apos;s University.
                 </p>
+
+                {/* External Links */}
+                <div className="pt-2 flex flex-wrap gap-6 text-base text-pale_dogwood uppercase tracking-wider font-medium">
+                    <a href="https://boxd.it/kmZFf" target="_blank" rel="noopener noreferrer" className="hover:text-steel_blue transition-colors">Letterboxd</a>
+                    <a href="https://www.goodreads.com/user/show/202046676-alex-levesque" target="_blank" rel="noopener noreferrer" className="hover:text-steel_blue transition-colors">Goodreads</a>
+                </div>
             </header>
 
             {/* Notes Section */}

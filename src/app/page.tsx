@@ -53,7 +53,7 @@ export default function Home() {
           </p>
 
           <p>
-            <strong className="text-isabelline">Beyond engineering.</strong> Music, piano, cycling, and reading across economics, psychology, and geopolitics. See <Link href="/projects" className="text-rose_quartz hover:text-steel_blue transition-colors">Projects</Link> and <Link href="/library" className="text-rose_quartz hover:text-steel_blue transition-colors">Library</Link>.
+            <strong className="text-isabelline">Beyond engineering.</strong> Music, piano, cycling, and reading across economics, psychology, and geopolitics. See <Link href="/projects" className="text-rose_quartz hover:text-steel_blue transition-colors">Projects</Link> and <Link href="/library" className="text-rose_quartz hover:text-steel_blue transition-colors">Notes</Link>.
           </p>
         </div>
       </section>
@@ -64,7 +64,7 @@ export default function Home() {
         </p>
         <div className="flex flex-wrap gap-6 text-base text-pale_dogwood uppercase tracking-wider font-medium">
           <Link href="/projects" className="hover:text-steel_blue transition-colors">Projects</Link>
-          <Link href="/library" className="hover:text-steel_blue transition-colors">Library</Link>
+          <Link href="/library" className="hover:text-steel_blue transition-colors">Notes</Link>
         </div>
       </section>
     </div>
