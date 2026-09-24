@@ -21,7 +21,7 @@ export default function Home() {
             <p className="mt-2 text-xl text-rose_quartz font-medium">Applied Math & Computer Engineering<br /><span className="text-base opacity-80">Queen's University</span></p>
           </div>
           <p className="text-lg text-pale_dogwood leading-relaxed max-w-2xl">
-            I&apos;m interested in machine learning, quantitative systems, and the mathematical structure behind intelligent software. I like building practical tools that make difficult technical work more accurate, faster, and easier to reason about.
+            I&apos;m interested in machine learning, statistics, and their applications to finance and decision-making. I like making tools that make technical work more efficient and that optimize my workflows.
           </p>
           <div className="pt-4 flex flex-wrap gap-6 text-base text-pale_dogwood uppercase tracking-wider font-medium">
             <a href="/documents/resume.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-steel_blue transition-colors">Resume</a>
@@ -37,7 +37,11 @@ export default function Home() {
 
         <div className="space-y-4 text-base sm:text-lg text-pale_dogwood leading-relaxed">
           <p>
-            <strong className="text-isabelline">Data science.</strong> At Scotiabank, I build LLM pipelines for unstructured audit data, analytics dashboards, and clustering workflows for risk operations.
+            <strong className="text-isabelline">Finance.</strong> Next summer, I will partake in a Sales &apos; Trading internship at Scotiabank, where I hope to link machine learning and finance in a professional setting.
+          </p>
+
+          <p>
+            <strong className="text-isabelline">Data science.</strong> At Scotiabank, I built LLM pipelines for unstructured audit data, analytics dashboards, and clustering workflows for risk operations.
           </p>
 
           <p>
@@ -45,15 +49,11 @@ export default function Home() {
           </p>
 
           <p>
-            <strong className="text-isabelline">Quantitative modeling:</strong> I&apos;m drawn to probability, statistics, and optimization problems. My reinforcement learning trading project explored adaptive portfolio allocation with an ensemble of reinforcement learning agents with a focus on volatility reduction and risk-adjusted performance.
+            <strong className="text-isabelline">Social sciences:</strong> I&apos;m naturally drawn to sociology, neuroscience, human behavior, and mental models. I spend my free time reading on such subjects to improve conscientiousness and emotional intelligence.
           </p>
 
           <p>
-            <strong className="text-isabelline">Engineering systems:</strong> I enjoy building systems that combine mathematical structure with practical constraints. My autonomous robotic firefighting project used decentralized clustering and spatial partitioning to model wildfire containment.
-          </p>
-
-          <p>
-            <strong className="text-isabelline">Beyond engineering.</strong> Music, piano, cycling, and reading across economics, psychology, and geopolitics. See <Link href="/projects" className="text-rose_quartz hover:text-steel_blue transition-colors">Projects</Link> and <Link href="/library" className="text-rose_quartz hover:text-steel_blue transition-colors">Notes</Link>.
+            <strong className="text-isabelline">Engineering projects:</strong> I've built many projects in engineering and beyond. I've built a reinforcement learning trading project, a theoretical autonomous robotic firefighting project, and a working water filter!
           </p>
         </div>
       </section>
