@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import Figure from '@/components/Figure';
 
 interface ProjectCardProps {
     title: string;
@@ -12,8 +11,7 @@ interface ProjectCardProps {
     techStack: string;
     constraints: string;
     description?: React.ReactNode;
-    imageSrc?: string;
-    imageScale?: number;
+    illustration?: React.ReactNode; // a small generated picture, rendered by the page on the server
 }
 
 export default function ProjectCard({
@@ -25,8 +23,7 @@ export default function ProjectCard({
     techStack,
     constraints,
     description,
-    imageSrc,
-    imageScale
+    illustration
 }: ProjectCardProps) {
     const [isExpanded, setIsExpanded] = useState(false);
 
@@ -46,28 +43,19 @@ export default function ProjectCard({
                 </h3>
             </div>
 
-            {/* Banner Area */}
-            {imageSrc && (
-                <Figure
-                    src={imageSrc}
-                    alt={`${title} Preview`}
-                    sizes="(min-width: 1024px) 960px, 100vw"
-                    scale={imageScale}
-                    priority
-                    className="mb-6"
-                    frameClassName="h-56 sm:h-72"
-                />
-            )}
+            <div className="mb-6 grid items-start gap-6 md:grid-cols-[22rem_1fr] md:gap-8">
+                {illustration && <div className="aspect-[4/3] border border-ink/70 bg-paper">{illustration}</div>}
 
-            {/* Metadata Block */}
-            <dl className="mb-6 space-y-3 text-lg leading-relaxed">
-                {metadata.map(([label, value]) => (
-                    <div key={label} className="grid gap-1 sm:grid-cols-[8rem_1fr] sm:gap-6">
-                        <dt className="plate-label pt-1.5 text-ink/80">{label}:</dt>
-                        <dd>{value}</dd>
-                    </div>
-                ))}
-            </dl>
+                {/* Metadata Block */}
+                <dl className="space-y-3 text-lg leading-relaxed">
+                    {metadata.map(([label, value]) => (
+                        <div key={label} className="grid gap-1 sm:grid-cols-[8rem_1fr] sm:gap-6">
+                            <dt className="plate-label pt-1.5 text-ink/80">{label}:</dt>
+                            <dd>{value}</dd>
+                        </div>
+                    ))}
+                </dl>
+            </div>
 
             {/* Expandable Content */}
             {description && (
@@ -82,7 +70,7 @@ export default function ProjectCard({
 
                     <div className={`grid transition-all duration-300 ease-in-out ${isExpanded ? 'grid-rows-[1fr] opacity-100 mt-5' : 'grid-rows-[0fr] opacity-0'}`}>
                         <div className="overflow-hidden">
-                            <div className="text-lg leading-relaxed space-y-4 sm:pl-[9.5rem]">
+                            <div className="text-lg leading-relaxed space-y-4">
                                 {description}
                             </div>
                         </div>

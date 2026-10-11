@@ -2,6 +2,8 @@ import Link from 'next/link';
 import ProjectCard from '@/components/ProjectCard';
 import Plate from '@/components/plates/Plate';
 import StipplePlate from '@/components/plates/StipplePlate';
+import EnsembleFigure from '@/components/plates/EnsembleFigure';
+import SwarmFigure from '@/components/plates/SwarmFigure';
 
 export default function Projects() {
     return (
@@ -24,8 +26,7 @@ export default function Projects() {
                     outcome="Adaptive trading strategy that reduces portfolio volatility and improves risk-adjusted returns using an ensemble of reinforcement learning agents."
                     techStack="Python, PyTorch, PPO, A2C, TD3, Git"
                     constraints="Adaptive allocation across varying market regimes, effective diversification to minimize drawdown, rigorous backtesting against SPY benchmark."
-                    imageSrc="/trading.png"
-                    imageScale={1.3}
+                    illustration={<EnsembleFigure />}
                     description={
                         <>
                             <p>
@@ -63,7 +64,7 @@ export default function Projects() {
                     outcome="Optimized autonomous robot deployment system for wildfire containment, achieving a 30% reduction in cluster convergence time."
                     techStack="MATLAB, Lloyd's Algorithm, K-Means Clustering, GIS Spatial Analysis Tools"
                     constraints="Real-time dynamic fire hotspot data processing, accurate perimeter modeling, efficient multi-agent coordination."
-                    imageSrc="/autonomousrobot.jpg"
+                    illustration={<SwarmFigure />}
                     description={
                         <>
                             <p className="plate-label text-ink-rose mb-4">

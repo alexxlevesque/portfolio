@@ -10,6 +10,11 @@ export function random(seed: number) {
     };
 }
 
+// Standard normal draw (Box–Muller).
+export function gaussian(rand: () => number) {
+    return Math.sqrt(-2 * Math.log(1 - rand())) * Math.cos(2 * Math.PI * rand());
+}
+
 const fmt = (n: number) => String(Math.round(n * 10) / 10);
 
 export function path(points: Point[]) {

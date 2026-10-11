@@ -1,4 +1,5 @@
-import { path, random, type Point } from './geometry';
+import { gaussian, path, random, type Point } from './geometry';
+import GrainFilter from './GrainFilter';
 
 // A landscape sheet: Brownian motion across the top, the option and Itô's table beneath.
 const W = 1000;
@@ -13,10 +14,6 @@ const tx = (t: number) => X0 + (XT - X0) * t;
 const by = (b: number) => ZERO - 92 * b;
 const A = 1.2; // the level a
 const aY = by(A);
-
-function gaussian(rand: () => number) {
-    return Math.sqrt(-2 * Math.log(1 - rand())) * Math.cos(2 * Math.PI * rand());
-}
 
 const STEPS = 700;
 function brownian(seed: number) {
@@ -135,11 +132,7 @@ export default function BrownianPlate() {
             className="h-full w-full"
         >
             <defs>
-                <filter id="bm-grain">
-                    <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="17" result="n" />
-                    <feColorMatrix in="n" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -3 2.1" result="m" />
-                    <feComposite in="SourceGraphic" in2="m" operator="in" />
-                </filter>
+                <GrainFilter id="bm-grain" seed={17} />
                 <pattern id="bm-dots" width="5" height="5" patternUnits="userSpaceOnUse">
                     <circle cx="2.5" cy="2.5" r="1.3" className="fill-ink-rose" />
                 </pattern>
