@@ -37,14 +37,6 @@ export default function RootLayout({
         <div className="mx-auto w-full max-w-5xl px-5 sm:px-8 pt-6 pb-12">
           <TopNavigation />
           <main className="mt-10 sm:mt-14">{children}</main>
-          <footer className="mt-20 flex justify-end border-t border-ink/60 pt-3 plate-label text-ink/70">
-            <span className="flex items-center gap-2">
-              Inks
-              <span className="h-2.5 w-2.5 rounded-full bg-ink-yellow" />
-              <span className="h-2.5 w-2.5 rounded-full bg-ink-rose" />
-              <span className="h-2.5 w-2.5 rounded-full bg-ink-purple" />
-            </span>
-          </footer>
         </div>
       </body>
     </html>
