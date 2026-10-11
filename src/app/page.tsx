@@ -1,71 +1,80 @@
 import Link from 'next/link';
-import RisoImage from '@/components/RisoImage';
-import RisoTitle from '@/components/RisoTitle';
+import Figure from '@/components/Figure';
+import Plate from '@/components/plates/Plate';
+import ApollonianPlate from '@/components/plates/ApollonianPlate';
+
+const interests = [
+  { label: 'Finance.', text: 'Next summer, I will partake in a Sales & Trading internship at Scotiabank, where I hope to link machine learning and finance in a professional setting.' },
+  { label: 'Data science.', text: 'At Scotiabank, I built LLM pipelines for unstructured audit data, analytics dashboards, and clustering workflows for risk operations.' },
+  { label: 'Generative AI.', text: 'At the Immigration and Refugee Board of Canada, I shipped Azure workflows for document transcription, classification, and legal retrieval.' },
+  { label: 'Social sciences:', text: "I'm naturally drawn to sociology, neuroscience, human behavior, and mental models. I spend my free time reading on such subjects to improve conscientiousness and emotional intelligence." },
+  { label: 'Engineering projects:', text: "I've built many projects in engineering and beyond. I've built a reinforcement learning trading project, a theoretical autonomous robotic firefighting project, and a working water filter!" },
+];
+
+const numerals = ['i', 'ii', 'iii', 'iv', 'v'];
 
 export default function Home() {
   return (
     <div className="space-y-16">
+      <Plate
+        numeral="I"
+        kicker="Applied Math & Computer Engineering"
+        title="Alex Levesque"
+        formula="|P − F₁| = k · |P − F₂|,  0 < k < 1"
+        note="Queen's University"
+        caption="Circles of Apollonius about the pole F₁, crossed by the circles through F₁ and its partner F₂ below the sheet."
+      >
+        <ApollonianPlate />
+      </Plate>
+
       {/* Hero Section */}
-      <section className="flex flex-col md:flex-row gap-10 md:gap-12 items-start">
-        <RisoImage
+      <section className="grid gap-8 sm:grid-cols-[14rem_1fr] sm:gap-12 items-start">
+        <Figure
           src="/headshot.jpg"
           alt="Alex Levesque"
-          sizes="256px"
-          cell={3.5}
-          scale={1.45}
+          sizes="224px"
+          label="Fig. 1"
+          caption="Portrait"
           priority
-          className="shrink-0 w-48 h-48 sm:w-64 sm:h-64 border-2 border-ink-blue shadow-plate"
+          className="w-48 sm:w-56"
+          frameClassName="aspect-[4/5]"
         />
-        <div className="flex-1 space-y-6">
-          <div>
-            <RisoTitle className="riso-display text-6xl sm:text-7xl">Alex Levesque</RisoTitle>
-            <p className="mt-4 font-mono text-sm uppercase tracking-wider font-bold">Applied Math & Computer Engineering<br /><span className="font-normal opacity-80">Queen&apos;s University</span></p>
-          </div>
-          <p className="text-lg leading-relaxed max-w-2xl">
+        <div className="space-y-6">
+          <p className="text-xl sm:text-2xl leading-relaxed max-w-2xl">
             I&apos;m interested in machine learning, statistics, and their applications to finance and decision-making. I like making tools that make technical work more efficient and that optimize my workflows.
           </p>
-          <div className="pt-2 flex flex-wrap gap-3">
-            <a href="/documents/resume.pdf" target="_blank" rel="noopener noreferrer" className="riso-button">Resume</a>
-            <a href="https://www.linkedin.com/in/alex-levesque/" target="_blank" rel="noopener noreferrer" className="riso-button">LinkedIn</a>
-            <a href="https://github.com/alexxlevesque" target="_blank" rel="noopener noreferrer" className="riso-button">GitHub</a>
-            <a href="mailto:alex.levesque@queensu.ca" className="riso-button">Email</a>
+          <div className="flex flex-wrap gap-x-6 gap-y-3">
+            <a href="/documents/resume.pdf" target="_blank" rel="noopener noreferrer" className="plate-link">Resume ↗</a>
+            <a href="https://www.linkedin.com/in/alex-levesque/" target="_blank" rel="noopener noreferrer" className="plate-link">LinkedIn ↗</a>
+            <a href="https://github.com/alexxlevesque" target="_blank" rel="noopener noreferrer" className="plate-link">GitHub ↗</a>
+            <a href="mailto:alex.levesque@queensu.ca" className="plate-link">Email</a>
           </div>
         </div>
       </section>
 
       <section className="space-y-6">
-        <h2 className="riso-display text-3xl sm:text-4xl"><span className="riso-highlight">Experience and areas of interest</span></h2>
+        <h2 className="plate-heading">Experience and areas of interest</h2>
 
-        <div className="space-y-4 text-base sm:text-lg leading-relaxed">
-          <p>
-            <strong className="riso-mark font-extrabold">Finance.</strong> Next summer, I will partake in a Sales &apos; Trading internship at Scotiabank, where I hope to link machine learning and finance in a professional setting.
-          </p>
-
-          <p>
-            <strong className="riso-mark font-extrabold">Data science.</strong> At Scotiabank, I built LLM pipelines for unstructured audit data, analytics dashboards, and clustering workflows for risk operations.
-          </p>
-
-          <p>
-            <strong className="riso-mark font-extrabold">Generative AI.</strong> At the Immigration and Refugee Board of Canada, I shipped Azure workflows for document transcription, classification, and legal retrieval.
-          </p>
-
-          <p>
-            <strong className="riso-mark font-extrabold">Social sciences:</strong> I&apos;m naturally drawn to sociology, neuroscience, human behavior, and mental models. I spend my free time reading on such subjects to improve conscientiousness and emotional intelligence.
-          </p>
-
-          <p>
-            <strong className="riso-mark font-extrabold">Engineering projects:</strong> I've built many projects in engineering and beyond. I've built a reinforcement learning trading project, a theoretical autonomous robotic firefighting project, and a working water filter!
-          </p>
-        </div>
+        <dl className="text-lg leading-relaxed">
+          {interests.map(({ label, text }, i) => (
+            <div key={label} className="grid gap-1 sm:grid-cols-[14rem_1fr] sm:gap-12 border-b border-dotted border-ink/40 py-4">
+              <dt className="font-display text-lg font-semibold italic">
+                <span className="mr-3 font-mono text-xs not-italic font-normal text-ink-rose">{numerals[i]}.</span>
+                {label}
+              </dt>
+              <dd>{text}</dd>
+            </div>
+          ))}
+        </dl>
       </section>
 
-      <section className="space-y-4 border-t-2 border-dashed border-ink-blue/60 pt-8">
-        <p className="text-base leading-relaxed">
+      <section className="space-y-4">
+        <p className="text-lg leading-relaxed italic">
           For selected projects and lecture notes, see the pages below.
         </p>
-        <div className="flex flex-wrap gap-3">
-          <Link href="/projects" className="riso-button">Projects</Link>
-          <Link href="/library" className="riso-button">Notes</Link>
+        <div className="flex flex-wrap gap-x-6 gap-y-3">
+          <Link href="/projects" className="plate-link">II. Projects →</Link>
+          <Link href="/library" className="plate-link">III. Notes →</Link>
         </div>
       </section>
     </div>

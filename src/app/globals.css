@@ -3,18 +3,15 @@
 @tailwind utilities;
 
 :root {
-  /* Riso spot inks, as RGB channels so Tailwind can add alpha */
-  --paper: 246 241 231;
-  --ink-blue: 50 85 164;    /* Medium Blue */
-  --ink-pink: 255 72 176;   /* Fluorescent Pink */
-  --ink-yellow: 255 232 0;  /* Yellow */
+  /* Spot inks, as RGB channels so Tailwind can add alpha */
+  --paper: 245 240 226;      /* cream stock */
+  --ink: 38 33 30;           /* warm black */
+  --ink-yellow: 243 211 74;  /* soft yellow */
+  --ink-rose: 154 66 96;     /* muted burgundy-rose */
+  --ink-purple: 92 76 156;   /* indigo purple */
 
-  /* How far the pink drum lands from the blue one, relative to type size */
-  --misregister-x: 0.04em;
-  --misregister-y: 0.028em;
-
-  /* Paper fibre (dark flecks) and ink starvation (light flecks) */
-  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='d'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .14 0 0 0 0 .12 0 0 0 0 .2 -10 0 0 0 3.85'/%3E%3C/filter%3E%3Cfilter id='l'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.55' numOctaves='2' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 .97 10 0 0 0 -5.9'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23d)'/%3E%3Crect width='100%25' height='100%25' filter='url(%23l)'/%3E%3C/svg%3E");
+  /* Fine paper tooth: sparse dark fibres, multiplied in so photos and ink stay clean */
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='d'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .2 0 0 0 0 .16 0 0 0 0 .1 -10 0 0 0 3.85'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23d)'/%3E%3C/svg%3E");
 }
 
 html {
@@ -22,10 +19,10 @@ html {
 }
 
 body {
-  color: rgb(var(--ink-blue));
+  color: rgb(var(--ink));
   background-color: rgb(var(--paper));
-  font-size: 1.125rem;
-  line-height: 1.65;
+  font-size: 1.2rem;
+  line-height: 1.6;
 }
 
 body::after {
@@ -35,114 +32,60 @@ body::after {
   z-index: 60;
   pointer-events: none;
   background-image: var(--grain);
-  opacity: 0.3;
+  mix-blend-mode: multiply;
+  opacity: 0.25;
 }
 
 ::selection {
   background: rgb(var(--ink-yellow));
-  color: rgb(var(--ink-blue));
+  color: rgb(var(--ink));
 }
 
 :focus-visible {
-  outline: 2px dashed rgb(var(--ink-blue));
+  outline: 1px dashed rgb(var(--ink));
   outline-offset: 3px;
 }
 
 @layer components {
-  /* Heavy condensed poster type */
-  .riso-display {
-    @apply font-display font-extrabold leading-[0.95] tracking-tight;
-    font-stretch: 78%;
+  /* Small letterspaced typewriter caps, as on a plate's header and labels */
+  .plate-label {
+    @apply font-mono text-[0.72rem] uppercase leading-snug tracking-[0.18em];
   }
 
-  /* Blue key plate with a misregistered pink plate printed on top */
-  .riso-title {
-    position: relative;
-    filter: url(#riso-rough);
+  /* Section heading: a label followed by a hairline running to the margin */
+  .plate-heading {
+    @apply plate-label flex items-center gap-4 text-ink;
   }
 
-  .riso-title__plate {
-    position: absolute;
-    inset: 0;
-    color: rgb(var(--ink-pink));
-    mix-blend-mode: multiply;
-    transform: translate(var(--misregister-x), var(--misregister-y));
-    pointer-events: none;
-    user-select: none;
-  }
-
-  /* Yellow highlighter run behind the lower part of a line */
-  .riso-highlight {
-    background: linear-gradient(transparent 45%, rgb(var(--ink-yellow)) 45%, rgb(var(--ink-yellow)) 92%, transparent 92%);
-    box-decoration-break: clone;
-    -webkit-box-decoration-break: clone;
-    padding: 0 0.15em;
-  }
-
-  /* Pink marker stripe under a word */
-  .riso-mark {
-    text-decoration-line: underline;
-    text-decoration-color: rgb(var(--ink-pink));
-    text-decoration-thickness: 0.32em;
-    text-underline-offset: -0.12em;
-    text-decoration-skip-ink: none;
-  }
-
-  /* Mono label stamped in a blue frame; floods yellow on hover */
-  .riso-button {
-    @apply inline-flex items-center gap-2 border-2 border-ink-blue px-3 py-1 font-mono text-sm font-bold uppercase tracking-wider text-ink-blue;
-    transition: background-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
-  }
-
-  .riso-button:hover {
-    @apply bg-ink-yellow shadow-plate-sm;
-    transform: translate(-2px, -2px);
-  }
-
-  /* Flat tint printed as a dot screen */
-  .riso-screen {
-    background-image: radial-gradient(currentColor 1.1px, transparent 1.5px);
-    background-size: 6px 6px;
-  }
-
-  /* Single-ink duotone: greys become blue ink, white stays paper */
-  .riso-mono {
-    position: relative;
-    background: #fff;
-    mix-blend-mode: multiply;
-  }
-
-  .riso-mono img {
-    display: block;
-    filter: grayscale(1) contrast(1.15);
-  }
-
-  .riso-mono::after {
+  .plate-heading::after {
     content: '';
-    position: absolute;
-    inset: 0;
-    background: rgb(var(--ink-blue));
-    mix-blend-mode: screen;
-    pointer-events: none;
+    @apply h-px flex-1 bg-ink/60;
   }
 
-  /* Crop marks just outside each corner of the printed sheet */
-  .riso-sheet::before {
-    --c: rgb(var(--ink-blue) / 0.7);
-    content: '';
-    position: absolute;
-    inset: -14px;
-    pointer-events: none;
-    background:
-      linear-gradient(var(--c), var(--c)) left 0 top 14px / 9px 1px,
-      linear-gradient(var(--c), var(--c)) left 14px top 0 / 1px 9px,
-      linear-gradient(var(--c), var(--c)) right 0 top 14px / 9px 1px,
-      linear-gradient(var(--c), var(--c)) right 14px top 0 / 1px 9px,
-      linear-gradient(var(--c), var(--c)) left 0 bottom 14px / 9px 1px,
-      linear-gradient(var(--c), var(--c)) left 14px bottom 0 / 1px 9px,
-      linear-gradient(var(--c), var(--c)) right 0 bottom 14px / 9px 1px,
-      linear-gradient(var(--c), var(--c)) right 14px bottom 0 / 1px 9px;
-    background-repeat: no-repeat;
+  /* Typewriter link; a stroke of yellow ink behind it on hover */
+  .plate-link {
+    @apply plate-label underline decoration-ink-rose/60 decoration-1 underline-offset-4;
+    transition: background-color 0.15s ease;
+  }
+
+  .plate-link:hover {
+    @apply bg-ink-yellow/70 decoration-ink;
+  }
+
+  /* Map-label halo, so annotations stay legible over linework */
+  .halo {
+    text-shadow:
+      0 0 2px rgb(var(--paper)),
+      0 0 4px rgb(var(--paper)),
+      0 0 8px rgb(var(--paper));
+  }
+
+  /* The same halo for SVG text: a paper-coloured stroke painted under the fill */
+  .svg-halo text {
+    paint-order: stroke;
+    stroke: rgb(var(--paper));
+    stroke-width: 3px;
+    stroke-linejoin: round;
   }
 }
 
@@ -151,9 +94,5 @@ body::after {
   *::before,
   *::after {
     transition: none !important;
-  }
-
-  .riso-button:hover {
-    transform: none;
   }
 }

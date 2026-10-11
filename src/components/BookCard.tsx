@@ -23,58 +23,58 @@ export default function BookCard({
     const [isExpanded, setIsExpanded] = useState(false);
 
     return (
-        <div className="bg-paper border-2 border-ink-blue overflow-hidden shadow-plate-sm flex flex-col h-full">
+        <div className="border-t border-ink/70 pt-4 flex flex-col h-full">
             {/* Image Area - Smaller than project card */}
-            <div className="h-48 w-full bg-paper border-b-2 border-ink-blue relative overflow-hidden group">
+            <div className="h-48 w-full bg-paper border border-ink/70 relative overflow-hidden group">
                 {imageSrc ? (
                     <Image
                         src={imageSrc}
                         alt={`${title} Cover`}
                         fill
-                        className="object-cover grayscale mix-blend-multiply transition-transform duration-500 group-hover:scale-105"
+                        className="object-cover mix-blend-multiply"
                         priority
                     />
                 ) : (
-                    <div className="riso-screen absolute inset-0 flex items-center justify-center text-ink-blue/30">
-                        <span className="riso-display text-ink-blue text-2xl">{title}</span>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                        <span className="font-display italic text-2xl text-ink/60">{title}</span>
                     </div>
                 )}
 
                 {/* Overlay Rating */}
                 {rating && (
-                    <div className="absolute top-3 right-3 bg-ink-yellow text-ink-blue font-mono text-xs font-bold px-2 py-1 border-2 border-ink-blue">
+                    <div className="absolute top-3 right-3 bg-paper plate-label px-2 py-1 border border-ink/70">
                         {rating}
                     </div>
                 )}
             </div>
 
-            <div className="p-5 flex flex-col flex-grow">
+            <div className="pt-4 flex flex-col flex-grow">
                 {/* Header */}
                 <div className="mb-3">
-                    <h3 className="riso-display text-2xl mb-1">
+                    <h3 className="font-display text-2xl font-medium leading-tight mb-1">
                         {link ? (
-                            <a href={link} target="_blank" rel="noopener noreferrer" className="hover:riso-mark">
+                            <a href={link} target="_blank" rel="noopener noreferrer" className="hover:bg-ink-yellow/50">
                                 {title}
                             </a>
                         ) : (
                             title
                         )}
                     </h3>
-                    <p className="font-mono text-xs uppercase tracking-wider">By {author}</p>
+                    <p className="plate-label text-ink/80">By {author}</p>
                 </div>
 
                 {/* Content */}
-                <div className="space-y-3 text-sm leading-relaxed flex-grow">
+                <div className="space-y-3 text-base leading-relaxed flex-grow">
                     <div className={`relative ${!isExpanded ? 'line-clamp-3' : ''}`}>
                         {thoughts}
                     </div>
                 </div>
 
                 {/* Expand / Collapse Action */}
-                <div className="pt-4 mt-auto border-t-2 border-dashed border-ink-blue/60 flex justify-end">
+                <div className="pt-3 mt-auto border-t border-dotted border-ink/40 flex justify-end">
                     <button
                         onClick={() => setIsExpanded(!isExpanded)}
-                        className="flex items-center gap-1.5 font-mono text-xs font-bold uppercase tracking-wider px-1 hover:bg-ink-yellow"
+                        className="flex items-center gap-1.5 plate-label px-1 hover:bg-ink-yellow/50"
                     >
                         {isExpanded ? 'Less' : 'More'}
                         <svg

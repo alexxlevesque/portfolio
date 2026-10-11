@@ -1,8 +1,7 @@
-'use client';
-
 import Link from 'next/link';
 import { Analytics } from "@vercel/analytics/next"
-import RisoTitle from '@/components/RisoTitle';
+import Plate from '@/components/plates/Plate';
+import ContourPlate from '@/components/plates/ContourPlate';
 
 export default function Notes() {
     const terms = [
@@ -80,64 +79,60 @@ export default function Notes() {
 
     return (
         <div className="space-y-16">
+            <Plate
+                numeral="III"
+                kicker="Lecture notes"
+                title="Notes"
+                formula="f(p) = Σ aᵢ · exp(−|p − pᵢ|² / 2σᵢ²)"
+                caption="Contours of f at intervals of 0.05, heavier every 0.25; a hollow is dashed in purple. The transect A–A′ is marked where it crosses the heavy lines."
+            >
+                <ContourPlate terms={terms.map((term) => ({ name: term.name, codes: term.courses.map((course) => course.code) }))} />
+            </Plate>
+
             {/* Header */}
-            <header className="space-y-4">
-                <RisoTitle className="riso-display text-6xl sm:text-8xl">Notes</RisoTitle>
-                <p className="text-lg leading-relaxed max-w-2xl">
+            <section className="space-y-4">
+                <p className="text-xl leading-relaxed max-w-2xl">
                     Lecture notes from my engineering studies at Queen&apos;s University.
                 </p>
 
                 {/* External Links */}
-                <div className="pt-2 flex flex-wrap gap-3">
-                    <a href="https://boxd.it/kmZFf" target="_blank" rel="noopener noreferrer" className="riso-button">Letterboxd</a>
-                    <a href="https://www.goodreads.com/user/show/202046676-alex-levesque" target="_blank" rel="noopener noreferrer" className="riso-button">Goodreads</a>
-                </div>
-            </header>
-
-            {/* Notes Section */}
-            <section className="space-y-12">
-
-                <div className="space-y-10">
-                    {terms.map((term) => (
-                        <div key={term.name} className="space-y-4">
-                            <h3 className="font-mono text-sm font-bold uppercase tracking-wider">
-                                <span className="riso-highlight">{term.name}</span>
-                            </h3>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                {term.courses.map((repo) => (
-                                    <div key={repo.code} className="flex flex-col sm:flex-row gap-4 items-start sm:items-center group bg-paper p-4 border-2 border-ink-blue transition duration-150 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-plate-sm motion-reduce:hover:translate-x-0 motion-reduce:hover:translate-y-0">
-                                        {/* Icon/Code Box */}
-                                        <div className="shrink-0 w-14 h-14 p-1.5 bg-ink-blue flex items-center justify-center font-mono text-[11px] leading-tight font-bold text-center text-paper transition-colors group-hover:bg-ink-yellow group-hover:text-ink-blue">
-                                            {repo.code}
-                                        </div>
-
-                                        <div className="flex-1 min-w-0 w-full">
-                                            <h4 className="text-lg font-bold leading-snug sm:truncate">
-                                                <a href={repo.repository} target="_blank" rel="noopener noreferrer" className="hover:riso-mark">
-                                                    {repo.title}
-                                                </a>
-                                            </h4>
-                                            <div className="flex items-center gap-2 mt-1">
-                                                <a href={repo.repository} target="_blank" rel="noopener noreferrer" className="font-mono text-xs uppercase tracking-wider hover:bg-ink-yellow flex items-center gap-1">
-                                                    <span>View PDF</span>
-                                                    <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                                    </svg>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    ))}
+                <div className="flex flex-wrap gap-x-6 gap-y-3">
+                    <a href="https://boxd.it/kmZFf" target="_blank" rel="noopener noreferrer" className="plate-link">Letterboxd ↗</a>
+                    <a href="https://www.goodreads.com/user/show/202046676-alex-levesque" target="_blank" rel="noopener noreferrer" className="plate-link">Goodreads ↗</a>
                 </div>
             </section>
 
-            <section>
-                <div className="flex flex-wrap gap-3 border-t-2 border-dashed border-ink-blue/60 pt-8">
-                    <Link href="/" className="riso-button">Home</Link>
-                    <Link href="/projects" className="riso-button">Projects</Link>
+            {/* Notes Section */}
+            <section className="space-y-12">
+                {terms.map((term) => (
+                    <div key={term.name} className="space-y-2">
+                        <h3 className="plate-heading">{term.name}</h3>
+                        <ol>
+                            {term.courses.map((repo) => (
+                                <li key={repo.code}>
+                                    <a
+                                        href={repo.repository}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="group flex items-baseline gap-3 sm:gap-5 py-2 transition-colors hover:bg-ink-yellow/40"
+                                    >
+                                        <span className="plate-label w-20 shrink-0 text-ink-rose">{repo.code}</span>
+                                        <span className="text-lg leading-snug group-hover:underline decoration-ink-rose/60 decoration-1 underline-offset-4">{repo.title}</span>
+                                        {/* Dotted leader running out to the page reference, as in a table of contents */}
+                                        <span aria-hidden="true" className="hidden sm:block flex-1 min-w-8 border-b border-dotted border-ink/50" />
+                                        <span className="plate-label ml-auto shrink-0 text-ink/80">View PDF ↗</span>
+                                    </a>
+                                </li>
+                            ))}
+                        </ol>
+                    </div>
+                ))}
+            </section>
+
+            <section className="border-t border-ink/70 pt-6">
+                <div className="flex flex-wrap gap-x-6 gap-y-3">
+                    <Link href="/" className="plate-link">I. Home →</Link>
+                    <Link href="/projects" className="plate-link">II. Projects →</Link>
                 </div>
             </section>
 

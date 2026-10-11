@@ -8,22 +8,19 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-bricolage)', 'system-ui', 'sans-serif'],
-        display: ['var(--font-bricolage)', 'system-ui', 'sans-serif'],
-        mono: ['var(--font-space-mono)', 'ui-monospace', 'monospace'],
+        serif: ['var(--font-garamond)', 'Garamond', 'Times New Roman', 'serif'],
+        display: ['var(--font-bodoni)', 'Didot', 'Bodoni 72', 'serif'],
+        mono: ['var(--font-courier)', 'Courier New', 'monospace'],
       },
-      // Riso spot inks. Channels live in globals.css so the canvas halftone can read them too.
+      // Spot inks on cream stock. Channels live in globals.css.
       colors: {
         paper: 'rgb(var(--paper) / <alpha-value>)',
         ink: {
-          blue: 'rgb(var(--ink-blue) / <alpha-value>)',
-          pink: 'rgb(var(--ink-pink) / <alpha-value>)',
+          DEFAULT: 'rgb(var(--ink) / <alpha-value>)',
           yellow: 'rgb(var(--ink-yellow) / <alpha-value>)',
+          rose: 'rgb(var(--ink-rose) / <alpha-value>)',
+          purple: 'rgb(var(--ink-purple) / <alpha-value>)',
         },
-      },
-      boxShadow: {
-        'plate-sm': '4px 4px 0 0 rgb(var(--ink-pink))',
-        plate: '10px 10px 0 0 rgb(var(--ink-pink))',
       },
     },
   },

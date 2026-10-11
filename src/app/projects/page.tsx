@@ -1,20 +1,28 @@
 import Link from 'next/link';
 import ProjectCard from '@/components/ProjectCard';
-import RisoTitle from '@/components/RisoTitle';
+import Plate from '@/components/plates/Plate';
+import StipplePlate from '@/components/plates/StipplePlate';
 
 export default function Projects() {
     return (
-        <div className="space-y-16 max-w-5xl mx-auto">
-            <header className="mb-16 text-center sm:text-left">
-                <RisoTitle className="riso-display text-6xl sm:text-8xl mb-5">Projects</RisoTitle>
-                <p className="font-mono text-sm uppercase tracking-wider"> Implementing my passions into reality.</p>
-            </header>
+        <div className="space-y-16">
+            <Plate
+                numeral="II"
+                kicker="Selected work"
+                title="Projects"
+                formula="z = exp(−3r²) + 0.15 · cos 5x · exp(−r²)"
+                note="Implementing my passions into reality."
+                caption="A surface stippled by its own shading, lit from the upper left. The rose band is the level set z = ½."
+            >
+                <StipplePlate />
+            </Plate>
 
-            <section className="space-y-12">
+            <section className="space-y-20">
 
                 <ProjectCard
                     title="Adaptive RL Ensemble Strategy"
                     status="COMPLETED"
+                    figure="Fig. II.1"
                     outcome="Adaptive trading strategy that reduces portfolio volatility and improves risk-adjusted returns using an ensemble of reinforcement learning agents."
                     techStack="Python, PyTorch, PPO, A2C, TD3, Git"
                     constraints="Adaptive allocation across varying market regimes, effective diversification to minimize drawdown, rigorous backtesting against SPY benchmark."
@@ -33,12 +41,12 @@ export default function Projects() {
                                 <li><strong>Statistical confidence:</strong> performance validated with 10,000-sample bootstrap confidence intervals, so the edge wasn't just a lucky run.</li>
                                 <li><strong>Adaptive diversification:</strong> the ensemble shifts weight across ETFs as conditions change, smoothing volatility instead of riding any single position.</li>
                             </ul>
-                            <div className="mt-6 pt-4 border-t-2 border-dashed border-ink-blue/60">
+                            <div className="mt-6 pt-4 border-t border-dotted border-ink/40">
                                 <a
                                     href="https://github.com/ary4f/QMINDARES/tree/main"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="riso-button"
+                                    className="plate-link inline-flex items-center gap-2"
                                 >
                                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                                         <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.645-.735-3.885-1.395-.135-.345-.72-1.395-1.23-1.68-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
@@ -53,23 +61,24 @@ export default function Projects() {
                 <ProjectCard
                     title="Autonomous Multi-Agent Robotic Firefighting"
                     status="COMPLETED"
+                    figure="Fig. II.2"
                     outcome="Optimized autonomous robot deployment system for wildfire containment, achieving a 30% reduction in cluster convergence time."
                     techStack="MATLAB, Lloyd's Algorithm, K-Means Clustering, GIS Spatial Analysis Tools"
                     constraints="Real-time dynamic fire hotspot data processing, accurate perimeter modeling, efficient multi-agent coordination."
                     imageSrc="/autonomousrobot.jpg"
                     description={
                         <>
-                            <p className="font-mono text-sm font-bold uppercase tracking-wider mb-4">
+                            <p className="plate-label text-ink-rose mb-4">
                                 Course project for APSC 200: Engineering Design and Practice. Course Grade: A+ | Role: Primary Technical Contributor
                             </p>
                             <p>
                                 Driven by an interest in mathematical optimization, I developed a decentralized multi-agent system designed to tackle the unpredictable nature of wildfires. Moving away from rigid, centralized control, I implemented <strong>Lloyd’s Algorithm</strong> (i. e. K-Means Clustering) to allow a fleet of drones to "self-organize" based on real-time environmental data.
                             </p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
-                                <div className="riso-mono overflow-hidden border-2 border-ink-blue">
+                                <div className="overflow-hidden border border-ink/70">
                                     <img src="/firefighting_1.png" alt="Multi-agent fire containment simulation" className="w-full h-auto" />
                                 </div>
-                                <div className="riso-mono overflow-hidden border-2 border-ink-blue">
+                                <div className="overflow-hidden border border-ink/70">
                                     <img src="/firefighting_2.png" alt="Drone agent trajectory plots" className="w-full h-auto" />
                                 </div>
                             </div>
@@ -87,12 +96,10 @@ export default function Projects() {
 
             </section>
 
-            <hr className="border-t-2 border-dashed border-ink-blue/60 my-12" />
-
-            <section>
-                <div className="flex flex-wrap gap-3">
-                    <Link href="/" className="riso-button">Home</Link>
-                    <Link href="/library" className="riso-button">Notes</Link>
+            <section className="border-t border-ink/70 pt-6">
+                <div className="flex flex-wrap gap-x-6 gap-y-3">
+                    <Link href="/" className="plate-link">I. Home →</Link>
+                    <Link href="/library" className="plate-link">III. Notes →</Link>
                 </div>
             </section>
         </div>

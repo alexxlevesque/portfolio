@@ -1,19 +1,24 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque, Space_Mono } from "next/font/google";
+import { Bodoni_Moda, Courier_Prime, EB_Garamond } from "next/font/google";
 import "./globals.css";
 import TopNavigation from "@/components/TopNavigation";
-import { ColorBar, RegistrationMark } from "@/components/PrintMarks";
 
-const bricolage = Bricolage_Grotesque({
+const garamond = EB_Garamond({
   subsets: ["latin"],
-  axes: ["opsz", "wdth"],
-  variable: "--font-bricolage",
+  style: ["normal", "italic"],
+  variable: "--font-garamond",
 });
 
-const spaceMono = Space_Mono({
+const bodoni = Bodoni_Moda({
+  subsets: ["latin"],
+  axes: ["opsz"],
+  variable: "--font-bodoni",
+});
+
+const courier = Courier_Prime({
   subsets: ["latin"],
   weight: ["400", "700"],
-  variable: "--font-space-mono",
+  variable: "--font-courier",
 });
 
 export const metadata: Metadata = {
@@ -27,25 +32,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`scroll-smooth ${bricolage.variable} ${spaceMono.variable}`}>
-      <body className="font-sans min-h-screen antialiased">
-        {/* Roughens ink edges on .riso-title, like toner on uncoated stock */}
-        <svg aria-hidden="true" focusable="false" className="absolute h-0 w-0">
-          <filter id="riso-rough">
-            <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="noise" />
-            <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" xChannelSelector="R" yChannelSelector="G" />
-          </filter>
-        </svg>
-
-        <TopNavigation />
-
-        <div className="min-h-screen flex flex-col items-center justify-center gap-10 py-24 px-6 sm:px-8">
-          <div className="riso-sheet relative w-full max-w-4xl p-2 sm:p-12">
-            <RegistrationMark className="hidden sm:block absolute -top-12 left-1/2 -translate-x-1/2 w-6 h-6" />
-            <RegistrationMark className="hidden sm:block absolute -bottom-12 left-1/2 -translate-x-1/2 w-6 h-6" />
-            {children}
-          </div>
-          <ColorBar className="w-full max-w-4xl justify-end" />
+    <html lang="en" className={`scroll-smooth ${garamond.variable} ${bodoni.variable} ${courier.variable}`}>
+      <body className="font-serif min-h-screen antialiased">
+        <div className="mx-auto w-full max-w-5xl px-5 sm:px-8 pt-6 pb-12">
+          <TopNavigation />
+          <main className="mt-10 sm:mt-14">{children}</main>
+          <footer className="mt-20 flex flex-wrap items-center justify-between gap-3 border-t border-ink/60 pt-3 plate-label text-ink/70">
+            <span>Set in EB Garamond, Bodoni Moda &amp; Courier Prime</span>
+            <span className="flex items-center gap-2">
+              Inks
+              <span className="h-2.5 w-2.5 rounded-full bg-ink-yellow" />
+              <span className="h-2.5 w-2.5 rounded-full bg-ink-rose" />
+              <span className="h-2.5 w-2.5 rounded-full bg-ink-purple" />
+            </span>
+          </footer>
         </div>
       </body>
     </html>
