@@ -111,8 +111,8 @@ export default function Notes() {
                                             {repo.code}
                                         </div>
 
-                                        <div className="flex-1 min-w-0">
-                                            <h4 className="text-lg font-bold leading-snug truncate">
+                                        <div className="flex-1 min-w-0 w-full">
+                                            <h4 className="text-lg font-bold leading-snug sm:truncate">
                                                 <a href={repo.repository} target="_blank" rel="noopener noreferrer" className="hover:riso-mark">
                                                     {repo.title}
                                                 </a>
