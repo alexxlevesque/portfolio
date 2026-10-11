@@ -92,12 +92,6 @@ export default function Notes() {
                 <p className="text-xl leading-relaxed max-w-2xl">
                     Lecture notes from my engineering studies at Queen&apos;s University.
                 </p>
-
-                {/* External Links */}
-                <div className="flex flex-wrap gap-x-6 gap-y-3">
-                    <a href="https://boxd.it/kmZFf" target="_blank" rel="noopener noreferrer" className="plate-link">Letterboxd ↗</a>
-                    <a href="https://www.goodreads.com/user/show/202046676-alex-levesque" target="_blank" rel="noopener noreferrer" className="plate-link">Goodreads ↗</a>
-                </div>
             </section>
 
             {/* Notes Section */}

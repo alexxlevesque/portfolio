@@ -44,6 +44,7 @@ export default function Home() {
             <a href="/documents/resume.pdf" target="_blank" rel="noopener noreferrer" className="plate-link">Resume ↗</a>
             <a href="https://www.linkedin.com/in/alex-levesque/" target="_blank" rel="noopener noreferrer" className="plate-link">LinkedIn ↗</a>
             <a href="https://github.com/alexxlevesque" target="_blank" rel="noopener noreferrer" className="plate-link">GitHub ↗</a>
+            <a href="https://www.goodreads.com/user/show/202046676-alex-levesque" target="_blank" rel="noopener noreferrer" className="plate-link">Goodreads ↗</a>
             <a href="mailto:alex.levesque@queensu.ca" className="plate-link">Email</a>
           </div>
         </div>
