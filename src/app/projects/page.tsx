@@ -10,9 +10,7 @@ export default function Projects() {
                 numeral="II"
                 kicker="Selected work"
                 title="Projects"
-                formula="z = exp(−3r²) + 0.15 · cos 5x · exp(−r²)"
                 note="Implementing my passions into reality."
-                caption="A surface stippled by its own shading, lit from the upper left. The rose band is the level set z = ½."
             >
                 <StipplePlate />
             </Plate>

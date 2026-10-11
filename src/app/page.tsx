@@ -20,9 +20,7 @@ export default function Home() {
         numeral="I"
         kicker="Applied Math & Computer Engineering"
         title="Alex Levesque"
-        formula="|P − F₁| = k · |P − F₂|,  0 < k < 1"
         note="Queen's University"
-        caption="Circles of Apollonius about the pole F₁, crossed by the circles through F₁ and its partner F₂ below the sheet."
       >
         <ApollonianPlate />
       </Plate>
@@ -33,8 +31,6 @@ export default function Home() {
           src="/headshot.jpg"
           alt="Alex Levesque"
           sizes="224px"
-          label="Fig. 1"
-          caption="Portrait"
           priority
           className="w-48 sm:w-56"
           frameClassName="aspect-[4/5]"

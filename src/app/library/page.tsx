@@ -83,8 +83,6 @@ export default function Notes() {
                 numeral="III"
                 kicker="Lecture notes"
                 title="Notes"
-                formula="f(p) = Σ aᵢ · exp(−|p − pᵢ|² / 2σᵢ²)"
-                caption="Contours of f at intervals of 0.05, heavier every 0.25; a hollow is dashed in purple. The transect A–A′ is marked where it crosses the heavy lines."
             >
                 <ContourPlate terms={terms.map((term) => ({ name: term.name, codes: term.courses.map((course) => course.code) }))} />
             </Plate>

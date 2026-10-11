@@ -4,15 +4,13 @@ interface PlateProps {
     numeral: string;
     kicker: string;
     title: string;
-    formula?: string;
     note?: ReactNode;
-    caption: ReactNode;
     children: ReactNode; // the generated figure
 }
 
-// A page header laid out like a plate from a technical atlas: Roman numeral, typewritten heading and formula
-// over the figure, an italic note in the corner and the figure's caption at its foot.
-export default function Plate({ numeral, kicker, title, formula, note, caption, children }: PlateProps) {
+// A page header laid out like a plate from a technical atlas: Roman numeral and typewritten heading over the
+// figure, with an italic note in the corner.
+export default function Plate({ numeral, kicker, title, note, children }: PlateProps) {
     return (
         <header className="relative h-[34rem] sm:h-auto sm:aspect-[1000/640]">
             <div className="absolute inset-0">{children}</div>
@@ -24,7 +22,6 @@ export default function Plate({ numeral, kicker, title, formula, note, caption, 
                 <div className="space-y-1">
                     <p className="plate-label">{kicker}</p>
                     <h1 className="font-display text-4xl sm:text-5xl font-medium leading-none tracking-tight">{title}</h1>
-                    {formula && <p className="pt-1 font-mono text-xs tracking-wide text-ink/80">{formula}</p>}
                 </div>
             </div>
 
@@ -33,8 +30,6 @@ export default function Plate({ numeral, kicker, title, formula, note, caption, 
                     {note}
                 </p>
             )}
-
-            <p className="halo absolute bottom-0 left-0 max-w-sm text-sm italic leading-snug text-ink-rose">{caption}</p>
         </header>
     );
 }
