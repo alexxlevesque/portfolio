@@ -1,7 +1,7 @@
 'use client';
 
-import Image from 'next/image';
 import { useState } from 'react';
+import RisoImage from '@/components/RisoImage';
 
 interface ProjectCardProps {
     title: string;
@@ -12,11 +12,7 @@ interface ProjectCardProps {
     constraints: string;
     description?: React.ReactNode;
     imageSrc?: string;
-    imagePosition?: string;
     imageScale?: number;
-    grayscale?: boolean;
-    contrast?: boolean;
-    customFilter?: string;
 }
 
 export default function ProjectCard({
@@ -28,87 +24,74 @@ export default function ProjectCard({
     constraints,
     description,
     imageSrc,
-    imagePosition = 'center',
-    imageScale = 1,
-    grayscale = false,
-    contrast = false,
-    customFilter = ''
+    imageScale = 1
 }: ProjectCardProps) {
     const [isExpanded, setIsExpanded] = useState(false);
 
     return (
-        <div className="bg-white/50 backdrop-blur-sm border border-white/20 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+        <div className="bg-paper border-2 border-ink-blue shadow-plate">
             {/* Banner Area */}
-            <div className="h-64 w-full bg-space_cadet relative overflow-hidden">
-                {imageSrc ? (
-                    <Image
-                        src={imageSrc}
-                        alt={`${title} Preview`}
-                        fill
-                        className={`object-cover ${grayscale ? 'grayscale' : ''} ${contrast ? 'contrast-150' : ''}`}
-                        style={{
-                            objectPosition: imagePosition,
-                            transform: `scale(${imageScale})`,
-                            filter: customFilter
-                        }}
-                        priority
-                    />
-                ) : (
-                    <>
-                        <div className="absolute inset-0 opacity-20"
-                            style={{
-                                backgroundImage: `radial-gradient(#fff 1px, transparent 1px)`,
-                                backgroundSize: '20px 20px'
-                            }}>
-                        </div>
-                        {/* Abstract shapes or patterns could go here */}
-                        <div className="absolute right-0 bottom-0 w-32 h-32 bg-rose_quartz/20 rounded-full blur-2xl transform translate-x-10 translate-y-10"></div>
-                    </>
-                )}
-            </div>
+            {imageSrc ? (
+                <RisoImage
+                    src={imageSrc}
+                    alt={`${title} Preview`}
+                    sizes="(min-width: 896px) 800px, 100vw"
+                    scale={imageScale}
+                    priority
+                    className="h-64 w-full border-b-2 border-ink-blue"
+                />
+            ) : (
+                <div className="h-64 w-full relative overflow-hidden border-b-2 border-ink-blue">
+                    <div className="riso-screen absolute inset-0 text-ink-blue/40" />
+                    <div className="absolute -right-10 -bottom-10 w-40 h-40 rounded-full bg-ink-pink mix-blend-multiply" />
+                </div>
+            )}
 
             <div className="p-6 sm:p-8">
                 {/* Header */}
                 <div className="flex flex-col gap-2 mb-6">
-                    <h3 className="text-xl sm:text-2xl font-serif font-bold text-space_cadet tracking-tight max-w-xl">
+                    <h3 className="riso-display text-3xl sm:text-4xl max-w-xl">
                         {title}
                     </h3>
                 </div>
 
                 {/* Metadata Block */}
-                <div className="space-y-3 text-base leading-relaxed text-space_cadet mb-6">
+                <div className="space-y-3 text-base leading-relaxed mb-6">
                     <p>
-                        <strong className="font-semibold text-space_cadet">Outcome:</strong> {outcome}
+                        <strong className="riso-highlight font-mono text-sm uppercase tracking-wider">Outcome:</strong> {outcome}
                     </p>
                     <p>
-                        <strong className="font-semibold text-space_cadet">Tech Stack:</strong> {techStack}
+                        <strong className="riso-highlight font-mono text-sm uppercase tracking-wider">Tech Stack:</strong> {techStack}
                     </p>
                     <p>
-                        <strong className="font-semibold text-space_cadet">Key Constraints:</strong> {constraints}
+                        <strong className="riso-highlight font-mono text-sm uppercase tracking-wider">Key Constraints:</strong> {constraints}
                     </p>
                 </div>
 
                 {/* Expandable Content */}
                 {description && (
-                    <div className="border-t border-black/5 pt-4">
-                        <button
-                            onClick={() => setIsExpanded(!isExpanded)}
-                            className="w-full flex items-center justify-end gap-2 text-sm font-bold uppercase tracking-wider text-space_cadet/60 hover:text-space_cadet transition-colors"
-                        >
-                            {isExpanded ? 'Collapse' : 'Click to expand'}
-                            <svg
-                                className={`w-4 h-4 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
+                    <div className="border-t-2 border-dashed border-ink-blue/60 pt-4">
+                        <div className="flex justify-end">
+                            <button
+                                onClick={() => setIsExpanded(!isExpanded)}
+                                aria-expanded={isExpanded}
+                                className="riso-button"
                             >
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                            </svg>
-                        </button>
+                                {isExpanded ? 'Collapse' : 'Click to expand'}
+                                <svg
+                                    className={`w-4 h-4 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path strokeLinecap="square" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                        </div>
 
-                        <div className={`grid transition-all duration-300 ease-in-out ${isExpanded ? 'grid-rows-[1fr] opacity-100 mt-4' : 'grid-rows-[0fr] opacity-0'}`}>
+                        <div className={`grid transition-all duration-300 ease-in-out ${isExpanded ? 'grid-rows-[1fr] opacity-100 mt-6' : 'grid-rows-[0fr] opacity-0'}`}>
                             <div className="overflow-hidden">
-                                <div className="text-base text-space_cadet/80 leading-relaxed space-y-4">
+                                <div className="text-base leading-relaxed space-y-4">
                                     {description}
                                 </div>
                             </div>

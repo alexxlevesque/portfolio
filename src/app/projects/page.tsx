@@ -1,15 +1,16 @@
 import Link from 'next/link';
 import ProjectCard from '@/components/ProjectCard';
+import RisoTitle from '@/components/RisoTitle';
 
 export default function Projects() {
     return (
         <div className="space-y-16 max-w-5xl mx-auto">
             <header className="mb-16 text-center sm:text-left">
-                <h1 className="text-4xl sm:text-5xl font-serif font-bold text-space_cadet tracking-tight mb-4">Projects</h1>
-                <p className="text-ultra_violet font-medium italic"> Implementing my passions into reality.</p>
+                <RisoTitle className="riso-display text-6xl sm:text-8xl mb-5">Projects</RisoTitle>
+                <p className="font-mono text-sm uppercase tracking-wider"> Implementing my passions into reality.</p>
             </header>
 
-            <section className="space-y-6">
+            <section className="space-y-12">
 
                 <ProjectCard
                     title="Adaptive RL Ensemble Strategy"
@@ -19,7 +20,6 @@ export default function Projects() {
                     constraints="Adaptive allocation across varying market regimes, effective diversification to minimize drawdown, rigorous backtesting against SPY benchmark."
                     imageSrc="/trading.png"
                     imageScale={1.3}
-                    customFilter="grayscale(100%) sepia(100%) hue-rotate(180deg) saturate(3) brightness(0.8) contrast(1.2)"
                     description={
                         <>
                             <p>
@@ -33,12 +33,12 @@ export default function Projects() {
                                 <li><strong>Statistical confidence:</strong> performance validated with 10,000-sample bootstrap confidence intervals, so the edge wasn't just a lucky run.</li>
                                 <li><strong>Adaptive diversification:</strong> the ensemble shifts weight across ETFs as conditions change, smoothing volatility instead of riding any single position.</li>
                             </ul>
-                            <div className="mt-6 pt-4 border-t border-black/5">
+                            <div className="mt-6 pt-4 border-t-2 border-dashed border-ink-blue/60">
                                 <a
                                     href="https://github.com/ary4f/QMINDARES/tree/main"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 font-bold text-space_cadet hover:text-ultra_violet transition-colors"
+                                    className="riso-button"
                                 >
                                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                                         <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.645-.735-3.885-1.395-.135-.345-.72-1.395-1.23-1.68-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
@@ -57,20 +57,19 @@ export default function Projects() {
                     techStack="MATLAB, Lloyd's Algorithm, K-Means Clustering, GIS Spatial Analysis Tools"
                     constraints="Real-time dynamic fire hotspot data processing, accurate perimeter modeling, efficient multi-agent coordination."
                     imageSrc="/autonomousrobot.jpg"
-                    customFilter="grayscale(100%) sepia(100%) hue-rotate(180deg) saturate(2.3) brightness(0.8) contrast(1.2)"
                     description={
                         <>
-                            <p className="font-bold text-space_cadet mb-4 italic">
+                            <p className="font-mono text-sm font-bold uppercase tracking-wider mb-4">
                                 Course project for APSC 200: Engineering Design and Practice. Course Grade: A+ | Role: Primary Technical Contributor
                             </p>
                             <p>
                                 Driven by an interest in mathematical optimization, I developed a decentralized multi-agent system designed to tackle the unpredictable nature of wildfires. Moving away from rigid, centralized control, I implemented <strong>Lloyd’s Algorithm</strong> (i. e. K-Means Clustering) to allow a fleet of drones to "self-organize" based on real-time environmental data.
                             </p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
-                                <div className="rounded-lg overflow-hidden border border-black/5 shadow-sm">
+                                <div className="riso-mono overflow-hidden border-2 border-ink-blue">
                                     <img src="/firefighting_1.png" alt="Multi-agent fire containment simulation" className="w-full h-auto" />
                                 </div>
-                                <div className="rounded-lg overflow-hidden border border-black/5 shadow-sm">
+                                <div className="riso-mono overflow-hidden border-2 border-ink-blue">
                                     <img src="/firefighting_2.png" alt="Drone agent trajectory plots" className="w-full h-auto" />
                                 </div>
                             </div>
@@ -88,12 +87,12 @@ export default function Projects() {
 
             </section>
 
-            <hr className="border-black/5 my-12" />
+            <hr className="border-t-2 border-dashed border-ink-blue/60 my-12" />
 
             <section>
-                <div className="flex flex-wrap gap-6 text-base text-space_cadet/80 uppercase tracking-wider font-bold">
-                    <Link href="/" className="hover:text-steel_blue transition-colors">Home</Link>
-                    <Link href="/library" className="hover:text-steel_blue transition-colors">Notes</Link>
+                <div className="flex flex-wrap gap-3">
+                    <Link href="/" className="riso-button">Home</Link>
+                    <Link href="/library" className="riso-button">Notes</Link>
                 </div>
             </section>
         </div>

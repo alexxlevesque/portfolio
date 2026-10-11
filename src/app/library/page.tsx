@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { Analytics } from "@vercel/analytics/next"
+import RisoTitle from '@/components/RisoTitle';
 
 export default function Notes() {
     const terms = [
@@ -81,15 +82,15 @@ export default function Notes() {
         <div className="space-y-16">
             {/* Header */}
             <header className="space-y-4">
-                <h1 className="text-3xl sm:text-4xl font-serif font-bold text-isabelline tracking-tight">Notes</h1>
-                <p className="text-rose_quartz text-base leading-relaxed max-w-2xl">
+                <RisoTitle className="riso-display text-6xl sm:text-8xl">Notes</RisoTitle>
+                <p className="text-lg leading-relaxed max-w-2xl">
                     Lecture notes from my engineering studies at Queen&apos;s University.
                 </p>
 
                 {/* External Links */}
-                <div className="pt-2 flex flex-wrap gap-6 text-base text-pale_dogwood uppercase tracking-wider font-medium">
-                    <a href="https://boxd.it/kmZFf" target="_blank" rel="noopener noreferrer" className="hover:text-steel_blue transition-colors">Letterboxd</a>
-                    <a href="https://www.goodreads.com/user/show/202046676-alex-levesque" target="_blank" rel="noopener noreferrer" className="hover:text-steel_blue transition-colors">Goodreads</a>
+                <div className="pt-2 flex flex-wrap gap-3">
+                    <a href="https://boxd.it/kmZFf" target="_blank" rel="noopener noreferrer" className="riso-button">Letterboxd</a>
+                    <a href="https://www.goodreads.com/user/show/202046676-alex-levesque" target="_blank" rel="noopener noreferrer" className="riso-button">Goodreads</a>
                 </div>
             </header>
 
@@ -99,25 +100,25 @@ export default function Notes() {
                 <div className="space-y-10">
                     {terms.map((term) => (
                         <div key={term.name} className="space-y-4">
-                            <h3 className="text-base font-bold text-rose_quartz uppercase tracking-wider">
-                                {term.name}
+                            <h3 className="font-mono text-sm font-bold uppercase tracking-wider">
+                                <span className="riso-highlight">{term.name}</span>
                             </h3>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 {term.courses.map((repo) => (
-                                    <div key={repo.code} className="flex flex-col sm:flex-row gap-4 items-start sm:items-center group bg-white/5 rounded-lg p-4 hover:bg-white/10 transition-colors border border-white/5 hover:border-white/10">
+                                    <div key={repo.code} className="flex flex-col sm:flex-row gap-4 items-start sm:items-center group bg-paper p-4 border-2 border-ink-blue transition duration-150 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-plate-sm motion-reduce:hover:translate-x-0 motion-reduce:hover:translate-y-0">
                                         {/* Icon/Code Box */}
-                                        <div className="shrink-0 w-12 h-12 rounded bg-steel_blue/20 border border-steel_blue/30 flex items-center justify-center text-[10px] font-bold text-center text-steel_blue">
+                                        <div className="shrink-0 w-14 h-14 p-1.5 bg-ink-blue flex items-center justify-center font-mono text-[11px] leading-tight font-bold text-center text-paper transition-colors group-hover:bg-ink-yellow group-hover:text-ink-blue">
                                             {repo.code}
                                         </div>
 
                                         <div className="flex-1 min-w-0">
-                                            <h4 className="text-lg font-bold text-isabelline group-hover:text-white transition-colors truncate">
-                                                <a href={repo.repository} target="_blank" rel="noopener noreferrer" className="hover:underline decoration-white/30 underline-offset-4">
+                                            <h4 className="text-lg font-bold leading-snug truncate">
+                                                <a href={repo.repository} target="_blank" rel="noopener noreferrer" className="hover:riso-mark">
                                                     {repo.title}
                                                 </a>
                                             </h4>
                                             <div className="flex items-center gap-2 mt-1">
-                                                <a href={repo.repository} target="_blank" rel="noopener noreferrer" className="text-sm text-rose_quartz hover:text-steel_blue transition-colors flex items-center gap-1">
+                                                <a href={repo.repository} target="_blank" rel="noopener noreferrer" className="font-mono text-xs uppercase tracking-wider hover:bg-ink-yellow flex items-center gap-1">
                                                     <span>View PDF</span>
                                                     <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
@@ -134,9 +135,9 @@ export default function Notes() {
             </section>
 
             <section>
-                <div className="flex flex-wrap gap-6 text-base text-space_cadet/80 uppercase tracking-wider font-bold">
-                    <Link href="/" className="hover:text-steel_blue transition-colors">Home</Link>
-                    <Link href="/projects" className="hover:text-steel_blue transition-colors">Projects</Link>
+                <div className="flex flex-wrap gap-3 border-t-2 border-dashed border-ink-blue/60 pt-8">
+                    <Link href="/" className="riso-button">Home</Link>
+                    <Link href="/projects" className="riso-button">Projects</Link>
                 </div>
             </section>
 
