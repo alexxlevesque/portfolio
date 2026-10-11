@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Figure from '@/components/Figure';
 import Plate from '@/components/plates/Plate';
-import ApollonianPlate from '@/components/plates/ApollonianPlate';
+import BrownianPlate from '@/components/plates/BrownianPlate';
 
 const interests = [
   { label: 'Finance.', text: 'Next summer, I will partake in a Sales & Trading internship at Scotiabank, where I hope to link machine learning and finance in a professional setting.' },
@@ -21,8 +21,9 @@ export default function Home() {
         kicker="Applied Math & Computer Engineering"
         title="Alex Levesque"
         note="Queen's University"
+        className="mx-auto w-full max-w-3xl aspect-[840/1040]"
       >
-        <ApollonianPlate />
+        <BrownianPlate />
       </Plate>
 
       {/* Hero Section */}

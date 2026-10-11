@@ -5,14 +5,22 @@ interface PlateProps {
     kicker: string;
     title: string;
     note?: ReactNode;
+    className?: string; // the plate's size; defaults to a landscape sheet
     children: ReactNode; // the generated figure
 }
 
 // A page header laid out like a plate from a technical atlas: Roman numeral and typewritten heading over the
 // figure, with an italic note in the corner.
-export default function Plate({ numeral, kicker, title, note, children }: PlateProps) {
+export default function Plate({
+    numeral,
+    kicker,
+    title,
+    note,
+    className = 'h-[34rem] sm:h-auto sm:aspect-[1000/640]',
+    children,
+}: PlateProps) {
     return (
-        <header className="relative h-[34rem] sm:h-auto sm:aspect-[1000/640]">
+        <header className={`relative ${className}`}>
             <div className="absolute inset-0">{children}</div>
 
             <div className="halo relative flex items-start gap-4 sm:gap-6">
