@@ -21,7 +21,7 @@ export default function Home() {
         kicker="Applied Math & Computer Engineering"
         title="Alex Levesque"
         note="Queen's University"
-        className="mx-auto w-full max-w-3xl aspect-[840/1040]"
+        className="h-[34rem] sm:h-auto sm:aspect-[1000/780]"
       >
         <BrownianPlate />
       </Plate>

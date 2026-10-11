@@ -11,7 +11,7 @@ const TURN = (-35 * Math.PI) / 180;
 const project = (x: number, y: number, h = z(x, y)): Point => {
     const u = x * Math.cos(TURN) - y * Math.sin(TURN);
     const v = x * Math.sin(TURN) + y * Math.cos(TURN);
-    return [620 + 330 * u, 440 + 125 * v - 300 * h];
+    return [500 + 470 * u, 440 + 170 * v - 330 * h];
 };
 
 const LEVEL = 0.5; // the level set printed in rose
@@ -28,7 +28,7 @@ const { purple, rose } = (() => {
     const purple: Point[] = [];
     const rose: Point[] = [];
     const e = 1e-3;
-    for (let n = 0; n < 18000; n++) {
+    for (let n = 0; n < 28000; n++) {
         const r = Math.sqrt(rand());
         const t = rand() * 2 * Math.PI;
         const x = r * Math.cos(t);
