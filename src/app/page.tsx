@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import Figure from '@/components/Figure';
 import Plate from '@/components/plates/Plate';
-import BrownianPlate from '@/components/plates/BrownianPlate';
 
 const interests = [
   { label: 'Finance.', text: 'Next summer, I will partake in a Sales & Trading internship at Scotiabank, where I hope to link machine learning and finance in a professional setting.' },
@@ -21,10 +20,7 @@ export default function Home() {
         kicker="Applied Math & Computer Engineering"
         title="Alex Levesque"
         note="Queen's University"
-        className="h-[34rem] sm:h-auto sm:aspect-[1000/780]"
-      >
-        <BrownianPlate />
-      </Plate>
+      />
 
       {/* Hero Section */}
       <section className="grid gap-8 sm:grid-cols-[14rem_1fr] sm:gap-12 items-start">
