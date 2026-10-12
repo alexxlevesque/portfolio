@@ -89,10 +89,80 @@ body::after {
   }
 }
 
+/* ---- Resume desk: the page held up close, a folded sheet laid on top of it ---- */
+
+/* A loose sheet of stock: edges a touch darker, a fold across the middle, the paper's tooth on top */
+.sheet-paper {
+  background-color: var(--sheet, rgb(250 247 238));
+  background-image:
+    linear-gradient(transparent calc(50% - 40px), rgb(80 62 36 / 0.035) calc(50% - 2px), rgb(80 62 36 / 0.11) 50%,
+      rgb(255 252 242 / 0.6) calc(50% + 1px), transparent calc(50% + 3px), rgb(80 62 36 / 0.025) calc(50% + 24px), transparent calc(50% + 48px)),
+    radial-gradient(125% 100% at 50% 50%, transparent 66%, rgb(150 115 60 / 0.06) 88%, rgb(130 96 48 / 0.13) 100%),
+    linear-gradient(to right, rgb(140 104 52 / 0.06), transparent 14px, transparent calc(100% - 14px), rgb(140 104 52 / 0.06)),
+    linear-gradient(rgb(140 104 52 / 0.05), transparent 14px, transparent calc(100% - 14px), rgb(140 104 52 / 0.06));
+}
+
+.sheet-paper::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: var(--grain);
+  mix-blend-mode: multiply;
+  opacity: 0.22;
+}
+
+.sheet-shadow {
+  box-shadow:
+    0 1px 2px rgb(var(--ink) / 0.07),
+    0 10px 26px -10px rgb(var(--ink) / 0.18),
+    0 32px 64px -28px rgb(var(--ink) / 0.24);
+}
+
+/* A sticky note in yellow ink, darker where the glue strip is */
+.note-paper {
+  background:
+    linear-gradient(rgb(var(--ink-yellow) / 0.85), rgb(var(--ink-yellow) / 0.62) 10px, rgb(var(--ink-yellow) / 0.6) 70%, rgb(var(--ink-yellow) / 0.72)),
+    rgb(var(--paper));
+  box-shadow:
+    0 1px 1px rgb(var(--ink) / 0.1),
+    0 6px 9px -6px rgb(var(--ink) / 0.32),
+    6px 9px 10px -9px rgb(var(--ink) / 0.3);
+}
+
+@keyframes desk-fade { from { opacity: 0; } }
+@keyframes desk-out { to { opacity: 0; } }
+@keyframes sheet-drop { from { opacity: 0; transform: translateY(-28px) scale(1.04); filter: blur(6px); } }
+@keyframes sheet-lift { to { opacity: 0; transform: translateY(14px) scale(0.98); } }
+@keyframes flap-open { from { transform: rotateX(180deg); } }
+@keyframes flap-shade { from { opacity: 1; } to { opacity: 0; } }
+@keyframes flap-darken { from { opacity: 0; } to { opacity: 1; } }
+@keyframes sheet-fan { from { opacity: 0; transform: none; } to { opacity: 1; transform: var(--fan); } }
+@keyframes note-stick { from { opacity: 0; transform: translateY(-14px) rotate(9deg); } }
+@keyframes prop-roll { from { opacity: 0; transform: translateX(28px); } }
+
+/* Faded layer by layer: opacity on a shared parent would stop the backdrop blur reaching the page */
+.desk-layer { animation: desk-fade 0.35s ease-out both; }
+.desk-sheet { animation: sheet-drop 0.5s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.desk-flap { animation: flap-open 0.85s cubic-bezier(0.6, 0, 0.2, 1) 0.45s both; }
+.desk-flap-shade { animation: flap-shade 0.85s cubic-bezier(0.6, 0, 0.2, 1) 0.45s both; }
+.desk-flap-back-shade { animation: flap-darken 0.85s cubic-bezier(0.6, 0, 0.2, 1) 0.45s both; }
+.desk-under { transform: var(--fan); animation: sheet-fan 0.6s cubic-bezier(0.22, 1, 0.36, 1) 1.15s both; }
+.desk-note { animation: note-stick 0.5s cubic-bezier(0.22, 1, 0.36, 1) 1.3s both; }
+.desk-prop { animation: prop-roll 0.7s cubic-bezier(0.22, 1, 0.36, 1) var(--delay, 1.35s) both; }
+
+.desk-leaving .desk-layer { animation: desk-out 0.22s ease-in both; }
+.desk-leaving .desk-sheet { animation: sheet-lift 0.22s ease-in both; }
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
   *::after {
     transition: none !important;
+  }
+
+  .desk,
+  .desk * {
+    animation: none !important;
   }
 }

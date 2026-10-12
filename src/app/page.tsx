@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Figure from '@/components/Figure';
 import Plate from '@/components/plates/Plate';
+import ResumeLink from '@/components/resume/ResumeLink';
 
 const interests = [
   { label: 'Finance.', text: 'Next summer, I will partake in a Sales & Trading internship at Scotiabank, where I hope to link machine learning and finance in a professional setting.' },
@@ -37,7 +38,7 @@ export default function Home() {
             I&apos;m interested in machine learning, statistics, and their applications to finance and decision-making. I like making tools that make technical work more efficient and that optimize my workflows.
           </p>
           <div className="flex flex-wrap gap-x-6 gap-y-3">
-            <a href="/documents/resume.pdf" target="_blank" rel="noopener noreferrer" className="plate-link">Resume ↗</a>
+            <ResumeLink className="plate-link">Resume</ResumeLink>
             <a href="https://www.linkedin.com/in/alex-levesque/" target="_blank" rel="noopener noreferrer" className="plate-link">LinkedIn ↗</a>
             <a href="https://github.com/alexxlevesque" target="_blank" rel="noopener noreferrer" className="plate-link">GitHub ↗</a>
             <a href="https://www.goodreads.com/user/show/202046676-alex-levesque" target="_blank" rel="noopener noreferrer" className="plate-link">Goodreads ↗</a>
