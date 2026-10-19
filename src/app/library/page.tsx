@@ -80,7 +80,6 @@ export default function Notes() {
     return (
         <div className="space-y-16">
             <Plate
-                numeral="III"
                 kicker="Lecture notes"
                 title="Notes"
             >

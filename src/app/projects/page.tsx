@@ -9,7 +9,6 @@ export default function Projects() {
     return (
         <div className="space-y-16">
             <Plate
-                numeral="II"
                 kicker="Selected work"
                 title="Projects"
                 note="Implementing my passions into reality."

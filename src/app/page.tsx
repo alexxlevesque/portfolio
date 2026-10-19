@@ -17,7 +17,6 @@ export default function Home() {
   return (
     <div className="space-y-16">
       <Plate
-        numeral="I"
         kicker="Applied Math & Computer Engineering"
         title="Alex Levesque"
         note="Queen's University"

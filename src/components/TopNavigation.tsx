@@ -7,9 +7,9 @@ export default function TopNavigation() {
   const pathname = usePathname();
 
   const navItems = [
-    { href: '/', label: 'Home', numeral: 'I' },
-    { href: '/projects', label: 'Projects', numeral: 'II' },
-    { href: '/library', label: 'Notes', numeral: 'III' },
+    { href: '/', label: 'Home' },
+    { href: '/projects', label: 'Projects' },
+    { href: '/library', label: 'Notes' },
   ];
 
   return (
@@ -24,7 +24,7 @@ export default function TopNavigation() {
             : 'hover:bg-ink-yellow/50'
             }`}
         >
-          <span className="text-ink-rose">{item.numeral}.</span> {item.label}
+          {item.label}
         </Link>
       ))}
     </nav>
