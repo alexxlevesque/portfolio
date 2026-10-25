@@ -4,6 +4,7 @@ import Plate from '@/components/plates/Plate';
 import StipplePlate from '@/components/plates/StipplePlate';
 import EnsembleFigure from '@/components/plates/EnsembleFigure';
 import SwarmFigure from '@/components/plates/SwarmFigure';
+import GraphFigure from '@/components/plates/GraphFigure';
 
 export default function Projects() {
     return (
@@ -88,6 +89,52 @@ export default function Projects() {
                                 <li><strong>Sensor Fusion Logic:</strong> Designing an "Observation Set" function that allows agents to weigh environmental density, effectively giving the swarm a collective "vision" of the fire's intensity.</li>
                                 <li><strong>Robustness & Scalability:</strong> Engineering the system to be decentralized so that the failure of one drone doesn't compromise the mission, as neighboring agents autonomously re-calculate and compensate for the gap.</li>
                             </ul>
+                        </>
+                    }
+                />
+
+                <ProjectCard
+                    title="Second Brain"
+                    status="ONGOING"
+                    figure="Fig. II.3"
+                    outcome="A public knowledge base of ideas from the books I've read, where each idea is its own short note linked to the book it came from and to related ideas in other books."
+                    techStack="Obsidian, Markdown, Quartz, GitHub Pages"
+                    constraints="Notes short enough to stand on their own, links that hold up across books, and publishing straight from my Obsidian vault."
+                    illustration={<GraphFigure />}
+                    description={
+                        <>
+                            <p>
+                                I write my reading notes in Obsidian, one idea per note, and publish the vault as a static site with Quartz. Each book page lists its ideas under its backlinks, so a reader can start from a book and follow its ideas into the other books they connect to.
+                            </p>
+                            <p>
+                                It covers eleven books so far, from Dale Carnegie&apos;s <em>How to Win Friends and Influence People</em> (1936) to Ryunosuke Koike&apos;s <em>The Practice of Not Thinking</em> (2010), including <em>Blink</em>, <em>The Black Swan</em>, <em>Atomic Habits</em> and <em>Naked Statistics</em>. The site has:
+                            </p>
+                            <ul className="list-disc ml-4 mt-2 space-y-2">
+                                <li><strong>Graph view:</strong> a map of every idea and how it connects across books.</li>
+                                <li><strong>Library:</strong> every book and idea in one table.</li>
+                                <li><strong>Original ideas and definitions:</strong> my own ideas, and a glossary of the terms I&apos;ve coined.</li>
+                            </ul>
+                            <div className="mt-6 pt-4 border-t border-dotted border-ink/40 flex flex-wrap gap-x-6 gap-y-3">
+                                <a
+                                    href="https://alexxlevesque.github.io/second-brain/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="plate-link"
+                                >
+                                    Visit Second Brain ↗
+                                </a>
+                                <a
+                                    href="https://github.com/alexxlevesque/second-brain"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="plate-link inline-flex items-center gap-2"
+                                >
+                                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.645-.735-3.885-1.395-.135-.345-.72-1.395-1.23-1.68-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                                    </svg>
+                                    View Source Code
+                                </a>
+                            </div>
                         </>
                     }
                 />
