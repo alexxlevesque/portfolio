@@ -34,7 +34,7 @@ export default function Home() {
         />
         <div className="space-y-6">
           <p className="text-xl sm:text-2xl leading-relaxed max-w-2xl">
-            Interested in finance, data science, and the mathematical structure behind complex systems. I&apos;m drawn to markets and its challenging problems. In my free time, I read and study topics such as economics, psychology, politics, and systems.
+            Interested in finance, data science, and the mathematical structure behind complex systems. I&apos;m drawn to markets and their challenging problems. In my free time, I read and study topics such as economics, psychology, politics, and systems.
           </p>
           <div className="flex flex-wrap gap-x-6 gap-y-3">
             <ResumeLink className="plate-link">Resume</ResumeLink>
