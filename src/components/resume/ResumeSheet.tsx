@@ -82,59 +82,65 @@ export default function ResumeSheet() {
             <Section numeral="I" title="Education">
                 <Entry
                     title="Queen’s University"
+                    detail="Smith Engineering"
                     right="Kingston, ON"
-                    sub={<>BASc Applied Mathematics and Computer Engineering <span className="not-italic">(GPA 3.80/4.30)</span></>}
-                    subRight="Sep 2024 – Apr 2028"
+                    sub={<>BASc Applied Mathematics and Computer Engineering <span className="not-italic">(GPA 3.8/4.3)</span></>}
+                    subRight="Sep 2024 – Apr 2029"
                 >
-                    <Item>Coursework: Algorithms, Engineering Design, Probability, Real Analysis, Microeconomics, Philosophy</Item>
+                    <Item>Coursework: Algorithms, Probability, Real Analysis, Microeconomics, Engineering Design</Item>
+                </Entry>
+                <Entry
+                    title="University of Warwick"
+                    right="Coventry, UK"
+                    sub="Exchange Semester, Department of Economics"
+                    subRight="Jan 2027 – Mar 2027"
+                >
+                    <Item>Coursework: Data Science, Macroeconomics of Global (de-)Integration, Topics in Financial Economics</Item>
                 </Entry>
             </Section>
 
-            <Section numeral="II" title="Awards">
-                <Entry title="GRAMMY Music Award" detail="The Recording Academy" right="Feb 2024">
-                    <Item>Received a GRAMMY Award for contributions to Killer Mike’s <i>MICHAEL</i>, 2024 Rap Album of the Year</Item>
-                    <Item>Produced for the Migos, Gunna, Peso Pluma, Roddy Ricch, Polo G, A Boogie, Lil Tjay, Skepta, Cam’ron</Item>
+            <Section numeral="II" title="Experience">
+                <Entry title="Scotiabank" right="Toronto, ON" sub="Incoming Sales & Trading Summer Analyst" subRight="Apr 2027 – Aug 2027" />
+                <Entry title="Scotiabank" right="Toronto, ON" sub="Data Science Intern" subRight="May 2026 – Aug 2026">
+                    <Item>Designed and deployed an end-to-end, concurrent LLM parsing pipeline for unstructured audit files using Vertex AI and OpenPyXL, cutting manual effort by <b className="font-semibold">25%+</b> while holding processing time near-constant as file volume scaled</Item>
+                    <Item>Reduced <b className="font-semibold">$2M+</b> in tech-risk loss exposure by building an HDBSCAN clustering pipeline, tuning it to minimize cluster overlap while cutting LLM calls by <b className="font-semibold">66.7%</b>, and proposing targeted control improvements to senior executives</Item>
+                    <Item>Built an interactive Power BI dashboard tracking <b className="font-semibold">4</b> KPIs across CAD expense spend and policy violations, used to brief stakeholders on the highest-spend business lines</Item>
                 </Entry>
-                <Entry title="Canada’s Top Students" detail="Scotiabank" right="Nov 2025">
-                    <Item>Selected as <b className="font-semibold">1 of 30</b> attendees (from 500+) for Scotiabank’s Canada’s Top Students conference and case competition</Item>
-                </Entry>
-            </Section>
-
-            <Section numeral="III" title="Experience">
-                <Entry title="Data Science Intern" right="May 2026 – Aug 2026" sub="Scotiabank" subRight="Toronto, ON">
-                    <Item>Designed and deployed an end-to-end, concurrent LLM parsing pipeline for unstructured audit files using Vertex AI and Openpyxl, cutting manual labor by <b className="font-semibold">25%+</b> while holding processing time near-constant as file volume scaled</Item>
-                    <Item>Reduced <b className="font-semibold">$70M+</b> in tech-risk loss exposure by building an HDBSCAN clustering pipeline, tuning it to minimize cluster overlap and cut LLM calls by <b className="font-semibold">66.7%</b></Item>
-                    <Item>Developed an interactive Power BI expense analysis dashboard surfacing 4 KPIs across CAD spend and policy violations with dynamic 3-, 6-, and 12-month filtering, saving the expense team ~<b className="font-semibold">5 hours/week</b> in manual review</Item>
-                </Entry>
-                <Entry title="Generative AI Engineering Intern" right="May 2025 – Aug 2025" sub="Government of Canada" subRight="Ottawa, ON">
-                    <Item>Designed and implemented an Azure-based GenAI workflow in PowerApps to transcribe, categorize, and organize refugee documents, achieving <b className="font-semibold">93%</b> accuracy and reducing manual processing time by over <b className="font-semibold">50%</b></Item>
+                <Entry title="Government of Canada" right="Ottawa, ON" sub="Generative AI Engineering Intern" subRight="May 2025 – Aug 2025">
+                    <Item>Implemented an Azure-based GenAI workflow in PowerApps to transcribe, categorize, and organize refugee documents, achieving <b className="font-semibold">93%</b> accuracy and reducing manual processing time by <b className="font-semibold">50%+</b></Item>
                     <Item>Engineered an Azure RAG chatbot with an ETL pipeline, Cosmos DB, and vector storage to automate legal information retrieval, reducing average lookup time from <b className="font-semibold">hours to minutes</b></Item>
                 </Entry>
             </Section>
 
-            <Section numeral="IV" title="Projects">
+            <Section numeral="III" title="Projects">
                 <p className="italic">
                     For more projects and in-depth analyses, see <Link href="/projects" className={`not-italic ${ink}`}>II. Projects</Link>.
                 </p>
-                <Entry title="Markowitz Portfolio Optimizer" detail="Convex Optimization">
-                    <Item>Built a Markowitz portfolio optimizer in Python with cvxpy, modeling risk minimization as a convex quadratic program that computes provably optimal allocations across 50+ assets in <b className="font-semibold">under 2 ms per solve</b></Item>
-                    <Item>Engineered a data pipeline pulling 5 years of market data via yfinance to estimate returns/covariance and trace a 50-portfolio efficient frontier in <b className="font-semibold">&lt;0.1 s</b>, validated by <b className="font-semibold">14 automated tests across 4 modules</b></Item>
-                </Entry>
                 <Entry title="Adaptive Reinforcement Learning Ensemble Strategy" detail="Queen’s AI Club (QMIND)">
-                    <Item>Built and trained an ensemble of PPO, A2C, and TD3 reinforcement learning agents for daily portfolio allocation across 9 ETFs, using Stable-Baselines3 within a custom Gymnasium trading environment</Item>
-                    <Item>Validated backtests with 10,000-sample bootstrap confidence intervals and 10 bps transaction-cost modeling, confirming an <b className="font-semibold">annualized Sharpe of 1.14</b> at roughly <b className="font-semibold">half the drawdown</b> of a passive S&amp;P 500 benchmark</Item>
+                    <Item>Built and trained an ensemble of PPO, A2C, and TD3 reinforcement learning agents for daily portfolio allocation across <b className="font-semibold">9</b> ETFs, using Stable-Baselines3 within a custom Gymnasium trading environment</Item>
+                    <Item>Validated backtests with <b className="font-semibold">10,000</b>-sample bootstrap confidence intervals and <b className="font-semibold">10</b> bps transaction-cost modeling, confirming an annualized Sharpe ratio of <b className="font-semibold">1.14</b> at roughly <b className="font-semibold">half</b> the drawdown of a passive S&amp;P 500 benchmark</Item>
                 </Entry>
-                <Entry title="Autonomous Multi-Agent Robotic Firefighting" detail="Second Year School Project">
-                    <Item>Developed and optimized Lloyd’s algorithm in MATLAB for adaptive k-means clustering of dynamic fire hotspot data, <b className="font-semibold">reducing cluster convergence time by 30%</b> and tightening robot-to-hotspot coverage</Item>
-                    <Item>Built the multi-agent coordination and simulation component in MATLAB, enabling 10 robots to cover <b className="font-semibold">100% of hotspots in under 100 iterations</b></Item>
+                <Entry title="Autonomous Multi-Agent Robotic Firefighting" detail="Second-Year Course Project">
+                    <Item>Implemented and optimized Lloyd’s algorithm (k-means) in MATLAB to adaptively cluster dynamic fire hotspot data, reducing cluster convergence time by <b className="font-semibold">30%</b> and tightening robot-to-hotspot coverage</Item>
+                    <Item>Built the multi-agent coordination and simulation component in MATLAB, enabling <b className="font-semibold">10</b> robots to cover <b className="font-semibold">80%+</b> of hotspots in under <b className="font-semibold">100</b> iterations</Item>
+                </Entry>
+            </Section>
+
+            <Section numeral="IV" title="Awards">
+                <Entry title="GRAMMY Award" detail="The Recording Academy" right="Feb 2024">
+                    <Item>Recognized for contributions to Killer Mike’s <i>MICHAEL</i>, winner of Best Rap Album at the 66th GRAMMY Awards</Item>
+                    <Item>Produced records for Migos, Gunna, Peso Pluma, Roddy Ricch, Polo G, A Boogie, Lil Tjay, Skepta, and Cam’ron</Item>
+                </Entry>
+                <Entry title="Canada’s Top Students" detail="Scotiabank" right="Nov 2025">
+                    <Item>Selected as <b className="font-semibold">1 of 30</b> students from <b className="font-semibold">500+</b> applicants for Scotiabank’s national conference and case competition</Item>
                 </Entry>
             </Section>
 
             <Section numeral="V" title="Skills & Interests">
                 <div className="space-y-[1px]">
-                    <p><span className="font-semibold">Skills:</span> Python, Excel, SQL, PowerBI, Microsoft Azure, Google Vertex AI, Cosmos DB, Copilot Studio</p>
-                    <p><span className="font-semibold">ML/AI:</span> PyTorch, Scikit-learn, HDBSCAN, CVXPY, Pandas, NumPy, Jupyter Notebook, OpenPyXL</p>
-                    <p><span className="font-semibold">Interests:</span> Native in English and French, Karate Black Belt, Cycling, Non-Fiction, Psychology</p>
+                    <p><span className="font-semibold">Programming &amp; Tools:</span> Python, MATLAB, Excel, Power BI, scikit-learn, Pandas</p>
+                    <p><span className="font-semibold">Languages:</span> English and French (bilingual)</p>
+                    <p><span className="font-semibold">Interests:</span> Music production, karate (black belt), strength training, distance running, reading, FC Bayern Munich</p>
                 </div>
             </Section>
         </article>
